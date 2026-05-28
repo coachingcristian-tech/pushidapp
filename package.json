@@ -1,0 +1,64 @@
+{
+  "name": "LiftShift",
+  "version": "1.0.0",
+  "description": "A comprehensive workout visualizer that transforms Hevy app CSV exports into powerful insights with analytics, personal records tracking, and training performance analysis.",
+  "author": "Areeb <mohammadar336@gmail.com>",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/aree6/LiftShift",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aree6/LiftShift.git"
+  },
+  "keywords": [
+    "fitness",
+    "workout",
+    "analytics",
+    "hevy",
+    "training",
+    "visualization",
+    "personal-records",
+    "react",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vike dev",
+    "build": "vike build",
+    "preview": "vike preview"
+  },
+  "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.19.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "date-fns": "^4.1.0",
+    "gsap": "^3.15.0",
+    "lucide-react": "^1.14.0",
+    "lz-string": "^1.5.0",
+    "motion": "^12.38.0",
+    "ogl": "^1.0.11",
+    "papaparse": "^5.5.3",
+    "posthog-js": "^1.372.6",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router": "^7.14.2",
+    "recharts": "^3.8.1",
+    "styled-components": "^6.4.1",
+    "tailwindcss": "^4.2.4",
+    "vike": "^0.4.258",
+    "vike-react": "^0.6.21",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "svgpath": "^2.6.0",
+    "terser": "^5.46.2",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.10"
+  }
+}
