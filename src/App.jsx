@@ -45,30 +45,33 @@ const services = [
     },
     modalTitle: 'Método Rebuild',
     eyebrow: 'Transformacion fisica y personal',
-    subtitle: 'Reconstrucción física, hábitos sostenibles e identidad personal.',
+    subtitle: 'Reconstrucción física, hábitos sostenibles e identidad.',
     description:
       'Un programa para recuperar estructura, ordenar habitos y reconstruirse desde adentro con un proceso claro.',
-    longDescription:
-      'Método Rebuild es el programa principal de transformación física y personal. Está diseñado para mujeres profesionales, emprendedoras o personas con alta exigencia personal que quieren bajar grasa, mejorar su composición corporal, recuperar energía y dejar de vivir en modo automático.',
-    secondaryDescription:
-      'No es solo una dieta ni una rutina. Es un proceso estructurado para recuperar control, orden y coherencia.',
-    highlights: [
-      'transformación física y personal',
-      'estructura, hábitos y reconstrucción interna',
-      'plataforma completa y optimizada',
-      'dejar de vivir en modo automático',
+    descriptionRich: [
+      { text: 'Método Rebuild es un proceso para mujeres con alta exigencia personal que quieren ' },
+      { text: 'bajar grasa', mark: true },
+      { text: ', ' },
+      { text: 'recuperar energía', mark: true },
+      { text: ' y ' },
+      { text: 'dejar de vivir en modo automático', mark: true },
+      { text: '. No es una dieta ni una rutina aislada: es una ' },
+      { text: 'estructura completa', mark: true },
+      { text: ' para ordenar cuerpo, hábitos y mente.' },
     ],
     featureBlock: {
-      title: 'Plataforma Rebuild',
-      text: 'Una plataforma completa y optimizada para que el proceso no dependa de improvisación: seguimiento, recursos, clases, registros, herramientas prácticas y organización del avance en un solo lugar.',
+      title: 'Diferencial principal',
+      segments: [
+        { text: 'Incluye una ' },
+        { text: 'plataforma completa y optimizada', mark: true },
+        { text: ' para tener seguimiento, recursos, clases, registros y herramientas prácticas en un solo lugar.' },
+      ],
     },
     solves: [
       'Desorden con la alimentación.',
       'Falta de constancia.',
+      'Autosabotaje y todo o nada.',
       'Cansancio físico y mental.',
-      'Autosabotaje.',
-      'Todo o nada.',
-      'Falta de estructura diaria.',
       'Pérdida de confianza por intentos fallidos.',
     ],
     frameworkTitle: 'Método 3R',
@@ -111,28 +114,35 @@ const services = [
     },
     modalTitle: 'Asesorías Fitness Online',
     eyebrow: 'Entrenamiento, nutricion y seguimiento',
-    subtitle: 'Entrenamiento, nutrición y seguimiento para mejorar tu composición corporal.',
+    subtitle: 'Entrenamiento, nutrición y seguimiento personalizado.',
     description:
       'Planes personalizados para personas que necesitan una estrategia concreta, medible y adaptada a su vida real.',
-    longDescription:
-      'Las Asesorías Fitness Online están diseñadas para personas que quieren perder grasa, ganar masa muscular, mejorar su físico o entrenar con una estrategia clara, sin improvisar.',
-    secondaryDescription:
-      'Aquí el foco principal es el resultado físico: entrenar mejor, comer con más criterio y tener seguimiento para ajustar el proceso según la respuesta real del cuerpo.',
-    highlights: [
-      'resultado físico',
-      'entrenamiento, nutrición y seguimiento',
-      'estrategia adaptada a tu vida real',
-      'mejorar composición corporal',
-      'ajustes según la respuesta real del cuerpo',
+    descriptionRich: [
+      { text: 'Servicio para personas que quieren ' },
+      { text: 'mejorar su composición corporal', mark: true },
+      { text: ' con una ' },
+      { text: 'estrategia clara', mark: true },
+      { text: '. El foco está en ' },
+      { text: 'entrenar mejor', mark: true },
+      { text: ', ' },
+      { text: 'comer con criterio', mark: true },
+      { text: ' y ajustar el proceso según la ' },
+      { text: 'respuesta real del cuerpo', mark: true },
+      { text: '.' },
     ],
     solves: [
-      'Rutinas genéricas que no progresan.',
+      'Rutinas genéricas.',
       'Dietas difíciles de sostener.',
-      'Falta de claridad con cantidades, comidas y entrenamiento.',
       'Estancamiento físico.',
       'Entrenar sin saber si se está haciendo bien.',
-      'Falta de seguimiento y ajustes.',
+      'Falta de seguimiento.',
     ],
+    featureBlock: {
+      title: 'Diferencial principal',
+      segments: [
+        { text: 'Planes con distintos niveles de acompañamiento según la intensidad de seguimiento que la persona necesita.' },
+      ],
+    },
     frameworkTitle: 'Planes',
     framework: [
       {
@@ -177,31 +187,35 @@ const services = [
     },
     modalTitle: 'Protocolo Rebirth',
     eyebrow: 'Programa premium de 90 dias',
-    subtitle: 'Intervención premium de 90 días para rendimiento humano, control e identidad.',
+    subtitle: 'Rendimiento humano, control e identidad.',
     description:
       'Proceso para lideres, ejecutivos y emprendedores que necesitan optimizar energia, control e impacto.',
-    longDescription:
-      'Protocolo Rebirth es un proceso premium de 90 días para líderes, ejecutivos, emprendedores y personas de alta exigencia que necesitan optimizar su biología, recuperar control sobre su agenda y proyectar una identidad más sólida.',
-    secondaryDescription:
-      'No está diseñado para quien solo quiere una rutina. Está diseñado para quien entiende que su cuerpo, energía, hábitos, decisiones y presencia afectan su rendimiento personal y profesional.',
-    highlights: [
-      'intervención premium de 90 días',
-      'líderes, ejecutivos y emprendedores',
-      'energía, control e impacto',
-      'Bio-Optimización',
-      'Arquitectura de Control',
-      'Identidad e Impacto',
-      'presencia ejecutiva',
+    descriptionRich: [
+      { text: 'Proceso ' },
+      { text: 'premium de 90 días', mark: true },
+      { text: ' para ' },
+      { text: 'líderes, ejecutivos y emprendedores', mark: true },
+      { text: ' que necesitan ' },
+      { text: 'recuperar energía', mark: true },
+      { text: ', ' },
+      { text: 'controlar su agenda', mark: true },
+      { text: ' y proyectar una ' },
+      { text: 'identidad más sólida', mark: true },
+      { text: ' en su vida personal y profesional.' },
     ],
     solves: [
       'Falta de energía sostenida.',
-      'Desorden en sueño, alimentación y entrenamiento.',
       'Agenda reactiva.',
+      'Desorden en sueño, alimentación y entrenamiento.',
       'Drenadores de energía.',
       'Falta de presencia ejecutiva.',
-      'Pérdida de dirección.',
-      'Desconexión entre físico, mente y objetivos.',
     ],
+    featureBlock: {
+      title: 'Diferencial principal',
+      segments: [
+        { text: 'Integra bio-optimización, arquitectura de control e identidad estratégica en un solo proceso.' },
+      ],
+    },
     frameworkTitle: 'Fases',
     framework: [
       {
@@ -242,30 +256,35 @@ const services = [
     },
     modalTitle: 'E-books y recursos digitales',
     eyebrow: 'Herramientas practicas',
-    subtitle: 'Herramientas prácticas para empezar a comer mejor, moverte más y ordenar tus hábitos.',
+    subtitle: 'Herramientas prácticas para empezar con claridad.',
     description:
       'Materiales claros para simplificar decisiones de alimentacion, entrenamiento y construccion de habitos.',
-    longDescription:
-      'Los e-books y recursos digitales son una puerta de entrada para quienes quieren empezar con más claridad antes de entrar a un acompañamiento personalizado.',
-    secondaryDescription:
-      'No son documentos decorativos. Son herramientas simples, aplicables y diseñadas para ayudarte a tomar mejores decisiones con alimentación, movimiento, hábitos y pérdida de grasa.',
-    highlights: [
-      'herramientas prácticas',
-      'empezar con claridad',
-      'alimentación, movimiento y hábitos',
-      'Come. Muévete. Y Ya.',
-      'recetarios',
-      'guías de hábitos',
-      'recursos aplicables',
+    descriptionRich: [
+      { text: 'Recursos para personas que quieren empezar a ' },
+      { text: 'comer mejor', mark: true },
+      { text: ', ' },
+      { text: 'moverse más', mark: true },
+      { text: ' y ' },
+      { text: 'ordenar sus hábitos', mark: true },
+      { text: ' antes de entrar a un ' },
+      { text: 'acompañamiento personalizado', mark: true },
+      { text: '.' },
     ],
     solves: [
       'No saber por dónde empezar.',
       'Complicarse demasiado con la nutrición.',
       'Falta de ideas para comer mejor.',
-      'Falta de estructura básica.',
-      'Dependencia de motivación.',
       'Confusión por exceso de información.',
+      'Falta de estructura básica.',
     ],
+    featureBlock: {
+      title: 'Diferencial principal',
+      segments: [
+        { text: 'Material simple, aplicable y diseñado para ' },
+        { text: 'tomar mejores decisiones', mark: true },
+        { text: ' en la vida diaria.' },
+      ],
+    },
     frameworkTitle: 'Recursos',
     framework: [
       {
@@ -363,6 +382,9 @@ const testimonials = [
   },
 ];
 
+const featuredTestimonials = testimonials.slice(0, 3);
+const moreTestimonials = testimonials.slice(3);
+
 const aboutPhotos = [
   {
     src: '/about/01-escenario-classic.webp',
@@ -411,6 +433,11 @@ const aboutPhotos = [
   },
 ];
 
+const aboutMainPhoto = {
+  src: '/about/06-presencia.webp',
+  alt: 'Cristian Núñez hablando en escenario en blanco y negro',
+};
+
 function SectionHeader({ label, title, description }) {
   return (
     <div className="section-reveal mx-auto mb-10 max-w-3xl text-center sm:mb-14" data-section-reveal>
@@ -457,6 +484,25 @@ function ContactIcon({ type }) {
       <path d="M4.5 7.5A2.5 2.5 0 0 1 7 5h10a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 17 19H7a2.5 2.5 0 0 1-2.5-2.5v-9Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
       <path d="m6 8 6 5 6-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
+  );
+}
+
+function RichText({ segments, className = '' }) {
+  return (
+    <p className={className}>
+      {segments.map((segment, index) =>
+        segment.mark ? (
+          <mark
+            className="rounded-md bg-accent/18 px-1.5 py-0.5 font-semibold text-smoke ring-1 ring-accent/20"
+            key={`${segment.text}-${index}`}
+          >
+            {segment.text}
+          </mark>
+        ) : (
+          <span key={`${segment.text}-${index}`}>{segment.text}</span>
+        )
+      )}
+    </p>
   );
 }
 
@@ -517,25 +563,40 @@ function ServiceModal({ service, onClose }) {
           </button>
         </div>
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
           <div className={`space-y-5 text-base leading-8 ${theme.bodyText}`}>
-            <p>{service.longDescription}</p>
-            <p>{service.secondaryDescription}</p>
-
-            <div className="flex flex-wrap gap-2">
-              {service.highlights?.map((highlight) => (
-                <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${theme.badge}`} key={highlight}>
-                  {highlight}
-                </span>
-              ))}
+            <RichText segments={service.descriptionRich} className={`text-base leading-8 ${theme.bodyText}`} />
+            <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.08)] ${theme.panelStrong}`}>
+              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>
+                {service.featureBlock.title}
+              </h4>
+              <RichText segments={service.featureBlock.segments} className={`mt-3 leading-7 ${theme.bodyText}`} />
             </div>
+          </div>
+
+          <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
+            <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Qué resuelve</h4>
+            <ul className={`mt-4 space-y-3 text-sm leading-6 ${theme.bodyText}`}>
+              {service.solves.map((item) => (
+                <li className="flex gap-3" key={item}>
+                  <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${theme.dot}`} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="hidden">
+          <div className={`space-y-5 text-base leading-8 ${theme.bodyText}`}>
+            <RichText segments={service.descriptionRich} className={`text-base leading-8 ${theme.bodyText}`} />
 
             {service.featureBlock ? (
               <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.08)] ${theme.panelStrong}`}>
                 <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>
                   {service.featureBlock.title}
                 </h4>
-                <p className={`mt-3 leading-7 ${theme.bodyText}`}>{service.featureBlock.text}</p>
+                <RichText segments={service.featureBlock.segments} className={`mt-3 leading-7 ${theme.bodyText}`} />
               </div>
             ) : null}
 
@@ -623,8 +684,7 @@ function AboutCarousel() {
 
   return (
     <div
-      className="section-reveal group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/30"
-      data-section-reveal
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/30"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={(event) => {
@@ -678,8 +738,140 @@ function AboutCarousel() {
   );
 }
 
+function AboutStoryModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/82 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6" onClick={onClose} role="presentation">
+      <article
+        className="relative max-h-[92vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-white/12 bg-[linear-gradient(145deg,rgba(11,15,20,0.96),rgba(25,38,50,0.94))] p-5 shadow-premium sm:p-8"
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="about-modal-title"
+      >
+        <button className="absolute right-5 top-5 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-smoke transition duration-300 hover:border-accent/50 hover:bg-white/15" type="button" onClick={onClose} aria-label="Cerrar historia">
+          ×
+        </button>
+        <div className="max-h-[calc(92vh-2.5rem)] overflow-y-auto pr-1">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="pt-10 lg:pt-0">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
+              <h3 id="about-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
+                Mi historia no empezó en el accidente, pero ahí cambió todo.
+              </h3>
+              <div className="mt-7 space-y-5 text-base leading-8 text-muted">
+                <p>
+                  Soy Cristian Núñez, mentor en rendimiento humano y transformación de identidad. Durante años construí mi autoridad desde la disciplina, el entrenamiento y la competencia. He acompañado más de 2.000 procesos de transformación física y personal, y también he sido 15 veces campeón en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
+                </p>
+                <p>Pero mi historia no se sostiene solo en medallas.</p>
+                <p>
+                  En septiembre de 2024 tuve un accidente grave. Pasé casi un mes en UCI, viví momentos críticos y, después de salir del hospital, tuve una recaída que exigió otra cirugía. Perdí autonomía. Mi cuerpo dejó de responder como antes. Lo básico volvió a ser difícil.
+                </p>
+                <p>Ese proceso me obligó a mirar la reconstrucción de otra forma. Ya no desde el ego del rendimiento, sino desde la humildad de empezar otra vez.</p>
+                <p>
+                  Hoy acompaño desde ese lugar: con estructura, criterio y verdad. No vendo promesas rápidas. Trabajo con personas que necesitan ordenar su cuerpo, sus hábitos y su identidad para sostener resultados reales.
+                </p>
+                <p className="font-semibold text-smoke">La reconstrucción no es teoría para mí. Es experiencia vivida.</p>
+              </div>
+            </div>
+            <AboutCarousel />
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+}
+
+function TestimonialCard({ testimonial, priority = false }) {
+  return (
+    <article className="group rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)]">
+      <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#070b10]">
+        <img
+          className="h-[460px] w-full object-contain object-top transition duration-500 group-hover:scale-[1.015] sm:h-[500px] lg:h-[520px]"
+          src={testimonial.image}
+          alt={`Testimonio de ${testimonial.name}`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      </div>
+      <div className="px-2 pb-2 pt-5">
+        <h3 className="text-lg font-semibold text-smoke">{testimonial.name}</h3>
+        <p className="mt-2 text-sm leading-6 text-muted">"{testimonial.summary}"</p>
+      </div>
+    </article>
+  );
+}
+
+function TestimonialsModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/82 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6" onClick={onClose} role="presentation">
+      <article
+        className="relative max-h-[92vh] w-full max-w-7xl overflow-hidden rounded-3xl border border-white/12 bg-[linear-gradient(145deg,rgba(11,15,20,0.96),rgba(25,38,50,0.94))] p-5 shadow-premium sm:p-8"
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="testimonials-modal-title"
+      >
+        <div className="mb-6 flex items-start justify-between gap-5">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Testimonios</p>
+            <h3 id="testimonials-modal-title" className="text-3xl font-semibold text-smoke sm:text-5xl">Más historias reales</h3>
+          </div>
+          <button className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-smoke transition duration-300 hover:border-accent/50 hover:bg-white/15" type="button" onClick={onClose} aria-label="Cerrar testimonios">
+            ×
+          </button>
+        </div>
+        <div className="max-h-[calc(92vh-9rem)] overflow-y-auto pr-1">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {moreTestimonials.map((testimonial) => (
+              <TestimonialCard testimonial={testimonial} key={testimonial.image} />
+            ))}
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+}
+
 function App() {
   const [selectedService, setSelectedService] = useState(null);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [areTestimonialsOpen, setAreTestimonialsOpen] = useState(false);
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('[data-section-reveal]'));
@@ -858,6 +1050,25 @@ function App() {
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-6xl gap-9 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:p-14">
+          <figure className="section-reveal overflow-hidden rounded-3xl border border-white/10 bg-ink shadow-premium" data-section-reveal>
+            <img className="aspect-[4/5] h-full w-full object-cover grayscale" src={aboutMainPhoto.src} alt={aboutMainPhoto.alt} loading="lazy" decoding="async" />
+          </figure>
+
+          <div className="section-reveal flex flex-col justify-center" data-section-reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
+            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Sobre mí</h2>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación y he sido 15 veces campeón en fisicoculturismo. Pero mi autoridad no viene solo de los logros: también viene de haber tenido que reconstruirme desde cero.
+            </p>
+            <button className="btn-primary mt-8 w-fit" type="button" onClick={() => setIsAboutOpen(true)}>
+              Leer mi historia completa
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="hidden px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-10 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
           <AboutCarousel />
 
@@ -919,27 +1130,20 @@ function App() {
             title="Historias Reales"
             description="Evidencia cercana del proceso: seguimiento, ajustes, constancia y cambios sostenidos."
           />
-          <div className="-mx-5 flex snap-x gap-5 overflow-x-auto px-5 pb-5 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3 xl:grid-cols-4">
-            {testimonials.map((testimonial, index) => (
-              <article
-                className="group min-w-[82%] snap-center rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)] sm:min-w-0"
-                key={testimonial.image}
-              >
-                <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#070b10]">
-                  <img
-                    className="h-[460px] w-full object-contain object-top transition duration-500 group-hover:scale-[1.015] sm:h-[500px] lg:h-[520px]"
-                    src={testimonial.image}
-                    alt={`Testimonio de ${testimonial.name}`}
-                    loading={index < 4 ? 'eager' : 'lazy'}
-                    decoding="async"
-                  />
-                </div>
-                <div className="px-2 pb-2 pt-5">
-                  <h3 className="text-lg font-semibold text-smoke">{testimonial.name}</h3>
-                  <p className="mt-2 text-sm leading-6 text-muted">"{testimonial.summary}"</p>
-                </div>
-              </article>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {featuredTestimonials.map((testimonial, index) => (
+              <TestimonialCard testimonial={testimonial} priority={index < 3} key={testimonial.image} />
             ))}
+            <button
+              className="group flex min-h-[620px] cursor-pointer flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/[0.055] p-6 text-center shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.075] hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)]"
+              type="button"
+              onClick={() => setAreTestimonialsOpen(true)}
+              aria-label="Ver más testimonios"
+            >
+              <span className="text-7xl font-light leading-none text-accent transition duration-300 group-hover:scale-105">+</span>
+              <span className="mt-5 text-lg font-semibold text-smoke">Ver más testimonios</span>
+              <span className="mt-3 max-w-xs text-sm leading-6 text-muted">Más procesos, mensajes y evidencia real del acompañamiento.</span>
+            </button>
           </div>
         </div>
       </section>
@@ -975,6 +1179,8 @@ function App() {
       </section>
 
       <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
+      <AboutStoryModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
+      <TestimonialsModal isOpen={areTestimonialsOpen} onClose={() => setAreTestimonialsOpen(false)} />
     </main>
   );
 }
