@@ -8,6 +8,8 @@ const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
 const DIGITAL_RESOURCES_URL = '#servicios';
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+const REBUILD_WHATSAPP_MESSAGE = 'Hola Cristian, quiero agendar una videollamada para conocer sobre tu programa';
+const rebuildWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(REBUILD_WHATSAPP_MESSAGE)}`;
 
 const focusLevels = [
   {
@@ -28,17 +30,18 @@ const services = [
   {
     title: 'Metodo Rebuild',
     theme: {
-      shell: 'border-[#9bb5cc]/55 bg-[#eef5fa] text-[#0b1722] shadow-[0_30px_100px_rgba(13,47,80,0.24)]',
+      shell: 'border-[#7096c3]/35 bg-[linear-gradient(145deg,#0b1722_0%,#0d2f50_48%,#192632_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(6,20,35,0.62)]',
       smokeA: 'bg-[#7096c3]/18',
-      smokeB: 'bg-[#0d2f50]/10',
-      accentText: 'text-[#0d2f50]',
-      titleText: 'text-[#0b1722]',
-      bodyText: 'text-[#34495c]',
-      panel: 'border-[#9bb5cc]/45 bg-white/58',
-      panelStrong: 'border-[#0d2f50]/18 bg-[#dfeaf3]/72',
-      dot: 'bg-[#0d2f50]',
-      cta: 'bg-[#0d2f50] text-[#f4f6f8] hover:bg-[#192632] focus:ring-[#7096c3]',
-      close: 'border-[#0d2f50]/15 bg-white/60 text-[#0b1722] hover:border-[#0d2f50]/35 hover:bg-[#dfeaf3]',
+      smokeB: 'bg-[#f4f6f8]/10',
+      accentText: 'text-[#a9c8e8]',
+      titleText: 'text-[#f4f6f8]',
+      bodyText: 'text-[#d7e2ee]',
+      panel: 'border-white/12 bg-white/[0.075]',
+      panelStrong: 'border-[#7096c3]/25 bg-[#7096c3]/12',
+      dot: 'bg-[#a9c8e8]',
+      badge: 'border-[#7096c3]/35 bg-[#7096c3]/14 text-[#f4f6f8]',
+      cta: 'bg-[#f4f6f8] text-[#0d2f50] hover:bg-[#a9c8e8] focus:ring-[#7096c3]',
+      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#7096c3]/50 hover:bg-white/15',
     },
     modalTitle: 'Método Rebuild',
     eyebrow: 'Transformacion fisica y personal',
@@ -49,6 +52,16 @@ const services = [
       'Método Rebuild es el programa principal de transformación física y personal. Está diseñado para mujeres profesionales, emprendedoras o personas con alta exigencia personal que quieren bajar grasa, mejorar su composición corporal, recuperar energía y dejar de vivir en modo automático.',
     secondaryDescription:
       'No es solo una dieta ni una rutina. Es un proceso estructurado para recuperar control, orden y coherencia.',
+    highlights: [
+      'transformación física y personal',
+      'estructura, hábitos y reconstrucción interna',
+      'plataforma completa y optimizada',
+      'dejar de vivir en modo automático',
+    ],
+    featureBlock: {
+      title: 'Plataforma Rebuild',
+      text: 'Una plataforma completa y optimizada para que el proceso no dependa de improvisación: seguimiento, recursos, clases, registros, herramientas prácticas y organización del avance en un solo lugar.',
+    },
     solves: [
       'Desorden con la alimentación.',
       'Falta de constancia.',
@@ -76,24 +89,25 @@ const services = [
     audience:
       'Para personas que no solo quieren verse mejor, sino volver a sentirse fuertes, ordenadas y dueñas de sí mismas.',
     cta: 'Quiero información sobre Rebuild',
-    ctaUrl: SCHEDULE_CALL_URL,
+    ctaUrl: rebuildWhatsappUrl,
     details: ['Regular la Biologia', 'Reordenar los habitos', 'Reconstruirse desde adentro'],
     footer: 'Etapa 1 - Reconstruccion / Etapa 2 - Direccion',
   },
   {
     title: 'Asesorias Fitness Online',
     theme: {
-      shell: 'border-[#aebfb3]/60 bg-[#eef5ef] text-[#101a14] shadow-[0_30px_100px_rgba(38,74,51,0.2)]',
-      smokeA: 'bg-[#829d89]/18',
-      smokeB: 'bg-[#45644e]/10',
-      accentText: 'text-[#45644e]',
-      titleText: 'text-[#101a14]',
-      bodyText: 'text-[#3e5144]',
-      panel: 'border-[#aebfb3]/50 bg-white/60',
-      panelStrong: 'border-[#45644e]/18 bg-[#dfeae1]/75',
-      dot: 'bg-[#45644e]',
-      cta: 'bg-[#45644e] text-[#f4f6f8] hover:bg-[#2f4937] focus:ring-[#829d89]',
-      close: 'border-[#45644e]/15 bg-white/60 text-[#101a14] hover:border-[#45644e]/35 hover:bg-[#dfeae1]',
+      shell: 'border-[#8fb99a]/35 bg-[linear-gradient(145deg,#0b1710_0%,#254434_48%,#506757_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(10,35,21,0.58)]',
+      smokeA: 'bg-[#8fb99a]/18',
+      smokeB: 'bg-[#f4f6f8]/9',
+      accentText: 'text-[#bfd8c4]',
+      titleText: 'text-[#f4f6f8]',
+      bodyText: 'text-[#dce9df]',
+      panel: 'border-white/12 bg-white/[0.075]',
+      panelStrong: 'border-[#8fb99a]/25 bg-[#8fb99a]/12',
+      dot: 'bg-[#bfd8c4]',
+      badge: 'border-[#8fb99a]/35 bg-[#8fb99a]/14 text-[#f4f6f8]',
+      cta: 'bg-[#f4f6f8] text-[#254434] hover:bg-[#bfd8c4] focus:ring-[#8fb99a]',
+      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#8fb99a]/50 hover:bg-white/15',
     },
     modalTitle: 'Asesorías Fitness Online',
     eyebrow: 'Entrenamiento, nutricion y seguimiento',
@@ -104,6 +118,13 @@ const services = [
       'Las Asesorías Fitness Online están diseñadas para personas que quieren perder grasa, ganar masa muscular, mejorar su físico o entrenar con una estrategia clara, sin improvisar.',
     secondaryDescription:
       'Aquí el foco principal es el resultado físico: entrenar mejor, comer con más criterio y tener seguimiento para ajustar el proceso según la respuesta real del cuerpo.',
+    highlights: [
+      'resultado físico',
+      'entrenamiento, nutrición y seguimiento',
+      'estrategia adaptada a tu vida real',
+      'mejorar composición corporal',
+      'ajustes según la respuesta real del cuerpo',
+    ],
     solves: [
       'Rutinas genéricas que no progresan.',
       'Dietas difíciles de sostener.',
@@ -141,17 +162,18 @@ const services = [
   {
     title: 'Protocolo Rebirth',
     theme: {
-      shell: 'border-[#d3bd8f]/60 bg-[#f6efdF] text-[#21180d] shadow-[0_30px_100px_rgba(93,68,32,0.2)]',
-      smokeA: 'bg-[#c9a96a]/18',
-      smokeB: 'bg-[#6f562d]/10',
-      accentText: 'text-[#6f562d]',
-      titleText: 'text-[#21180d]',
-      bodyText: 'text-[#5a4a34]',
-      panel: 'border-[#d3bd8f]/50 bg-white/58',
-      panelStrong: 'border-[#6f562d]/18 bg-[#efe3c9]/78',
-      dot: 'bg-[#6f562d]',
-      cta: 'bg-[#6f562d] text-[#f4f6f8] hover:bg-[#4e3c22] focus:ring-[#c9a96a]',
-      close: 'border-[#6f562d]/15 bg-white/60 text-[#21180d] hover:border-[#6f562d]/35 hover:bg-[#efe3c9]',
+      shell: 'border-[#c9a96a]/38 bg-[linear-gradient(145deg,#1b140a_0%,#5f4725_48%,#8a7244_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(55,35,12,0.58)]',
+      smokeA: 'bg-[#d9c08a]/18',
+      smokeB: 'bg-[#f4f6f8]/9',
+      accentText: 'text-[#ead8aa]',
+      titleText: 'text-[#f4f6f8]',
+      bodyText: 'text-[#efe4ca]',
+      panel: 'border-white/12 bg-white/[0.075]',
+      panelStrong: 'border-[#d9c08a]/25 bg-[#d9c08a]/12',
+      dot: 'bg-[#ead8aa]',
+      badge: 'border-[#d9c08a]/35 bg-[#d9c08a]/14 text-[#f4f6f8]',
+      cta: 'bg-[#f4f6f8] text-[#5f4725] hover:bg-[#ead8aa] focus:ring-[#d9c08a]',
+      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#d9c08a]/50 hover:bg-white/15',
     },
     modalTitle: 'Protocolo Rebirth',
     eyebrow: 'Programa premium de 90 dias',
@@ -162,6 +184,15 @@ const services = [
       'Protocolo Rebirth es un proceso premium de 90 días para líderes, ejecutivos, emprendedores y personas de alta exigencia que necesitan optimizar su biología, recuperar control sobre su agenda y proyectar una identidad más sólida.',
     secondaryDescription:
       'No está diseñado para quien solo quiere una rutina. Está diseñado para quien entiende que su cuerpo, energía, hábitos, decisiones y presencia afectan su rendimiento personal y profesional.',
+    highlights: [
+      'intervención premium de 90 días',
+      'líderes, ejecutivos y emprendedores',
+      'energía, control e impacto',
+      'Bio-Optimización',
+      'Arquitectura de Control',
+      'Identidad e Impacto',
+      'presencia ejecutiva',
+    ],
     solves: [
       'Falta de energía sostenida.',
       'Desorden en sueño, alimentación y entrenamiento.',
@@ -196,17 +227,18 @@ const services = [
   {
     title: 'E-books y recursos digitales',
     theme: {
-      shell: 'border-[#b8aec9]/60 bg-[#f1eef7] text-[#181421] shadow-[0_30px_100px_rgba(67,53,92,0.2)]',
-      smokeA: 'bg-[#9c8fb3]/18',
-      smokeB: 'bg-[#594d73]/10',
-      accentText: 'text-[#594d73]',
-      titleText: 'text-[#181421]',
-      bodyText: 'text-[#4f485c]',
-      panel: 'border-[#b8aec9]/50 bg-white/60',
-      panelStrong: 'border-[#594d73]/18 bg-[#e5dfef]/76',
-      dot: 'bg-[#594d73]',
-      cta: 'bg-[#594d73] text-[#f4f6f8] hover:bg-[#403852] focus:ring-[#9c8fb3]',
-      close: 'border-[#594d73]/15 bg-white/60 text-[#181421] hover:border-[#594d73]/35 hover:bg-[#e5dfef]',
+      shell: 'border-[#9c8fb3]/38 bg-[linear-gradient(145deg,#171321_0%,#44395d_48%,#675b80_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(35,26,52,0.58)]',
+      smokeA: 'bg-[#b9a9d0]/18',
+      smokeB: 'bg-[#f4f6f8]/9',
+      accentText: 'text-[#dbcff0]',
+      titleText: 'text-[#f4f6f8]',
+      bodyText: 'text-[#e6def0]',
+      panel: 'border-white/12 bg-white/[0.075]',
+      panelStrong: 'border-[#b9a9d0]/25 bg-[#b9a9d0]/12',
+      dot: 'bg-[#dbcff0]',
+      badge: 'border-[#b9a9d0]/35 bg-[#b9a9d0]/14 text-[#f4f6f8]',
+      cta: 'bg-[#f4f6f8] text-[#44395d] hover:bg-[#dbcff0] focus:ring-[#b9a9d0]',
+      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#b9a9d0]/50 hover:bg-white/15',
     },
     modalTitle: 'E-books y recursos digitales',
     eyebrow: 'Herramientas practicas',
@@ -217,6 +249,15 @@ const services = [
       'Los e-books y recursos digitales son una puerta de entrada para quienes quieren empezar con más claridad antes de entrar a un acompañamiento personalizado.',
     secondaryDescription:
       'No son documentos decorativos. Son herramientas simples, aplicables y diseñadas para ayudarte a tomar mejores decisiones con alimentación, movimiento, hábitos y pérdida de grasa.',
+    highlights: [
+      'herramientas prácticas',
+      'empezar con claridad',
+      'alimentación, movimiento y hábitos',
+      'Come. Muévete. Y Ya.',
+      'recetarios',
+      'guías de hábitos',
+      'recursos aplicables',
+    ],
     solves: [
       'No saber por dónde empezar.',
       'Complicarse demasiado con la nutrición.',
@@ -251,28 +292,128 @@ const services = [
 
 const testimonials = [
   {
-    name: 'Nombre del cliente',
-    result: 'Resultado alcanzado',
-    quote: 'Frase testimonial editable sobre el proceso, el acompanamiento y el cambio logrado.',
-    photo: '',
+    name: 'Sebastian',
+    summary: 'Bajo 3 kilos y volvio a sentirse mejor con su ropa.',
+    image: '/testimonials/01-testimonial.webp',
   },
   {
-    name: 'Nombre del cliente',
-    result: 'Resultado alcanzado',
-    quote: 'Frase testimonial editable sobre la claridad, la estructura y el seguimiento recibido.',
-    photo: '',
+    name: 'Juan Libreros',
+    summary: 'Celebro resultados fisicos claros y mas confianza en el proceso.',
+    image: '/testimonials/02-testimonial.webp',
   },
   {
-    name: 'Nombre del cliente',
-    result: 'Resultado alcanzado',
-    quote: 'Frase testimonial editable sobre como el programa encajo con una vida ocupada.',
-    photo: '',
+    name: 'Sahira Moreno',
+    summary: 'Aprendio a ajustar su alimentacion sin perder estructura.',
+    image: '/testimonials/03-testimonial.webp',
+  },
+  {
+    name: 'Juan Camilo Ortegon',
+    summary: 'Reconocio el acompanamiento como un pilar para avanzar.',
+    image: '/testimonials/04-testimonial.webp',
+  },
+  {
+    name: 'Johana Florez',
+    summary: 'Sostuvo 12 semanas gracias al seguimiento constante.',
+    image: '/testimonials/05-testimonial.webp',
+  },
+  {
+    name: 'Nathalia Garcia',
+    summary: 'Vio progreso real en una semana de entrenamiento exigente.',
+    image: '/testimonials/06-testimonial.webp',
+  },
+  {
+    name: 'Sandra Garcia',
+    summary: 'Se sintio mejor, menos inflamada y con cambios visibles.',
+    image: '/testimonials/07-testimonial.webp',
+  },
+  {
+    name: 'Alumna Rebuild',
+    summary: 'Noto mas confianza, menos grasa y mejores reportes de salud.',
+    image: '/testimonials/08-testimonial.webp',
+  },
+  {
+    name: 'Proceso fisico',
+    summary: 'El cambio visual mostro constancia y direccion.',
+    image: '/testimonials/09-testimonial.webp',
+  },
+  {
+    name: 'Alumna de coaching',
+    summary: 'Valoro habitos duraderos y una forma distinta de ver el proceso.',
+    image: '/testimonials/10-testimonial.webp',
+  },
+  {
+    name: 'Proceso femenino',
+    summary: 'Transformacion visible con mejor composicion corporal.',
+    image: '/testimonials/11-testimonial.webp',
+  },
+  {
+    name: 'Deborah Gonzales',
+    summary: 'Agradecio el apoyo y la guia durante el proceso.',
+    image: '/testimonials/12-testimonial.webp',
+  },
+  {
+    name: 'Respuesta de historia',
+    summary: 'Reconocio el valor del metodo y del acompanamiento.',
+    image: '/testimonials/13-testimonial.webp',
+  },
+  {
+    name: 'Paola Amador',
+    summary: 'Sintio menos inflamacion, mas dureza y avances reales.',
+    image: '/testimonials/14-testimonial.webp',
+  },
+];
+
+const aboutPhotos = [
+  {
+    src: '/about/01-escenario-classic.webp',
+    label: '15x campeón',
+    alt: 'Cristian Núñez compitiendo en escenario de fisicoculturismo',
+  },
+  {
+    src: '/about/02-mens-physique.webp',
+    label: 'Disciplina',
+    alt: 'Cristian Núñez en tarima de Men’s Physique',
+  },
+  {
+    src: '/about/03-medallas.webp',
+    label: 'Logros construidos',
+    alt: 'Cristian Núñez junto a trofeos y medallas deportivas',
+  },
+  {
+    src: '/about/04-evento-audiencia.webp',
+    label: 'Más de 2.000 procesos acompañados',
+    alt: 'Cristian Núñez frente a una audiencia en un evento',
+  },
+  {
+    src: '/about/06-presencia.webp',
+    label: 'Autoridad en campo',
+    alt: 'Cristian Núñez hablando en escenario',
+  },
+  {
+    src: '/about/07-revision-medica.webp',
+    label: 'Accidente 2024',
+    alt: 'Cristian Núñez en revisión médica durante su proceso de recuperación',
+  },
+  {
+    src: '/about/08-uci.webp',
+    label: 'UCI y reconstrucción',
+    alt: 'Cristian Núñez durante una etapa crítica en clínica',
+  },
+  {
+    src: '/about/09-regreso.webp',
+    label: 'Regreso',
+    alt: 'Cristian Núñez en su regreso a escenarios de formación',
+  },
+  {
+    src: '/about/10-equipo.webp',
+    label: 'Nueva etapa',
+    alt: 'Cristian Núñez junto a un equipo profesional en evento',
   },
 ];
 
 function SectionHeader({ label, title, description }) {
   return (
-    <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+    <div className="section-reveal mx-auto mb-10 max-w-3xl text-center sm:mb-14" data-section-reveal>
       <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">{label}</p>
       <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-4xl lg:text-5xl">{title}</h2>
       {description ? <p className="mt-5 text-base leading-8 text-muted sm:text-lg">{description}</p> : null}
@@ -381,6 +522,23 @@ function ServiceModal({ service, onClose }) {
             <p>{service.longDescription}</p>
             <p>{service.secondaryDescription}</p>
 
+            <div className="flex flex-wrap gap-2">
+              {service.highlights?.map((highlight) => (
+                <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${theme.badge}`} key={highlight}>
+                  {highlight}
+                </span>
+              ))}
+            </div>
+
+            {service.featureBlock ? (
+              <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.08)] ${theme.panelStrong}`}>
+                <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>
+                  {service.featureBlock.title}
+                </h4>
+                <p className={`mt-3 leading-7 ${theme.bodyText}`}>{service.featureBlock.text}</p>
+              </div>
+            ) : null}
+
             <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
               <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Para quién es</h4>
               <p className={`mt-3 leading-7 ${theme.bodyText}`}>{service.audience}</p>
@@ -404,7 +562,7 @@ function ServiceModal({ service, onClose }) {
               <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>{service.frameworkTitle}</h4>
               <div className="mt-4 space-y-4">
                 {service.framework.map((item, index) => (
-                  <div className="border-b border-black/10 pb-4 last:border-b-0 last:pb-0" key={item.title}>
+                  <div className="border-b border-white/12 pb-4 last:border-b-0 last:pb-0" key={item.title}>
                     <p className={`text-sm font-semibold ${theme.titleText}`}>
                       {index + 1}. {item.title}
                     </p>
@@ -416,7 +574,7 @@ function ServiceModal({ service, onClose }) {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/12 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className={`text-sm ${theme.bodyText}`}>Haz clic para avanzar con este servicio.</p>
           <a className={`inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white ${theme.cta}`} href={service.ctaUrl} target={isExternalCta ? '_blank' : undefined} rel={isExternalCta ? 'noreferrer' : undefined}>
             {service.cta}
@@ -428,8 +586,121 @@ function ServiceModal({ service, onClose }) {
   );
 }
 
+function AboutCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [touchStart, setTouchStart] = useState(null);
+
+  useEffect(() => {
+    if (isPaused) return undefined;
+
+    const timer = window.setInterval(() => {
+      setCurrentSlide((slide) => (slide + 1) % aboutPhotos.length);
+    }, 4200);
+
+    return () => window.clearInterval(timer);
+  }, [isPaused]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+    setIsPaused(true);
+  };
+
+  const handleTouchEnd = (event) => {
+    if (touchStart === null) return;
+    const touchEnd = event.changedTouches[0]?.clientX ?? touchStart;
+    const delta = touchStart - touchEnd;
+
+    if (Math.abs(delta) > 42) {
+      setCurrentSlide((slide) => {
+        if (delta > 0) return (slide + 1) % aboutPhotos.length;
+        return (slide - 1 + aboutPhotos.length) % aboutPhotos.length;
+      });
+    }
+
+    setTouchStart(null);
+  };
+
+  return (
+    <div
+      className="section-reveal group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/30"
+      data-section-reveal
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={(event) => {
+        setIsPaused(true);
+        setTouchStart(event.touches[0]?.clientX ?? null);
+      }}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-ink sm:aspect-[5/4] lg:aspect-[4/5]">
+        <div
+          className="flex h-full transition-transform duration-700 ease-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {aboutPhotos.map((photo, index) => (
+            <figure className="relative h-full min-w-full" key={photo.src}>
+              <img
+                className="h-full w-full object-cover"
+                src={photo.src}
+                alt={photo.alt}
+                loading={index < 2 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,15,20,0.08)_0%,rgba(11,15,20,0.12)_45%,rgba(11,15,20,0.72)_100%)]" />
+              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-ink/45 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-smoke shadow-[0_14px_40px_rgba(0,0,0,0.28)] backdrop-blur-md">
+                {photo.label}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-4 flex items-center justify-between gap-4 px-1">
+        <div className="flex gap-2">
+          {aboutPhotos.map((photo, index) => (
+            <button
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                currentSlide === index ? 'w-8 bg-accent' : 'w-2.5 bg-white/25 hover:bg-white/45'
+              }`}
+              key={photo.src}
+              type="button"
+              onClick={() => goToSlide(index)}
+              aria-label={`Ver foto ${index + 1}`}
+            />
+          ))}
+        </div>
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+          {String(currentSlide + 1).padStart(2, '0')} / {String(aboutPhotos.length).padStart(2, '0')}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [selectedService, setSelectedService] = useState(null);
+
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll('[data-section-reveal]'));
+    if (!elements.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.22, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-smoke">
@@ -554,7 +825,7 @@ function App() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             label="Servicios"
-            title="Programas y recursos para distintos momentos del proceso."
+            title="Programas y Servicios"
             description="Cada linea de trabajo tiene una estructura distinta, pero comparte el mismo principio: claridad, seguimiento y ejecucion."
           />
           <div className="grid gap-5 lg:grid-cols-2">
@@ -587,40 +858,86 @@ function App() {
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-10 rounded-3xl border border-white/10 bg-navy/55 p-7 sm:p-10 lg:grid-cols-[0.82fr_1.18fr] lg:p-14">
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mi</p>
-            <h2 className="text-3xl font-semibold text-smoke sm:text-5xl">Experiencia, estructura y criterio.</h2>
-          </div>
-          <div className="space-y-6 text-base leading-8 text-muted sm:text-lg">
-            <p>
-              Soy Cristian Núñez, mentor en rendimiento humano y transformacion de identidad. He acompanado mas de
-              2.000 procesos de transformacion fisica y personal.
-            </p>
-            <p>
-              Tambien he sido atleta de fisicoculturismo, 15 veces campeon en categorias como Fitness Model, Classic
-              Bodybuilding y Men's Physique, con experiencia en escenarios nacionales e internacionales.
-            </p>
-            <p>
-              Mi trabajo no se basa en prometer cambios rapidos. Se basa en estructura, habitos, seguimiento y
-              confrontar con honestidad lo que esta impidiendo que una persona avance.
-            </p>
+        <div className="mx-auto grid max-w-7xl gap-10 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
+          <AboutCarousel />
+
+          <div className="section-reveal flex flex-col justify-center" data-section-reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
+            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
+              Mi autoridad no viene solo del rendimiento. También viene de haber tenido que reconstruirme.
+            </h2>
+
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+                <p className="text-2xl font-semibold text-smoke">2.000+</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">procesos acompañados</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+                <p className="text-2xl font-semibold text-smoke">15x</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">campeón</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+                <p className="text-2xl font-semibold text-smoke">2024</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">reconstrucción real</p>
+              </div>
+            </div>
+
+            <div className="mt-8 space-y-5 text-base leading-8 text-muted sm:text-lg">
+              <p>
+                Soy Cristian Núñez. Durante años mi autoridad estuvo ligada al rendimiento: más de 2.000 procesos de
+                transformación física y personal acompañados, una carrera como atleta de fisicoculturismo y 15 títulos
+                en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
+              </p>
+              <p>
+                Pero mi historia no se queda en los logros. En septiembre de 2024 tuve un accidente muy fuerte. Pasé
+                casi un mes en UCI, viví momentos críticos y, después de salir del hospital, una recaída exigió otra
+                cirugía. Ese proceso me enfrentó a la pérdida de autonomía, a la fragilidad del cuerpo y a una
+                reconstrucción real desde cero.
+              </p>
+              <p>
+                Esa experiencia me hizo más humilde, más consciente y más claro en mi forma de acompañar. Hoy mi
+                trabajo no se basa en promesas rápidas, sino en estructura, criterio, acompañamiento y reconstrucción
+                real.
+              </p>
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-accent/25 bg-accent/10 p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Lo que sostiene el método</p>
+              <p className="mt-3 leading-7 text-smoke">
+                Disciplina, experiencia vivida y una mirada más humana del proceso: no solo cambiar el cuerpo, sino
+                construir una estructura que una persona pueda sostener cuando la vida deja de estar bajo control.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader label="Testimonios" title="Historias editables para mostrar evidencia del proceso." />
-          <div className="grid gap-5 md:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <article className="card" key={testimonial.name + testimonial.result}>
-                <div className="mb-6 h-16 w-16 rounded-full border border-white/10 bg-deep/80">
-                  {testimonial.photo ? <img className="h-full w-full rounded-full object-cover" src={testimonial.photo} alt={testimonial.name} /> : null}
+          <SectionHeader
+            label="Testimonios"
+            title="Historias Reales"
+            description="Evidencia cercana del proceso: seguimiento, ajustes, constancia y cambios sostenidos."
+          />
+          <div className="-mx-5 flex snap-x gap-5 overflow-x-auto px-5 pb-5 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3 xl:grid-cols-4">
+            {testimonials.map((testimonial, index) => (
+              <article
+                className="group min-w-[82%] snap-center rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)] sm:min-w-0"
+                key={testimonial.image}
+              >
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#070b10]">
+                  <img
+                    className="h-[460px] w-full object-contain object-top transition duration-500 group-hover:scale-[1.015] sm:h-[500px] lg:h-[520px]"
+                    src={testimonial.image}
+                    alt={`Testimonio de ${testimonial.name}`}
+                    loading={index < 4 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-smoke">{testimonial.name}</h3>
-                <p className="mt-1 text-sm font-semibold text-accent">{testimonial.result}</p>
-                <p className="mt-5 leading-7 text-muted">"{testimonial.quote}"</p>
+                <div className="px-2 pb-2 pt-5">
+                  <h3 className="text-lg font-semibold text-smoke">{testimonial.name}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">"{testimonial.summary}"</p>
+                </div>
               </article>
             ))}
           </div>
@@ -629,8 +946,10 @@ function App() {
 
       <section className="px-5 py-20 sm:px-8 lg:px-12" id="contacto">
         <div className="mx-auto max-w-4xl rounded-3xl border border-accent/30 bg-[linear-gradient(135deg,rgba(13,47,80,0.9),rgba(25,38,50,0.92))] p-7 text-center shadow-premium sm:p-12">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Contacto</p>
-          <h2 className="text-3xl font-semibold text-smoke sm:text-5xl">Hablemos de la estructura que necesitas ahora.</h2>
+          <div className="section-reveal" data-section-reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Contacto</p>
+            <h2 className="text-3xl font-semibold text-smoke sm:text-5xl">Hablemos de la estructura que necesitas ahora.</h2>
+          </div>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
             Puedes agendar una llamada, escribirme por WhatsApp o contactarme por Instagram y correo.
           </p>
