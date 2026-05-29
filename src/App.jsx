@@ -1,6 +1,7 @@
 const WHATSAPP_NUMBER = '573001112233';
-const SCHEDULE_CALL_URL = 'mailto:coachingcristian@gmail.com?subject=Quiero%20agendar%20una%20llamada';
+const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
 const WHATSAPP_MESSAGE = 'Hola Cristian, quiero informacion sobre tus programas de coaching.';
+const PROFILE_IMAGE = '/cristian-nunez-banner.png';
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
@@ -93,8 +94,22 @@ function App() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-ink to-transparent" />
 
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 border-b border-white/10 pb-5">
-          <a href="#" className="text-sm font-semibold uppercase tracking-[0.26em] text-smoke">
-            Cristian Núñez
+          <a href="#" className="group flex min-w-0 items-center gap-3">
+            <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl border border-accent/35 bg-white/5 shadow-[0_18px_40px_rgba(0,0,0,0.28)]">
+              <img
+                className="h-full w-full object-cover object-[50%_18%] transition duration-500 group-hover:scale-105"
+                src={PROFILE_IMAGE}
+                alt="Cristian Núñez"
+              />
+            </span>
+            <span className="min-w-0">
+              <span className="block text-sm font-semibold uppercase tracking-[0.22em] text-smoke sm:text-base">
+                Cristian Núñez
+              </span>
+              <span className="mt-1 hidden text-xs font-medium uppercase tracking-[0.18em] text-accent sm:block">
+                Rendimiento humano
+              </span>
+            </span>
           </a>
           <div className="hidden items-center gap-8 text-sm text-muted md:flex">
             <a className="transition hover:text-smoke" href="#enfoque">
