@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
@@ -39,7 +39,6 @@ const services = [
       panel: 'border-white/12 bg-white/[0.075]',
       panelStrong: 'border-[#7096c3]/25 bg-[#7096c3]/12',
       dot: 'bg-[#a9c8e8]',
-      badge: 'border-[#7096c3]/35 bg-[#7096c3]/14 text-[#f4f6f8]',
       cta: 'bg-[#f4f6f8] text-[#0d2f50] hover:bg-[#a9c8e8] focus:ring-[#7096c3]',
       close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#7096c3]/50 hover:bg-white/15',
     },
@@ -108,7 +107,6 @@ const services = [
       panel: 'border-white/12 bg-white/[0.075]',
       panelStrong: 'border-[#8fb99a]/25 bg-[#8fb99a]/12',
       dot: 'bg-[#bfd8c4]',
-      badge: 'border-[#8fb99a]/35 bg-[#8fb99a]/14 text-[#f4f6f8]',
       cta: 'bg-[#f4f6f8] text-[#254434] hover:bg-[#bfd8c4] focus:ring-[#8fb99a]',
       close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#8fb99a]/50 hover:bg-white/15',
     },
@@ -181,7 +179,6 @@ const services = [
       panel: 'border-white/12 bg-white/[0.075]',
       panelStrong: 'border-[#d9c08a]/25 bg-[#d9c08a]/12',
       dot: 'bg-[#ead8aa]',
-      badge: 'border-[#d9c08a]/35 bg-[#d9c08a]/14 text-[#f4f6f8]',
       cta: 'bg-[#f4f6f8] text-[#5f4725] hover:bg-[#ead8aa] focus:ring-[#d9c08a]',
       close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#d9c08a]/50 hover:bg-white/15',
     },
@@ -250,7 +247,6 @@ const services = [
       panel: 'border-white/12 bg-white/[0.075]',
       panelStrong: 'border-[#b9a9d0]/25 bg-[#b9a9d0]/12',
       dot: 'bg-[#dbcff0]',
-      badge: 'border-[#b9a9d0]/35 bg-[#b9a9d0]/14 text-[#f4f6f8]',
       cta: 'bg-[#f4f6f8] text-[#44395d] hover:bg-[#dbcff0] focus:ring-[#b9a9d0]',
       close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#b9a9d0]/50 hover:bg-white/15',
     },
@@ -433,10 +429,7 @@ const aboutPhotos = [
   },
 ];
 
-const aboutMainPhoto = {
-  src: '/about/06-presencia.webp',
-  alt: 'Cristian Núñez hablando en escenario en blanco y negro',
-};
+const aboutMainVideo = '/media/sobre-mi-video.mp4';
 
 function SectionHeader({ label, title, description }) {
   return (
@@ -490,18 +483,9 @@ function ContactIcon({ type }) {
 function RichText({ segments, className = '' }) {
   return (
     <p className={className}>
-      {segments.map((segment, index) =>
-        segment.mark ? (
-          <mark
-            className="rounded-md bg-accent/18 px-1.5 py-0.5 font-semibold text-smoke ring-1 ring-accent/20"
-            key={`${segment.text}-${index}`}
-          >
-            {segment.text}
-          </mark>
-        ) : (
-          <span key={`${segment.text}-${index}`}>{segment.text}</span>
-        )
-      )}
+      {segments.map((segment, index) => (
+        <span key={`${segment.text}-${index}`}>{segment.text}</span>
+      ))}
     </p>
   );
 }
@@ -738,6 +722,43 @@ function AboutCarousel() {
   );
 }
 
+function AboutVideo() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      className="aspect-[4/5] h-full w-full object-cover"
+      src={aboutMainVideo}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-label="Video de Cristian Núñez"
+    />
+  );
+}
+
 function AboutStoryModal({ isOpen, onClose }) {
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -799,9 +820,9 @@ function AboutStoryModal({ isOpen, onClose }) {
   );
 }
 
-function TestimonialCard({ testimonial, priority = false }) {
+function TestimonialCard({ testimonial, priority = false, className = '' }) {
   return (
-    <article className="group rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)]">
+    <article className={`group rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)] ${className}`}>
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#070b10]">
         <img
           className="h-[460px] w-full object-contain object-top transition duration-500 group-hover:scale-[1.015] sm:h-[500px] lg:h-[520px]"
@@ -816,6 +837,20 @@ function TestimonialCard({ testimonial, priority = false }) {
         <p className="mt-2 text-sm leading-6 text-muted">"{testimonial.summary}"</p>
       </div>
     </article>
+  );
+}
+
+function MoreTestimonialsCard({ className = '', onClick }) {
+  return (
+    <button
+      className={`group flex cursor-pointer flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/[0.035] p-6 text-center shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-white/[0.055] ${className}`}
+      type="button"
+      onClick={onClick}
+      aria-label="Ver más historias"
+    >
+      <span className="text-5xl font-light leading-none text-accent/80 transition duration-300 group-hover:text-accent">+</span>
+      <span className="mt-4 text-base font-semibold text-smoke">Ver más historias</span>
+    </button>
   );
 }
 
@@ -1052,7 +1087,7 @@ function App() {
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-6xl gap-9 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:p-14">
           <figure className="section-reveal overflow-hidden rounded-3xl border border-white/10 bg-ink shadow-premium" data-section-reveal>
-            <img className="aspect-[4/5] h-full w-full object-cover grayscale" src={aboutMainPhoto.src} alt={aboutMainPhoto.alt} loading="lazy" decoding="async" />
+            <AboutVideo />
           </figure>
 
           <div className="section-reveal flex flex-col justify-center" data-section-reveal>
@@ -1130,20 +1165,25 @@ function App() {
             title="Historias Reales"
             description="Evidencia cercana del proceso: seguimiento, ajustes, constancia y cambios sostenidos."
           />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {featuredTestimonials.map((testimonial, index) => (
-              <TestimonialCard testimonial={testimonial} priority={index < 3} key={testimonial.image} />
-            ))}
-            <button
-              className="group flex min-h-[620px] cursor-pointer flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/[0.055] p-6 text-center shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.075] hover:shadow-[0_26px_90px_rgba(112,150,195,0.16)]"
-              type="button"
-              onClick={() => setAreTestimonialsOpen(true)}
-              aria-label="Ver más testimonios"
-            >
-              <span className="text-7xl font-light leading-none text-accent transition duration-300 group-hover:scale-105">+</span>
-              <span className="mt-5 text-lg font-semibold text-smoke">Ver más testimonios</span>
-              <span className="mt-3 max-w-xs text-sm leading-6 text-muted">Más procesos, mensajes y evidencia real del acompañamiento.</span>
-            </button>
+          <div className="-mx-5 overflow-hidden px-5 sm:mx-0 sm:px-0">
+            <div className="testimonials-marquee flex w-max gap-5 overflow-x-auto pb-4">
+              {[...featuredTestimonials, { type: 'more' }, ...featuredTestimonials, { type: 'more' }].map((item, index) =>
+                item.type === 'more' ? (
+                  <MoreTestimonialsCard
+                    className="min-h-[620px] w-[82vw] max-w-[360px] shrink-0 sm:w-[330px] lg:w-[350px]"
+                    key={`more-${index}`}
+                    onClick={() => setAreTestimonialsOpen(true)}
+                  />
+                ) : (
+                  <TestimonialCard
+                    className="w-[82vw] max-w-[360px] shrink-0 sm:w-[330px] lg:w-[350px]"
+                    testimonial={item}
+                    priority={index < 3}
+                    key={`${item.image}-${index}`}
+                  />
+                )
+              )}
+            </div>
           </div>
         </div>
       </section>

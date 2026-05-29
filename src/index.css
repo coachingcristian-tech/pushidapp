@@ -49,4 +49,36 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .testimonials-marquee {
+    animation: testimonials-scroll 76s linear infinite;
+    scrollbar-width: none;
+    will-change: transform;
+  }
+
+  .testimonials-marquee::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonials-marquee:hover,
+  .testimonials-marquee:active,
+  .testimonials-marquee:focus-within {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes testimonials-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-marquee {
+    animation: none;
+  }
 }
