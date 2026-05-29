@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '573001112233';
+const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
 const WHATSAPP_MESSAGE = 'Hola Cristian, quiero informacion sobre tus programas de coaching.';
 const PROFILE_IMAGE = '/cristian-nunez-banner.png';
