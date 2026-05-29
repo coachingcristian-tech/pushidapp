@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Better Chill";
+  src: url("/fonts/BetterChill.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     color: #f4f6f8;
@@ -38,9 +46,10 @@
   }
 
   .signature-name {
-    font-family: "Allura", "Parisienne", "Segoe Script", "Brush Script MT", cursive;
+    font-family: "Better Chill", "Segoe Script", "Brush Script MT", cursive;
     font-weight: 400;
     letter-spacing: 0;
+    transform: translateY(0.08em);
     text-shadow: 0 10px 28px rgba(11, 15, 20, 0.34);
   }
 

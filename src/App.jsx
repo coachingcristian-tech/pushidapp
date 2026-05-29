@@ -949,11 +949,8 @@ function App() {
               alt="Logo Cristian Núñez"
             />
             <span className="min-w-0">
-              <span className="signature-name block whitespace-nowrap text-3xl leading-none text-smoke sm:text-4xl">
+              <span className="signature-name block whitespace-nowrap text-[2.15rem] leading-none text-smoke sm:text-[2.75rem]">
                 Cristian Núñez
-              </span>
-              <span className="mt-1 hidden text-xs font-medium uppercase tracking-[0.18em] text-accent sm:block">
-                Rendimiento humano
               </span>
             </span>
           </a>
