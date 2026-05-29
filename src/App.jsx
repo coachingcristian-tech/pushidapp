@@ -941,15 +941,15 @@ function App() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_22%_16%,rgba(112,150,195,0.18),transparent_28rem)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-ink to-transparent" />
 
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 border-b border-white/10 pb-5">
-          <a href="#" className="group flex min-w-0 items-center gap-3 sm:gap-4">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 border-b border-white/10 pb-4 sm:gap-5 sm:pb-5">
+          <a href="#" className="group flex min-w-0 items-center gap-2 sm:gap-3 lg:gap-4">
             <img
-              className="h-10 w-auto shrink-0 object-contain drop-shadow-[0_10px_22px_rgba(112,150,195,0.22)] transition duration-500 group-hover:scale-[1.03] sm:h-12"
+              className="h-8 w-auto shrink-0 object-contain drop-shadow-[0_10px_22px_rgba(112,150,195,0.22)] transition duration-500 group-hover:scale-[1.03] sm:h-9 lg:h-12"
               src={PROFILE_IMAGE}
               alt="Logo Cristian Núñez"
             />
             <span className="min-w-0">
-              <span className="signature-name block whitespace-nowrap text-[2.15rem] leading-none text-smoke sm:text-[2.75rem]">
+              <span className="signature-name block whitespace-nowrap text-[1.72rem] leading-none text-smoke sm:text-[2.05rem] lg:text-[2.75rem]">
                 Cristian Núñez
               </span>
             </span>
