@@ -37,6 +37,13 @@
     @apply rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 sm:p-8;
   }
 
+  .signature-name {
+    font-family: "Allura", "Parisienne", "Segoe Script", "Brush Script MT", cursive;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-shadow: 0 10px 28px rgba(11, 15, 20, 0.34);
+  }
+
   .section-reveal {
     opacity: 0;
     transform: translateY(18px);
@@ -50,19 +57,28 @@
     transform: translateY(0);
   }
 
-  .testimonials-marquee {
-    animation: testimonials-scroll 76s linear infinite;
+  .testimonials-marquee-viewport {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: 1.25rem;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    will-change: transform;
   }
 
-  .testimonials-marquee::-webkit-scrollbar {
+  .testimonials-marquee-viewport::-webkit-scrollbar {
     display: none;
   }
 
+  .testimonials-marquee {
+    animation: testimonials-scroll 76s linear infinite;
+    will-change: transform;
+  }
+
+  .testimonials-marquee-viewport:hover .testimonials-marquee,
+  .testimonials-marquee-viewport:active .testimonials-marquee,
+  .testimonials-marquee-viewport:focus-within .testimonials-marquee,
   .testimonials-marquee:hover,
-  .testimonials-marquee:active,
-  .testimonials-marquee:focus-within {
+  .testimonials-marquee:active {
     animation-play-state: paused;
   }
 }

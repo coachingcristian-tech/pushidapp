@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
 const WHATSAPP_MESSAGE = 'Hola Cristian, quiero información sobre tus programas de coaching.';
-const PROFILE_IMAGE = '/cristian-nunez-banner.png';
+const PROFILE_IMAGE = '/brand/cristian-nunez-logo.png';
 const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
 const DIGITAL_RESOURCES_URL = '#servicios';
 
@@ -941,17 +941,15 @@ function App() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_22%_16%,rgba(112,150,195,0.18),transparent_28rem)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-ink to-transparent" />
 
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 border-b border-white/10 pb-5">
-          <a href="#" className="group flex min-w-0 items-center gap-3">
-            <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl border border-accent/35 bg-white/5 shadow-[0_18px_40px_rgba(0,0,0,0.28)]">
-              <img
-                className="h-full w-full object-cover object-[50%_18%] transition duration-500 group-hover:scale-105"
-                src={PROFILE_IMAGE}
-                alt="Cristian Núñez"
-              />
-            </span>
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 border-b border-white/10 pb-5">
+          <a href="#" className="group flex min-w-0 items-center gap-3 sm:gap-4">
+            <img
+              className="h-10 w-auto shrink-0 object-contain drop-shadow-[0_10px_22px_rgba(112,150,195,0.22)] transition duration-500 group-hover:scale-[1.03] sm:h-12"
+              src={PROFILE_IMAGE}
+              alt="Logo Cristian Núñez"
+            />
             <span className="min-w-0">
-              <span className="block text-sm font-semibold uppercase tracking-[0.22em] text-smoke sm:text-base">
+              <span className="signature-name block whitespace-nowrap text-3xl leading-none text-smoke sm:text-4xl">
                 Cristian Núñez
               </span>
               <span className="mt-1 hidden text-xs font-medium uppercase tracking-[0.18em] text-accent sm:block">
