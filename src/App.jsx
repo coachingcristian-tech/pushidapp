@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 
 const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
-const WHATSAPP_MESSAGE = 'Hola Cristian, quiero información sobre tus programas de coaching.';
+const WHATSAPP_MESSAGE = 'Hola Cristian, quiero informaciÃ³n sobre tus programas de coaching.';
 const PROFILE_IMAGE = '/brand/cristian-nunez-logo.png';
 const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
 const DIGITAL_RESOURCES_URL = '#servicios';
@@ -42,55 +42,55 @@ const services = [
       cta: 'bg-[#f4f6f8] text-[#0d2f50] hover:bg-[#a9c8e8] focus:ring-[#7096c3]',
       close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#7096c3]/50 hover:bg-white/15',
     },
-    modalTitle: 'Método Rebuild',
+    modalTitle: 'MÃ©todo Rebuild',
     eyebrow: 'Transformacion fisica y personal',
-    subtitle: 'Reconstrucción física, hábitos sostenibles e identidad.',
+    subtitle: 'ReconstrucciÃ³n fÃ­sica, hÃ¡bitos sostenibles e identidad.',
     description:
       'Un programa para recuperar estructura, ordenar habitos y reconstruirse desde adentro con un proceso claro.',
     descriptionRich: [
-      { text: 'Método Rebuild es un proceso para mujeres con alta exigencia personal que quieren ' },
+      { text: 'MÃ©todo Rebuild es un proceso para mujeres con alta exigencia personal que quieren ' },
       { text: 'bajar grasa', mark: true },
       { text: ', ' },
-      { text: 'recuperar energía', mark: true },
+      { text: 'recuperar energÃ­a', mark: true },
       { text: ' y ' },
-      { text: 'dejar de vivir en modo automático', mark: true },
+      { text: 'dejar de vivir en modo automÃ¡tico', mark: true },
       { text: '. No es una dieta ni una rutina aislada: es una ' },
       { text: 'estructura completa', mark: true },
-      { text: ' para ordenar cuerpo, hábitos y mente.' },
+      { text: ' para ordenar cuerpo, hÃ¡bitos y mente.' },
     ],
     featureBlock: {
       title: 'Diferencial principal',
       segments: [
         { text: 'Incluye una ' },
         { text: 'plataforma completa y optimizada', mark: true },
-        { text: ' para tener seguimiento, recursos, clases, registros y herramientas prácticas en un solo lugar.' },
+        { text: ' para tener seguimiento, recursos, clases, registros y herramientas prÃ¡cticas en un solo lugar.' },
       ],
     },
     solves: [
-      'Desorden con la alimentación.',
+      'Desorden con la alimentaciÃ³n.',
       'Falta de constancia.',
       'Autosabotaje y todo o nada.',
-      'Cansancio físico y mental.',
-      'Pérdida de confianza por intentos fallidos.',
+      'Cansancio fÃ­sico y mental.',
+      'PÃ©rdida de confianza por intentos fallidos.',
     ],
-    frameworkTitle: 'Método 3R',
+    frameworkTitle: 'MÃ©todo 3R',
     framework: [
       {
-        title: 'Regular la Biología',
-        text: 'Entrenamiento, alimentación, descanso, recuperación y energía.',
+        title: 'Regular la BiologÃ­a',
+        text: 'Entrenamiento, alimentaciÃ³n, descanso, recuperaciÃ³n y energÃ­a.',
       },
       {
-        title: 'Reordenar los hábitos',
-        text: 'Rutina real, seguimiento, organización mínima y no negociables sostenibles.',
+        title: 'Reordenar los hÃ¡bitos',
+        text: 'Rutina real, seguimiento, organizaciÃ³n mÃ­nima y no negociables sostenibles.',
       },
       {
         title: 'Reconstruirse desde adentro',
-        text: 'Diálogo interno, responsabilidad, coherencia, identidad y orgullo personal basado en evidencia.',
+        text: 'DiÃ¡logo interno, responsabilidad, coherencia, identidad y orgullo personal basado en evidencia.',
       },
     ],
     audience:
-      'Para personas que no solo quieren verse mejor, sino volver a sentirse fuertes, ordenadas y dueñas de sí mismas.',
-    cta: 'Quiero información sobre Rebuild',
+      'Para personas que no solo quieren verse mejor, sino volver a sentirse fuertes, ordenadas y dueÃ±as de sÃ­ mismas.',
+    cta: 'Quiero informaciÃ³n sobre Rebuild',
     ctaUrl: rebuildWhatsappUrl,
     details: ['Regular la Biologia', 'Reordenar los habitos', 'Reconstruirse desde adentro'],
     footer: 'Etapa 1 - Reconstruccion / Etapa 2 - Direccion',
@@ -110,59 +110,59 @@ const services = [
       cta: 'bg-[#f4f6f8] text-[#254434] hover:bg-[#bfd8c4] focus:ring-[#8fb99a]',
       close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#8fb99a]/50 hover:bg-white/15',
     },
-    modalTitle: 'Asesorías Fitness Online',
+    modalTitle: 'AsesorÃ­as Fitness Online',
     eyebrow: 'Entrenamiento, nutricion y seguimiento',
-    subtitle: 'Entrenamiento, nutrición y seguimiento personalizado.',
+    subtitle: 'Entrenamiento, nutriciÃ³n y seguimiento personalizado.',
     description:
       'Planes personalizados para personas que necesitan una estrategia concreta, medible y adaptada a su vida real.',
     descriptionRich: [
       { text: 'Servicio para personas que quieren ' },
-      { text: 'mejorar su composición corporal', mark: true },
+      { text: 'mejorar su composiciÃ³n corporal', mark: true },
       { text: ' con una ' },
       { text: 'estrategia clara', mark: true },
-      { text: '. El foco está en ' },
+      { text: '. El foco estÃ¡ en ' },
       { text: 'entrenar mejor', mark: true },
       { text: ', ' },
       { text: 'comer con criterio', mark: true },
-      { text: ' y ajustar el proceso según la ' },
+      { text: ' y ajustar el proceso segÃºn la ' },
       { text: 'respuesta real del cuerpo', mark: true },
       { text: '.' },
     ],
     solves: [
-      'Rutinas genéricas.',
-      'Dietas difíciles de sostener.',
-      'Estancamiento físico.',
-      'Entrenar sin saber si se está haciendo bien.',
+      'Rutinas genÃ©ricas.',
+      'Dietas difÃ­ciles de sostener.',
+      'Estancamiento fÃ­sico.',
+      'Entrenar sin saber si se estÃ¡ haciendo bien.',
       'Falta de seguimiento.',
     ],
     featureBlock: {
       title: 'Diferencial principal',
       segments: [
-        { text: 'Planes con distintos niveles de acompañamiento según la intensidad de seguimiento que la persona necesita.' },
+        { text: 'Planes con distintos niveles de acompaÃ±amiento segÃºn la intensidad de seguimiento que la persona necesita.' },
       ],
     },
     frameworkTitle: 'Planes',
     framework: [
       {
         title: 'Gold',
-        text: 'Acompañamiento básico y efectivo.',
+        text: 'AcompaÃ±amiento bÃ¡sico y efectivo.',
       },
       {
         title: 'Platinum',
-        text: 'Seguimiento más completo durante 12 semanas.',
+        text: 'Seguimiento mÃ¡s completo durante 12 semanas.',
       },
       {
         title: 'Platinum Plus',
-        text: 'Acompañamiento intensivo con más herramientas y análisis.',
+        text: 'AcompaÃ±amiento intensivo con mÃ¡s herramientas y anÃ¡lisis.',
       },
       {
         title: 'Platinum Pro',
-        text: 'Servicio premium con mayor personalización, videollamadas y soporte prioritario.',
+        text: 'Servicio premium con mayor personalizaciÃ³n, videollamadas y soporte prioritario.',
       },
     ],
     audience:
-      'Para personas que quieren una mejora física seria, con entrenamiento, nutrición y acompañamiento adaptado a su vida real.',
-    cta: 'Quiero mi asesoría fitness',
+      'Para personas que quieren una mejora fÃ­sica seria, con entrenamiento, nutriciÃ³n y acompaÃ±amiento adaptado a su vida real.',
+    cta: 'Quiero mi asesorÃ­a fitness',
     ctaUrl: SCHEDULE_CALL_URL,
     details: ['Gold', 'Platinum', 'Platinum Plus', 'Platinum Pro'],
     footer: 'Acompanamiento progresivo segun nivel de soporte.',
@@ -189,43 +189,43 @@ const services = [
       'Proceso para lideres, ejecutivos y emprendedores que necesitan optimizar energia, control e impacto.',
     descriptionRich: [
       { text: 'Proceso ' },
-      { text: 'premium de 90 días', mark: true },
+      { text: 'premium de 90 dÃ­as', mark: true },
       { text: ' para ' },
-      { text: 'líderes, ejecutivos y emprendedores', mark: true },
+      { text: 'lÃ­deres, ejecutivos y emprendedores', mark: true },
       { text: ' que necesitan ' },
-      { text: 'recuperar energía', mark: true },
+      { text: 'recuperar energÃ­a', mark: true },
       { text: ', ' },
       { text: 'controlar su agenda', mark: true },
       { text: ' y proyectar una ' },
-      { text: 'identidad más sólida', mark: true },
+      { text: 'identidad mÃ¡s sÃ³lida', mark: true },
       { text: ' en su vida personal y profesional.' },
     ],
     solves: [
-      'Falta de energía sostenida.',
+      'Falta de energÃ­a sostenida.',
       'Agenda reactiva.',
-      'Desorden en sueño, alimentación y entrenamiento.',
-      'Drenadores de energía.',
+      'Desorden en sueÃ±o, alimentaciÃ³n y entrenamiento.',
+      'Drenadores de energÃ­a.',
       'Falta de presencia ejecutiva.',
     ],
     featureBlock: {
       title: 'Diferencial principal',
       segments: [
-        { text: 'Integra bio-optimización, arquitectura de control e identidad estratégica en un solo proceso.' },
+        { text: 'Integra bio-optimizaciÃ³n, arquitectura de control e identidad estratÃ©gica en un solo proceso.' },
       ],
     },
     frameworkTitle: 'Fases',
     framework: [
       {
-        title: 'Bio-Optimización',
-        text: 'Nutrición, sueño, entrenamiento, recuperación y resistencia mental.',
+        title: 'Bio-OptimizaciÃ³n',
+        text: 'NutriciÃ³n, sueÃ±o, entrenamiento, recuperaciÃ³n y resistencia mental.',
       },
       {
         title: 'Arquitectura de Control',
-        text: 'Gestión del tiempo, agenda blindada y eliminación de drenadores.',
+        text: 'GestiÃ³n del tiempo, agenda blindada y eliminaciÃ³n de drenadores.',
       },
       {
         title: 'Identidad e Impacto',
-        text: 'Presencia, narrativa de autoridad, marca personal y proyección estratégica.',
+        text: 'Presencia, narrativa de autoridad, marca personal y proyecciÃ³n estratÃ©gica.',
       },
     ],
     audience:
@@ -252,31 +252,31 @@ const services = [
     },
     modalTitle: 'E-books y recursos digitales',
     eyebrow: 'Herramientas practicas',
-    subtitle: 'Herramientas prácticas para empezar con claridad.',
+    subtitle: 'Herramientas prÃ¡cticas para empezar con claridad.',
     description:
       'Materiales claros para simplificar decisiones de alimentacion, entrenamiento y construccion de habitos.',
     descriptionRich: [
       { text: 'Recursos para personas que quieren empezar a ' },
       { text: 'comer mejor', mark: true },
       { text: ', ' },
-      { text: 'moverse más', mark: true },
+      { text: 'moverse mÃ¡s', mark: true },
       { text: ' y ' },
-      { text: 'ordenar sus hábitos', mark: true },
+      { text: 'ordenar sus hÃ¡bitos', mark: true },
       { text: ' antes de entrar a un ' },
-      { text: 'acompañamiento personalizado', mark: true },
+      { text: 'acompaÃ±amiento personalizado', mark: true },
       { text: '.' },
     ],
     solves: [
-      'No saber por dónde empezar.',
-      'Complicarse demasiado con la nutrición.',
+      'No saber por dÃ³nde empezar.',
+      'Complicarse demasiado con la nutriciÃ³n.',
       'Falta de ideas para comer mejor.',
-      'Confusión por exceso de información.',
-      'Falta de estructura básica.',
+      'ConfusiÃ³n por exceso de informaciÃ³n.',
+      'Falta de estructura bÃ¡sica.',
     ],
     featureBlock: {
       title: 'Diferencial principal',
       segments: [
-        { text: 'Material simple, aplicable y diseñado para ' },
+        { text: 'Material simple, aplicable y diseÃ±ado para ' },
         { text: 'tomar mejores decisiones', mark: true },
         { text: ' en la vida diaria.' },
       ],
@@ -284,20 +284,20 @@ const services = [
     frameworkTitle: 'Recursos',
     framework: [
       {
-        title: 'Come. Muévete. Y Ya.',
-        text: 'Guía práctica para simplificar alimentación y movimiento.',
+        title: 'Come. MuÃ©vete. Y Ya.',
+        text: 'GuÃ­a prÃ¡ctica para simplificar alimentaciÃ³n y movimiento.',
       },
       {
-        title: 'Recetarios para pérdida de grasa',
+        title: 'Recetarios para pÃ©rdida de grasa',
         text: 'Ideas aplicables para comer mejor sin complicarte.',
       },
       {
-        title: 'Guías de hábitos, nutrición y entrenamiento',
+        title: 'GuÃ­as de hÃ¡bitos, nutriciÃ³n y entrenamiento',
         text: 'Herramientas para ordenar decisiones diarias y seguimiento.',
       },
     ],
     audience:
-      'Para personas que quieren empezar de forma simple, realista y sin entrar todavía a un proceso personalizado.',
+      'Para personas que quieren empezar de forma simple, realista y sin entrar todavÃ­a a un proceso personalizado.',
     cta: 'Ver recursos digitales',
     ctaUrl: DIGITAL_RESOURCES_URL,
     details: ['Come. Muevete. Y Ya.', 'Recetarios para perdida de grasa', 'Guias de habitos, nutricion y entrenamiento'],
@@ -384,48 +384,48 @@ const moreTestimonials = testimonials.slice(3);
 const aboutPhotos = [
   {
     src: '/about/01-escenario-classic.webp',
-    label: '15x campeón',
-    alt: 'Cristian Núñez compitiendo en escenario de fisicoculturismo',
+    label: '15x campeÃ³n',
+    alt: 'Cristian NÃºÃ±ez compitiendo en escenario de fisicoculturismo',
   },
   {
     src: '/about/02-mens-physique.webp',
     label: 'Disciplina',
-    alt: 'Cristian Núñez en tarima de Men’s Physique',
+    alt: 'Cristian NÃºÃ±ez en tarima de Menâ€™s Physique',
   },
   {
     src: '/about/03-medallas.webp',
     label: 'Logros construidos',
-    alt: 'Cristian Núñez junto a trofeos y medallas deportivas',
+    alt: 'Cristian NÃºÃ±ez junto a trofeos y medallas deportivas',
   },
   {
     src: '/about/04-evento-audiencia.webp',
-    label: 'Más de 2.000 procesos acompañados',
-    alt: 'Cristian Núñez frente a una audiencia en un evento',
+    label: 'MÃ¡s de 2.000 procesos acompaÃ±ados',
+    alt: 'Cristian NÃºÃ±ez frente a una audiencia en un evento',
   },
   {
     src: '/about/06-presencia.webp',
     label: 'Autoridad en campo',
-    alt: 'Cristian Núñez hablando en escenario',
+    alt: 'Cristian NÃºÃ±ez hablando en escenario',
   },
   {
     src: '/about/07-revision-medica.webp',
     label: 'Accidente 2024',
-    alt: 'Cristian Núñez en revisión médica durante su proceso de recuperación',
+    alt: 'Cristian NÃºÃ±ez en revisiÃ³n mÃ©dica durante su proceso de recuperaciÃ³n',
   },
   {
     src: '/about/08-uci.webp',
-    label: 'UCI y reconstrucción',
-    alt: 'Cristian Núñez durante una etapa crítica en clínica',
+    label: 'UCI y reconstrucciÃ³n',
+    alt: 'Cristian NÃºÃ±ez durante una etapa crÃ­tica en clÃ­nica',
   },
   {
     src: '/about/09-regreso.webp',
     label: 'Regreso',
-    alt: 'Cristian Núñez en su regreso a escenarios de formación',
+    alt: 'Cristian NÃºÃ±ez en su regreso a escenarios de formaciÃ³n',
   },
   {
     src: '/about/10-equipo.webp',
     label: 'Nueva etapa',
-    alt: 'Cristian Núñez junto a un equipo profesional en evento',
+    alt: 'Cristian NÃºÃ±ez junto a un equipo profesional en evento',
   },
 ];
 
@@ -541,9 +541,9 @@ function ServiceModal({ service, onClose }) {
             className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border text-2xl leading-none transition duration-300 ${theme.close}`}
             type="button"
             onClick={onClose}
-            aria-label="Cerrar descripción del servicio"
+            aria-label="Cerrar descripciÃ³n del servicio"
           >
-            ×
+            Ã—
           </button>
         </div>
 
@@ -559,7 +559,7 @@ function ServiceModal({ service, onClose }) {
           </div>
 
           <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
-            <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Qué resuelve</h4>
+            <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>QuÃ© resuelve</h4>
             <ul className={`mt-4 space-y-3 text-sm leading-6 ${theme.bodyText}`}>
               {service.solves.map((item) => (
                 <li className="flex gap-3" key={item}>
@@ -585,14 +585,14 @@ function ServiceModal({ service, onClose }) {
             ) : null}
 
             <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
-              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Para quién es</h4>
+              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Para quiÃ©n es</h4>
               <p className={`mt-3 leading-7 ${theme.bodyText}`}>{service.audience}</p>
             </div>
           </div>
 
           <div className="space-y-5">
             <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
-              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Qué resuelve</h4>
+              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>QuÃ© resuelve</h4>
               <ul className={`mt-4 space-y-3 text-sm leading-6 ${theme.bodyText}`}>
                 {service.solves.map((item) => (
                   <li className="flex gap-3" key={item}>
@@ -754,7 +754,7 @@ function AboutVideo() {
       loop
       playsInline
       preload="metadata"
-      aria-label="Video de Cristian Núñez"
+      aria-label="Video de Cristian NÃºÃ±ez"
     />
   );
 }
@@ -788,28 +788,28 @@ function AboutStoryModal({ isOpen, onClose }) {
         aria-labelledby="about-modal-title"
       >
         <button className="absolute right-5 top-5 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-smoke transition duration-300 hover:border-accent/50 hover:bg-white/15" type="button" onClick={onClose} aria-label="Cerrar historia">
-          ×
+          Ã—
         </button>
         <div className="max-h-[calc(92vh-2.5rem)] overflow-y-auto pr-1">
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="pt-10 lg:pt-0">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mÃ­</p>
               <h3 id="about-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
-                Mi historia no empezó en el accidente, pero ahí cambió todo.
+                Mi historia no empezÃ³ en el accidente, pero ahÃ­ cambiÃ³ todo.
               </h3>
               <div className="mt-7 space-y-5 text-base leading-8 text-muted">
                 <p>
-                  Soy Cristian Núñez, mentor en rendimiento humano y transformación de identidad. Durante años construí mi autoridad desde la disciplina, el entrenamiento y la competencia. He acompañado más de 2.000 procesos de transformación física y personal, y también he sido 15 veces campeón en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
+                  Soy Cristian NÃºÃ±ez, mentor en rendimiento humano y transformaciÃ³n de identidad. Durante aÃ±os construÃ­ mi autoridad desde la disciplina, el entrenamiento y la competencia. He acompaÃ±ado mÃ¡s de 2.000 procesos de transformaciÃ³n fÃ­sica y personal, y tambiÃ©n he sido 15 veces campeÃ³n en categorÃ­as como Fitness Model, Classic Bodybuilding y Menâ€™s Physique.
                 </p>
                 <p>Pero mi historia no se sostiene solo en medallas.</p>
                 <p>
-                  En septiembre de 2024 tuve un accidente grave. Pasé casi un mes en UCI, viví momentos críticos y, después de salir del hospital, tuve una recaída que exigió otra cirugía. Perdí autonomía. Mi cuerpo dejó de responder como antes. Lo básico volvió a ser difícil.
+                  En septiembre de 2024 tuve un accidente grave. PasÃ© casi un mes en UCI, vivÃ­ momentos crÃ­ticos y, despuÃ©s de salir del hospital, tuve una recaÃ­da que exigiÃ³ otra cirugÃ­a. PerdÃ­ autonomÃ­a. Mi cuerpo dejÃ³ de responder como antes. Lo bÃ¡sico volviÃ³ a ser difÃ­cil.
                 </p>
-                <p>Ese proceso me obligó a mirar la reconstrucción de otra forma. Ya no desde el ego del rendimiento, sino desde la humildad de empezar otra vez.</p>
+                <p>Ese proceso me obligÃ³ a mirar la reconstrucciÃ³n de otra forma. Ya no desde el ego del rendimiento, sino desde la humildad de empezar otra vez.</p>
                 <p>
-                  Hoy acompaño desde ese lugar: con estructura, criterio y verdad. No vendo promesas rápidas. Trabajo con personas que necesitan ordenar su cuerpo, sus hábitos y su identidad para sostener resultados reales.
+                  Hoy acompaÃ±o desde ese lugar: con estructura, criterio y verdad. No vendo promesas rÃ¡pidas. Trabajo con personas que necesitan ordenar su cuerpo, sus hÃ¡bitos y su identidad para sostener resultados reales.
                 </p>
-                <p className="font-semibold text-smoke">La reconstrucción no es teoría para mí. Es experiencia vivida.</p>
+                <p className="font-semibold text-smoke">La reconstrucciÃ³n no es teorÃ­a para mÃ­. Es experiencia vivida.</p>
               </div>
             </div>
             <AboutCarousel />
@@ -846,10 +846,10 @@ function MoreTestimonialsCard({ className = '', onClick }) {
       className={`group flex cursor-pointer flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/[0.035] p-6 text-center shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-white/[0.055] ${className}`}
       type="button"
       onClick={onClick}
-      aria-label="Ver más historias"
+      aria-label="Ver mÃ¡s historias"
     >
       <span className="text-5xl font-light leading-none text-accent/80 transition duration-300 group-hover:text-accent">+</span>
-      <span className="mt-4 text-base font-semibold text-smoke">Ver más historias</span>
+      <span className="mt-4 text-base font-semibold text-smoke">Ver mÃ¡s historias</span>
     </button>
   );
 }
@@ -885,10 +885,10 @@ function TestimonialsModal({ isOpen, onClose }) {
         <div className="mb-6 flex items-start justify-between gap-5">
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Testimonios</p>
-            <h3 id="testimonials-modal-title" className="text-3xl font-semibold text-smoke sm:text-5xl">Más historias reales</h3>
+            <h3 id="testimonials-modal-title" className="text-3xl font-semibold text-smoke sm:text-5xl">MÃ¡s historias reales</h3>
           </div>
           <button className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-smoke transition duration-300 hover:border-accent/50 hover:bg-white/15" type="button" onClick={onClose} aria-label="Cerrar testimonios">
-            ×
+            Ã—
           </button>
         </div>
         <div className="max-h-[calc(92vh-9rem)] overflow-y-auto pr-1">
@@ -935,7 +935,7 @@ function App() {
         <img
           className="absolute inset-0 -z-20 h-full w-full object-cover object-[62%_50%]"
           src={HERO_BANNER_IMAGE}
-          alt="Cristian Núñez"
+          alt="Cristian NÃºÃ±ez"
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,15,20,0.96)_0%,rgba(11,15,20,0.88)_34%,rgba(11,15,20,0.48)_58%,rgba(11,15,20,0.12)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_22%_16%,rgba(112,150,195,0.18),transparent_28rem)]" />
@@ -946,13 +946,8 @@ function App() {
             <img
               className="h-8 w-auto shrink-0 object-contain drop-shadow-[0_10px_22px_rgba(112,150,195,0.22)] transition duration-500 group-hover:scale-[1.03] sm:h-9 lg:h-12"
               src={PROFILE_IMAGE}
-              alt="Logo Cristian Núñez"
+              alt="Logo Cristian NÃºÃ±ez"
             />
-            <span className="min-w-0">
-              <span className="signature-name block whitespace-nowrap text-[1.72rem] leading-none text-smoke sm:text-[2.05rem] lg:text-[2.75rem]">
-                Cristian Núñez
-              </span>
-            </span>
           </a>
           <div className="hidden items-center gap-8 text-sm text-muted md:flex">
             <a className="transition hover:text-smoke" href="#enfoque">
@@ -981,16 +976,16 @@ function App() {
               Rendimiento humano e identidad
             </p>
             <h1 className="max-w-5xl text-4xl font-semibold leading-[1.02] tracking-tight text-smoke sm:text-6xl lg:text-7xl">
-              Reconstruye tu cuerpo. Ordena tu vida. Sostén tus resultados.
+              Reconstruye tu cuerpo. Ordena tu vida. SostÃ©n tus resultados.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
-              Soy Cristian Núñez, mentor en rendimiento humano y transformacion de identidad. Ayudo a personas
+              Soy Cristian NÃºÃ±ez, mentor en rendimiento humano y transformacion de identidad. Ayudo a personas
               ocupadas a mejorar su fisico, recuperar energia y construir estructura real sin depender de motivacion
               pasajera.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noreferrer">
-                Agendar diagnóstico privado
+                Agendar diagnÃ³stico privado
               </a>
               <a className="btn-secondary" href="#servicios">
                 Ver servicios
@@ -1004,7 +999,7 @@ function App() {
       <section className="border-y border-accent/30 bg-[linear-gradient(90deg,#192632_0%,#0d2f50_52%,#192632_100%)] px-5 py-5 shadow-[0_20px_70px_rgba(13,47,80,0.28)] sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-smoke sm:text-base">
-            AGENDA ABIERTA — Diagnóstico privado con Cristian Núñez
+            AGENDA ABIERTA â€” DiagnÃ³stico privado con Cristian NÃºÃ±ez
           </p>
           <a
             className="inline-flex min-h-10 items-center justify-center rounded-full border border-accent/60 bg-accent/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-smoke transition hover:bg-accent hover:text-ink"
@@ -1057,7 +1052,7 @@ function App() {
                 key={service.title}
                 type="button"
                 onClick={() => setSelectedService(service)}
-                aria-label={`Ver más sobre ${service.modalTitle}`}
+                aria-label={`Ver mÃ¡s sobre ${service.modalTitle}`}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">{service.eyebrow}</p>
                 <h3 className="mt-4 text-3xl font-semibold text-smoke">{service.title}</h3>
@@ -1071,7 +1066,7 @@ function App() {
                 </ul>
                 <p className="mt-7 border-t border-white/10 pt-5 text-sm text-muted">{service.footer}</p>
                 <span className="mt-6 inline-flex text-sm font-semibold text-accent transition duration-300 group-hover:translate-x-1">
-                  Ver descripción ampliada
+                  Ver descripciÃ³n ampliada
                 </span>
               </button>
             ))}
@@ -1086,10 +1081,10 @@ function App() {
           </figure>
 
           <div className="section-reveal flex flex-col justify-center" data-section-reveal>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
-            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Sobre mí</h2>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mÃ­</p>
+            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Sobre mÃ­</h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación y he sido 15 veces campeón en fisicoculturismo. Pero mi autoridad no viene solo de los logros: también viene de haber tenido que reconstruirme desde cero.
+              Soy Cristian NÃºÃ±ez. He acompaÃ±ado mÃ¡s de 2.000 procesos de transformaciÃ³n y he sido 15 veces campeÃ³n en fisicoculturismo. Pero mi autoridad no viene solo de los logros: tambiÃ©n viene de haber tenido que reconstruirme desde cero.
             </p>
             <button className="btn-primary mt-8 w-fit" type="button" onClick={() => setIsAboutOpen(true)}>
               Leer mi historia completa
@@ -1103,49 +1098,49 @@ function App() {
           <AboutCarousel />
 
           <div className="section-reveal flex flex-col justify-center" data-section-reveal>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mÃ­</p>
             <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
-              Mi autoridad no viene solo del rendimiento. También viene de haber tenido que reconstruirme.
+              Mi autoridad no viene solo del rendimiento. TambiÃ©n viene de haber tenido que reconstruirme.
             </h2>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
                 <p className="text-2xl font-semibold text-smoke">2.000+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">procesos acompañados</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">procesos acompaÃ±ados</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
                 <p className="text-2xl font-semibold text-smoke">15x</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">campeón</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">campeÃ³n</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
                 <p className="text-2xl font-semibold text-smoke">2024</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">reconstrucción real</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">reconstrucciÃ³n real</p>
               </div>
             </div>
 
             <div className="mt-8 space-y-5 text-base leading-8 text-muted sm:text-lg">
               <p>
-                Soy Cristian Núñez. Durante años mi autoridad estuvo ligada al rendimiento: más de 2.000 procesos de
-                transformación física y personal acompañados, una carrera como atleta de fisicoculturismo y 15 títulos
-                en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
+                Soy Cristian NÃºÃ±ez. Durante aÃ±os mi autoridad estuvo ligada al rendimiento: mÃ¡s de 2.000 procesos de
+                transformaciÃ³n fÃ­sica y personal acompaÃ±ados, una carrera como atleta de fisicoculturismo y 15 tÃ­tulos
+                en categorÃ­as como Fitness Model, Classic Bodybuilding y Menâ€™s Physique.
               </p>
               <p>
-                Pero mi historia no se queda en los logros. En septiembre de 2024 tuve un accidente muy fuerte. Pasé
-                casi un mes en UCI, viví momentos críticos y, después de salir del hospital, una recaída exigió otra
-                cirugía. Ese proceso me enfrentó a la pérdida de autonomía, a la fragilidad del cuerpo y a una
-                reconstrucción real desde cero.
+                Pero mi historia no se queda en los logros. En septiembre de 2024 tuve un accidente muy fuerte. PasÃ©
+                casi un mes en UCI, vivÃ­ momentos crÃ­ticos y, despuÃ©s de salir del hospital, una recaÃ­da exigiÃ³ otra
+                cirugÃ­a. Ese proceso me enfrentÃ³ a la pÃ©rdida de autonomÃ­a, a la fragilidad del cuerpo y a una
+                reconstrucciÃ³n real desde cero.
               </p>
               <p>
-                Esa experiencia me hizo más humilde, más consciente y más claro en mi forma de acompañar. Hoy mi
-                trabajo no se basa en promesas rápidas, sino en estructura, criterio, acompañamiento y reconstrucción
+                Esa experiencia me hizo mÃ¡s humilde, mÃ¡s consciente y mÃ¡s claro en mi forma de acompaÃ±ar. Hoy mi
+                trabajo no se basa en promesas rÃ¡pidas, sino en estructura, criterio, acompaÃ±amiento y reconstrucciÃ³n
                 real.
               </p>
             </div>
 
             <div className="mt-8 rounded-2xl border border-accent/25 bg-accent/10 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Lo que sostiene el método</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Lo que sostiene el mÃ©todo</p>
               <p className="mt-3 leading-7 text-smoke">
-                Disciplina, experiencia vivida y una mirada más humana del proceso: no solo cambiar el cuerpo, sino
+                Disciplina, experiencia vivida y una mirada mÃ¡s humana del proceso: no solo cambiar el cuerpo, sino
                 construir una estructura que una persona pueda sostener cuando la vida deja de estar bajo control.
               </p>
             </div>
