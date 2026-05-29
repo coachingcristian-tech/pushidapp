@@ -1165,18 +1165,18 @@ function App() {
             title="Historias Reales"
             description="Evidencia cercana del proceso: seguimiento, ajustes, constancia y cambios sostenidos."
           />
-          <div className="-mx-5 overflow-hidden px-5 sm:mx-0 sm:px-0">
-            <div className="testimonials-marquee flex w-max gap-5 overflow-x-auto pb-4">
+          <div className="testimonials-marquee-viewport -mx-5 overflow-x-auto px-5 pb-4 sm:mx-0 sm:px-0">
+            <div className="testimonials-marquee flex w-max gap-5">
               {[...featuredTestimonials, { type: 'more' }, ...featuredTestimonials, { type: 'more' }].map((item, index) =>
                 item.type === 'more' ? (
                   <MoreTestimonialsCard
-                    className="min-h-[620px] w-[82vw] max-w-[360px] shrink-0 sm:w-[330px] lg:w-[350px]"
+                    className="min-h-[620px] w-[82vw] max-w-[360px] shrink-0 snap-center sm:w-[330px] lg:w-[350px]"
                     key={`more-${index}`}
                     onClick={() => setAreTestimonialsOpen(true)}
                   />
                 ) : (
                   <TestimonialCard
-                    className="w-[82vw] max-w-[360px] shrink-0 sm:w-[330px] lg:w-[350px]"
+                    className="w-[82vw] max-w-[360px] shrink-0 snap-center sm:w-[330px] lg:w-[350px]"
                     testimonial={item}
                     priority={index < 3}
                     key={`${item.image}-${index}`}
