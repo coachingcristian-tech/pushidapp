@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react';
+
 const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
 const WHATSAPP_MESSAGE = 'Hola Cristian, quiero informacion sobre tus programas de coaching.';
 const PROFILE_IMAGE = '/cristian-nunez-banner.png';
 const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
+const DIGITAL_RESOURCES_URL = '#servicios';
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
@@ -24,33 +27,171 @@ const focusLevels = [
 const services = [
   {
     title: 'Metodo Rebuild',
+    modalTitle: 'Método Rebuild',
     eyebrow: 'Transformacion fisica y personal',
+    subtitle: 'Reconstrucción física, hábitos sostenibles e identidad personal.',
     description:
       'Un programa para recuperar estructura, ordenar habitos y reconstruirse desde adentro con un proceso claro.',
+    longDescription:
+      'Método Rebuild es el programa principal de transformación física y personal. Está diseñado para mujeres profesionales, emprendedoras o personas con alta exigencia personal que quieren bajar grasa, mejorar su composición corporal, recuperar energía y dejar de vivir en modo automático.',
+    secondaryDescription:
+      'No es solo una dieta ni una rutina. Es un proceso estructurado para recuperar control, orden y coherencia.',
+    solves: [
+      'Desorden con la alimentación.',
+      'Falta de constancia.',
+      'Cansancio físico y mental.',
+      'Autosabotaje.',
+      'Todo o nada.',
+      'Falta de estructura diaria.',
+      'Pérdida de confianza por intentos fallidos.',
+    ],
+    frameworkTitle: 'Método 3R',
+    framework: [
+      {
+        title: 'Regular la Biología',
+        text: 'Entrenamiento, alimentación, descanso, recuperación y energía.',
+      },
+      {
+        title: 'Reordenar los hábitos',
+        text: 'Rutina real, seguimiento, organización mínima y no negociables sostenibles.',
+      },
+      {
+        title: 'Reconstruirse desde adentro',
+        text: 'Diálogo interno, responsabilidad, coherencia, identidad y orgullo personal basado en evidencia.',
+      },
+    ],
+    audience:
+      'Para personas que no solo quieren verse mejor, sino volver a sentirse fuertes, ordenadas y dueñas de sí mismas.',
+    cta: 'Quiero información sobre Rebuild',
+    ctaUrl: SCHEDULE_CALL_URL,
     details: ['Regular la Biologia', 'Reordenar los habitos', 'Reconstruirse desde adentro'],
     footer: 'Etapa 1 - Reconstruccion / Etapa 2 - Direccion',
   },
   {
     title: 'Asesorias Fitness Online',
+    modalTitle: 'Asesorías Fitness Online',
     eyebrow: 'Entrenamiento, nutricion y seguimiento',
+    subtitle: 'Entrenamiento, nutrición y seguimiento para mejorar tu composición corporal.',
     description:
       'Planes personalizados para personas que necesitan una estrategia concreta, medible y adaptada a su vida real.',
+    longDescription:
+      'Las Asesorías Fitness Online están diseñadas para personas que quieren perder grasa, ganar masa muscular, mejorar su físico o entrenar con una estrategia clara, sin improvisar.',
+    secondaryDescription:
+      'Aquí el foco principal es el resultado físico: entrenar mejor, comer con más criterio y tener seguimiento para ajustar el proceso según la respuesta real del cuerpo.',
+    solves: [
+      'Rutinas genéricas que no progresan.',
+      'Dietas difíciles de sostener.',
+      'Falta de claridad con cantidades, comidas y entrenamiento.',
+      'Estancamiento físico.',
+      'Entrenar sin saber si se está haciendo bien.',
+      'Falta de seguimiento y ajustes.',
+    ],
+    frameworkTitle: 'Planes',
+    framework: [
+      {
+        title: 'Gold',
+        text: 'Acompañamiento básico y efectivo.',
+      },
+      {
+        title: 'Platinum',
+        text: 'Seguimiento más completo durante 12 semanas.',
+      },
+      {
+        title: 'Platinum Plus',
+        text: 'Acompañamiento intensivo con más herramientas y análisis.',
+      },
+      {
+        title: 'Platinum Pro',
+        text: 'Servicio premium con mayor personalización, videollamadas y soporte prioritario.',
+      },
+    ],
+    audience:
+      'Para personas que quieren una mejora física seria, con entrenamiento, nutrición y acompañamiento adaptado a su vida real.',
+    cta: 'Quiero mi asesoría fitness',
+    ctaUrl: SCHEDULE_CALL_URL,
     details: ['Gold', 'Platinum', 'Platinum Plus', 'Platinum Pro'],
     footer: 'Acompanamiento progresivo segun nivel de soporte.',
   },
   {
     title: 'Protocolo Rebirth',
+    modalTitle: 'Protocolo Rebirth',
     eyebrow: 'Programa premium de 90 dias',
+    subtitle: 'Intervención premium de 90 días para rendimiento humano, control e identidad.',
     description:
       'Proceso para lideres, ejecutivos y emprendedores que necesitan optimizar energia, control e impacto.',
+    longDescription:
+      'Protocolo Rebirth es un proceso premium de 90 días para líderes, ejecutivos, emprendedores y personas de alta exigencia que necesitan optimizar su biología, recuperar control sobre su agenda y proyectar una identidad más sólida.',
+    secondaryDescription:
+      'No está diseñado para quien solo quiere una rutina. Está diseñado para quien entiende que su cuerpo, energía, hábitos, decisiones y presencia afectan su rendimiento personal y profesional.',
+    solves: [
+      'Falta de energía sostenida.',
+      'Desorden en sueño, alimentación y entrenamiento.',
+      'Agenda reactiva.',
+      'Drenadores de energía.',
+      'Falta de presencia ejecutiva.',
+      'Pérdida de dirección.',
+      'Desconexión entre físico, mente y objetivos.',
+    ],
+    frameworkTitle: 'Fases',
+    framework: [
+      {
+        title: 'Bio-Optimización',
+        text: 'Nutrición, sueño, entrenamiento, recuperación y resistencia mental.',
+      },
+      {
+        title: 'Arquitectura de Control',
+        text: 'Gestión del tiempo, agenda blindada y eliminación de drenadores.',
+      },
+      {
+        title: 'Identidad e Impacto',
+        text: 'Presencia, narrativa de autoridad, marca personal y proyección estratégica.',
+      },
+    ],
+    audience:
+      'Para personas que tienen responsabilidades reales y necesitan funcionar mejor, decidir mejor y sostener una imagen coherente con lo que quieren construir.',
+    cta: 'Quiero aplicar a Rebirth',
+    ctaUrl: SCHEDULE_CALL_URL,
     details: ['Bio-Optimizacion', 'Arquitectura de Control', 'Identidad e Impacto'],
     footer: 'Disenado para alta exigencia personal y profesional.',
   },
   {
     title: 'E-books y recursos digitales',
+    modalTitle: 'E-books y recursos digitales',
     eyebrow: 'Herramientas practicas',
+    subtitle: 'Herramientas prácticas para empezar a comer mejor, moverte más y ordenar tus hábitos.',
     description:
       'Materiales claros para simplificar decisiones de alimentacion, entrenamiento y construccion de habitos.',
+    longDescription:
+      'Los e-books y recursos digitales son una puerta de entrada para quienes quieren empezar con más claridad antes de entrar a un acompañamiento personalizado.',
+    secondaryDescription:
+      'No son documentos decorativos. Son herramientas simples, aplicables y diseñadas para ayudarte a tomar mejores decisiones con alimentación, movimiento, hábitos y pérdida de grasa.',
+    solves: [
+      'No saber por dónde empezar.',
+      'Complicarse demasiado con la nutrición.',
+      'Falta de ideas para comer mejor.',
+      'Falta de estructura básica.',
+      'Dependencia de motivación.',
+      'Confusión por exceso de información.',
+    ],
+    frameworkTitle: 'Recursos',
+    framework: [
+      {
+        title: 'Come. Muévete. Y Ya.',
+        text: 'Guía práctica para simplificar alimentación y movimiento.',
+      },
+      {
+        title: 'Recetarios para pérdida de grasa',
+        text: 'Ideas aplicables para comer mejor sin complicarte.',
+      },
+      {
+        title: 'Guías de hábitos, nutrición y entrenamiento',
+        text: 'Herramientas para ordenar decisiones diarias y seguimiento.',
+      },
+    ],
+    audience:
+      'Para personas que quieren empezar de forma simple, realista y sin entrar todavía a un proceso personalizado.',
+    cta: 'Ver recursos digitales',
+    ctaUrl: DIGITAL_RESOURCES_URL,
     details: ['Come. Muevete. Y Ya.', 'Recetarios para perdida de grasa', 'Guias de habitos, nutricion y entrenamiento'],
     footer: 'Recursos editables y escalables para avanzar con criterio.',
   },
@@ -87,7 +228,112 @@ function SectionHeader({ label, title, description }) {
   );
 }
 
+function ServiceModal({ service, onClose }) {
+  useEffect(() => {
+    if (!service) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [service, onClose]);
+
+  if (!service) return null;
+
+  const isExternalCta = service.ctaUrl.startsWith('http');
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center bg-ink/80 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
+      onClick={onClose}
+      role="presentation"
+    >
+      <article
+        className="max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-accent/30 bg-[linear-gradient(145deg,rgba(25,38,50,0.98),rgba(11,15,20,0.98))] p-6 shadow-[0_30px_100px_rgba(0,0,0,0.5)] sm:p-8 lg:p-10"
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="service-modal-title"
+      >
+        <div className="flex items-start justify-between gap-5">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-accent">{service.eyebrow}</p>
+            <h3 id="service-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
+              {service.modalTitle}
+            </h3>
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-accent">{service.subtitle}</p>
+          </div>
+          <button
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.045] text-2xl leading-none text-smoke transition duration-300 hover:border-accent/60 hover:bg-accent/15"
+            type="button"
+            onClick={onClose}
+            aria-label="Cerrar descripción del servicio"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-5 text-base leading-8 text-muted">
+            <p>{service.longDescription}</p>
+            <p>{service.secondaryDescription}</p>
+
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-smoke">Para quién es</h4>
+              <p className="mt-3 leading-7 text-muted">{service.audience}</p>
+            </div>
+          </div>
+
+          <div className="space-y-5">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-smoke">Qué resuelve</h4>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-muted">
+                {service.solves.map((item) => (
+                  <li className="flex gap-3" key={item}>
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-accent/20 bg-deep/35 p-5">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-smoke">{service.frameworkTitle}</h4>
+              <div className="mt-4 space-y-4">
+                {service.framework.map((item, index) => (
+                  <div className="border-b border-white/10 pb-4 last:border-b-0 last:pb-0" key={item.title}>
+                    <p className="text-sm font-semibold text-smoke">
+                      {index + 1}. {item.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-muted">Haz clic para avanzar con este servicio.</p>
+          <a className="btn-primary" href={service.ctaUrl} target={isExternalCta ? '_blank' : undefined} rel={isExternalCta ? 'noreferrer' : undefined}>
+            {service.cta}
+          </a>
+        </div>
+      </article>
+    </div>
+  );
+}
+
 function App() {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-smoke">
       <section className="relative isolate min-h-screen px-5 py-6 sm:px-8 lg:px-12">
@@ -213,7 +459,13 @@ function App() {
           />
           <div className="grid gap-5 lg:grid-cols-2">
             {services.map((service) => (
-              <article className="card group" key={service.title}>
+              <button
+                className="card group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink"
+                key={service.title}
+                type="button"
+                onClick={() => setSelectedService(service)}
+                aria-label={`Ver más sobre ${service.modalTitle}`}
+              >
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">{service.eyebrow}</p>
                 <h3 className="mt-4 text-3xl font-semibold text-smoke">{service.title}</h3>
                 <p className="mt-5 leading-7 text-muted">{service.description}</p>
@@ -225,7 +477,10 @@ function App() {
                   ))}
                 </ul>
                 <p className="mt-7 border-t border-white/10 pt-5 text-sm text-muted">{service.footer}</p>
-              </article>
+                <span className="mt-6 inline-flex text-sm font-semibold text-accent transition duration-300 group-hover:translate-x-1">
+                  Ver descripción ampliada
+                </span>
+              </button>
             ))}
           </div>
         </div>
@@ -295,6 +550,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
     </main>
   );
 }
