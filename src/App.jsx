@@ -2,6 +2,7 @@ const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
 const WHATSAPP_MESSAGE = 'Hola Cristian, quiero informacion sobre tus programas de coaching.';
 const PROFILE_IMAGE = '/cristian-nunez-banner.png';
+const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
@@ -90,7 +91,13 @@ function App() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-smoke">
       <section className="relative isolate min-h-screen px-5 py-6 sm:px-8 lg:px-12">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(112,150,195,0.22),transparent_28rem),linear-gradient(135deg,#0b0f14_0%,#192632_48%,#0d2f50_100%)]" />
+        <img
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[62%_50%]"
+          src={HERO_BANNER_IMAGE}
+          alt="Cristian Núñez"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,15,20,0.96)_0%,rgba(11,15,20,0.88)_34%,rgba(11,15,20,0.48)_58%,rgba(11,15,20,0.12)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_22%_16%,rgba(112,150,195,0.18),transparent_28rem)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-ink to-transparent" />
 
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 border-b border-white/10 pb-5">
@@ -122,12 +129,17 @@ function App() {
               Contacto
             </a>
           </div>
-          <a className="rounded-full border border-accent/50 px-5 py-2 text-sm font-semibold text-smoke transition hover:bg-accent hover:text-ink" href={SCHEDULE_CALL_URL}>
+          <a
+            className="rounded-full border border-accent/50 px-5 py-2 text-sm font-semibold text-smoke transition hover:bg-accent hover:text-ink"
+            href={SCHEDULE_CALL_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
             Agendar llamada
           </a>
         </nav>
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 py-20 sm:py-28 lg:grid-cols-[1.12fr_0.88fr] lg:py-32">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 py-20 sm:py-28 lg:grid-cols-[0.94fr_1.06fr] lg:py-32">
           <div>
             <p className="mb-6 max-w-max rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
               Rendimiento humano e identidad
@@ -141,31 +153,31 @@ function App() {
               pasajera.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a className="btn-primary" href={SCHEDULE_CALL_URL}>
-                Agendar llamada
+              <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noreferrer">
+                Agendar diagnóstico privado
               </a>
               <a className="btn-secondary" href="#servicios">
                 Ver servicios
               </a>
             </div>
           </div>
+          <div className="hidden min-h-[460px] lg:block" aria-hidden="true" />
+        </div>
+      </section>
 
-          <aside className="rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur sm:p-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-accent">Base del trabajo</p>
-            <div className="mt-8 space-y-6">
-              {['Estructura medible', 'Seguimiento real', 'Confrontacion honesta'].map((item, index) => (
-                <div className="flex gap-5 border-b border-white/10 pb-6 last:border-b-0 last:pb-0" key={item}>
-                  <span className="text-sm font-semibold text-accent">{String(index + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 className="font-semibold text-smoke">{item}</h3>
-                    <p className="mt-2 text-sm leading-6 text-muted">
-                      Decisiones claras para avanzar sin improvisar cada semana.
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </aside>
+      <section className="border-y border-accent/30 bg-[linear-gradient(90deg,#192632_0%,#0d2f50_52%,#192632_100%)] px-5 py-5 shadow-[0_20px_70px_rgba(13,47,80,0.28)] sm:px-8 lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-smoke sm:text-base">
+            AGENDA ABIERTA — Diagnóstico privado con Cristian Núñez
+          </p>
+          <a
+            className="inline-flex min-h-10 items-center justify-center rounded-full border border-accent/60 bg-accent/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-smoke transition hover:bg-accent hover:text-ink"
+            href={SCHEDULE_CALL_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Reservar
+          </a>
         </div>
       </section>
 
@@ -268,14 +280,14 @@ function App() {
             Puedes agendar una llamada, escribirme por WhatsApp o contactarme por Instagram y correo.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <a className="btn-primary" href={SCHEDULE_CALL_URL}>
+            <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noreferrer">
               Agendar llamada
             </a>
             <a className="btn-secondary" href={whatsappUrl} target="_blank" rel="noreferrer">
               Escribirme por WhatsApp
             </a>
-            <a className="btn-secondary" href="https://instagram.com/coachingcristian" target="_blank" rel="noreferrer">
-              Instagram @coachingcristian
+            <a className="btn-secondary" href="https://www.instagram.com/cristian_nunezzz/" target="_blank" rel="noreferrer">
+              Instagram
             </a>
             <a className="btn-secondary" href="mailto:coachingcristian@gmail.com">
               coachingcristian@gmail.com
