@@ -163,6 +163,7 @@ const services = [
     cta: 'Quiero mi asesoría fitness',
     ctaUrl: SCHEDULE_CALL_URL,
     details: ['Platinum', 'Platinum PRO'],
+    hideDetails: true,
     footer: 'Acompanamiento progresivo segun nivel de soporte.',
   },
   {
