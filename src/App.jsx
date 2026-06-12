@@ -1325,7 +1325,7 @@ function App() {
                     <img
                       className={`drop-shadow-[0_18px_45px_rgba(112,150,195,0.18)] ${
                         service.imageVariant === 'compact'
-                          ? 'h-full w-full object-cover object-center'
+                          ? 'h-full w-full object-cover object-[center_18%]'
                           : 'h-auto w-full object-contain'
                       }`}
                       src={service.image}
