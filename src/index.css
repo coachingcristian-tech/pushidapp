@@ -94,6 +94,10 @@
   .testimonials-marquee:active {
     animation-play-state: paused;
   }
+
+  .fitness-plans-reveal {
+    animation: fitness-plans-reveal 900ms ease 360ms both;
+  }
 }
 
 @keyframes testimonials-scroll {
@@ -117,9 +121,22 @@
   }
 }
 
+@keyframes fitness-plans-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .testimonials-marquee,
-  .ebooks-resource-visual img {
+  .ebooks-resource-visual img,
+  .fitness-plans-reveal {
     animation: none;
   }
 }
