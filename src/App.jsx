@@ -817,7 +817,7 @@ function FitnessPlansModal({ isOpen, onClose }) {
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-[0_28px_90px_rgba(0,0,0,0.28)] transition duration-500 hover:-translate-y-1 hover:border-[#8fb99a]/30">
               <img
-                className="aspect-[4/5] h-full w-full rounded-2xl object-cover object-center shadow-[0_18px_55px_rgba(0,0,0,0.24)]"
+                className="aspect-[4/5] h-full w-full rounded-2xl object-cover object-[center_35%] shadow-[0_18px_55px_rgba(0,0,0,0.24)]"
                 src="/media/asesoria-fitness-online.jpg"
                 alt="Cristian Núñez en Asesorías Fitness Online"
                 loading="eager"
@@ -1325,7 +1325,7 @@ function App() {
                     <img
                       className={`drop-shadow-[0_18px_45px_rgba(112,150,195,0.18)] ${
                         service.imageVariant === 'compact'
-                          ? 'h-full w-full object-cover object-[center_18%]'
+                          ? 'h-full w-full object-cover object-[center_35%]'
                           : 'h-auto w-full object-contain'
                       }`}
                       src={service.image}
