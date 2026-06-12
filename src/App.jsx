@@ -16,16 +16,23 @@ const fitnessWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICom
 const focusLevels = [
   {
     title: 'Cuerpo',
-    description: 'Entrenamiento, nutricion, descanso y energia para construir una base fisica sostenible.',
+    description: 'Entrenamiento, nutrición, descanso y energía.',
   },
   {
-    title: 'Habitos',
-    description: 'Organizacion, seguimiento, adherencia y ejecucion diaria sin depender de motivacion pasajera.',
+    title: 'Hábitos',
+    description: 'Rutina, adherencia, seguimiento y ejecución diaria.',
   },
   {
     title: 'Identidad',
-    description: 'Dialogo interno, responsabilidad, coherencia y direccion para sostener lo que construyes.',
+    description: 'Responsabilidad, diálogo interno, coherencia y dirección.',
   },
+];
+
+const authorityStats = [
+  '+2.000 procesos acompañados',
+  '15 veces campeón',
+  'Método con plataforma',
+  'Experiencia real de reconstrucción',
 ];
 
 const services = [
@@ -1089,6 +1096,26 @@ function TestimonialCard({ testimonial, priority = false, className = '' }) {
   );
 }
 
+function FeaturedProofCard({ testimonial, priority = false }) {
+  return (
+    <article className="group w-[82vw] max-w-[330px] shrink-0 snap-center rounded-3xl border border-white/10 bg-white/[0.055] p-3 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_24px_80px_rgba(112,150,195,0.16)] sm:w-auto sm:max-w-none">
+      <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#070b10]">
+        <img
+          className="h-[390px] w-full object-contain object-top transition duration-500 group-hover:scale-[1.015] sm:h-[420px] lg:h-[440px]"
+          src={testimonial.image}
+          alt={`Testimonio de ${testimonial.name}`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      </div>
+      <div className="px-2 pb-2 pt-5">
+        <h3 className="text-lg font-semibold text-smoke">{testimonial.name}</h3>
+        <p className="mt-2 text-sm leading-6 text-muted">"{testimonial.summary}"</p>
+      </div>
+    </article>
+  );
+}
+
 function MoreTestimonialsCard({ className = '', onClick }) {
   return (
     <button
@@ -1230,16 +1257,15 @@ function App() {
               Reconstruye tu cuerpo. Ordena tu vida. Sostén tus resultados.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
-              Soy Cristian Núñez, mentor en rendimiento humano y transformacion de identidad. Ayudo a personas
-              ocupadas a mejorar su fisico, recuperar energia y construir estructura real sin depender de motivacion
-              pasajera.
+              Acompaño a personas ocupadas a mejorar su físico, recuperar energía y construir hábitos que puedan
+              sostener cuando la vida se pone exigente.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noreferrer">
-                Agendar diagnóstico privado
+              <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
+                Agendar diagnóstico
               </a>
               <a className="btn-secondary" href="#servicios">
-                Ver servicios
+                Ver programas
               </a>
             </div>
           </div>
@@ -1247,34 +1273,65 @@ function App() {
         </div>
       </section>
 
-      <section className="border-y border-accent/30 bg-[linear-gradient(90deg,#192632_0%,#0d2f50_52%,#192632_100%)] px-5 py-5 shadow-[0_20px_70px_rgba(13,47,80,0.28)] sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-smoke sm:text-base">
-            AGENDA ABIERTA — Diagnóstico privado con Cristian Núñez
+      <section className="border-y border-accent/30 bg-[linear-gradient(90deg,#192632_0%,#0d2f50_52%,#192632_100%)] px-5 py-8 shadow-[0_20px_70px_rgba(13,47,80,0.28)] sm:px-8 lg:px-12">
+        <div className="section-reveal mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center" data-section-reveal>
+          <p className="text-center text-base font-semibold leading-7 text-smoke sm:text-lg lg:text-left">
+            Más que fitness. Un sistema de estructura, seguimiento y reconstrucción real.
           </p>
-          <a
-            className="inline-flex min-h-10 items-center justify-center rounded-full border border-accent/60 bg-accent/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-smoke transition hover:bg-accent hover:text-ink"
-            href={SCHEDULE_CALL_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Reservar
-          </a>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {authorityStats.map((stat) => (
+              <div className="rounded-2xl border border-white/12 bg-white/[0.06] px-4 py-4 text-center shadow-[0_16px_44px_rgba(0,0,0,0.16)] backdrop-blur" key={stat}>
+                <p className="text-sm font-semibold leading-6 text-smoke">{stat}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="text-2xl font-medium leading-relaxed text-smoke sm:text-4xl">
-            No necesitas otra dieta descargada de internet. No necesitas otra rutina generica. Necesitas estructura,
-            seguimiento y una estrategia que encaje con tu vida real.
-          </p>
+        <div className="section-reveal mx-auto grid max-w-7xl gap-10 rounded-3xl border border-white/10 bg-white/[0.045] p-7 shadow-premium backdrop-blur sm:p-10 lg:grid-cols-[0.92fr_1.08fr] lg:p-12" data-section-reveal>
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Problema</p>
+            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
+              No te falta más información. Te falta estructura.
+            </h2>
+          </div>
+          <div>
+            <div className="space-y-5 text-base leading-8 text-muted sm:text-lg">
+              <p>
+                Muchas personas saben qué deberían hacer, pero no logran sostenerlo. Empiezan una dieta, vuelven a
+                improvisar. Entran al gimnasio, no ven progreso. Se motivan unos días y después la vida real los
+                arrastra otra vez.
+              </p>
+              <p>
+                El problema no siempre es falta de disciplina. Muchas veces es falta de sistema, seguimiento y ajustes
+                concretos.
+              </p>
+            </div>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {[
+                'Entrenas, pero no sabes si estás progresando.',
+                'Comes “bien”, pero no tienes estructura.',
+                'Empiezas fuerte y abandonas rápido.',
+                'La motivación baja y todo se cae.',
+                'Nadie ajusta el plan según tu realidad.',
+              ].map((item) => (
+                <li className="rounded-2xl border border-white/10 bg-ink/35 px-4 py-3 text-sm leading-6 text-smoke" key={item}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12" id="enfoque">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader label="Mi enfoque" title="Tres niveles para construir resultados que no dependan del impulso." />
+          <SectionHeader
+            label="Mi enfoque"
+            title="Cuerpo, hábitos e identidad trabajando en la misma dirección."
+            description="Un proceso simple de entender, pero sostenido con seguimiento y ajustes reales."
+          />
           <div className="grid gap-5 md:grid-cols-3">
             {focusLevels.map((level) => (
               <article
@@ -1285,6 +1342,28 @@ function App() {
                 <p className="mt-5 leading-7 text-muted transition duration-300 group-hover:text-[#34495c]">{level.description}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            label="Evidencia"
+            title="Antes de ver los programas, mira lo que pasa cuando hay estructura real."
+            description="Historias reales de alumnos durante el proceso."
+          />
+          <div className="-mx-5 overflow-x-auto px-5 pb-4 sm:mx-0 sm:px-0">
+            <div className="flex snap-x snap-mandatory gap-5 sm:grid sm:grid-cols-3">
+              {featuredTestimonials.map((testimonial, index) => (
+                <FeaturedProofCard testimonial={testimonial} priority={index === 0} key={testimonial.image} />
+              ))}
+            </div>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <a className="btn-primary" href="#servicios">
+              Ver programas
+            </a>
           </div>
         </div>
       </section>
