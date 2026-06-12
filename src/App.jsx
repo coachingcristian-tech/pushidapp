@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 
 const WHATSAPP_NUMBER = '573206561668';
 const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
@@ -166,74 +166,6 @@ const services = [
     ctaUrl: SCHEDULE_CALL_URL,
     details: ['Gold', 'Platinum', 'Platinum Plus', 'Platinum Pro'],
     footer: 'Acompanamiento progresivo segun nivel de soporte.',
-  },
-  {
-    title: 'Protocolo Rebirth',
-    theme: {
-      shell: 'border-[#c9a96a]/38 bg-[linear-gradient(145deg,#1b140a_0%,#5f4725_48%,#8a7244_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(55,35,12,0.58)]',
-      smokeA: 'bg-[#d9c08a]/18',
-      smokeB: 'bg-[#f4f6f8]/9',
-      accentText: 'text-[#ead8aa]',
-      titleText: 'text-[#f4f6f8]',
-      bodyText: 'text-[#efe4ca]',
-      panel: 'border-white/12 bg-white/[0.075]',
-      panelStrong: 'border-[#d9c08a]/25 bg-[#d9c08a]/12',
-      dot: 'bg-[#ead8aa]',
-      cta: 'bg-[#f4f6f8] text-[#5f4725] hover:bg-[#ead8aa] focus:ring-[#d9c08a]',
-      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#d9c08a]/50 hover:bg-white/15',
-    },
-    modalTitle: 'Protocolo Rebirth',
-    eyebrow: 'Programa premium de 90 dias',
-    subtitle: 'Rendimiento humano, control e identidad.',
-    description:
-      'Proceso para lideres, ejecutivos y emprendedores que necesitan optimizar energia, control e impacto.',
-    descriptionRich: [
-      { text: 'Proceso ' },
-      { text: 'premium de 90 días', mark: true },
-      { text: ' para ' },
-      { text: 'líderes, ejecutivos y emprendedores', mark: true },
-      { text: ' que necesitan ' },
-      { text: 'recuperar energía', mark: true },
-      { text: ', ' },
-      { text: 'controlar su agenda', mark: true },
-      { text: ' y proyectar una ' },
-      { text: 'identidad más sólida', mark: true },
-      { text: ' en su vida personal y profesional.' },
-    ],
-    solves: [
-      'Falta de energía sostenida.',
-      'Agenda reactiva.',
-      'Desorden en sueño, alimentación y entrenamiento.',
-      'Drenadores de energía.',
-      'Falta de presencia ejecutiva.',
-    ],
-    featureBlock: {
-      title: 'Diferencial principal',
-      segments: [
-        { text: 'Integra bio-optimización, arquitectura de control e identidad estratégica en un solo proceso.' },
-      ],
-    },
-    frameworkTitle: 'Fases',
-    framework: [
-      {
-        title: 'Bio-Optimización',
-        text: 'Nutrición, sueño, entrenamiento, recuperación y resistencia mental.',
-      },
-      {
-        title: 'Arquitectura de Control',
-        text: 'Gestión del tiempo, agenda blindada y eliminación de drenadores.',
-      },
-      {
-        title: 'Identidad e Impacto',
-        text: 'Presencia, narrativa de autoridad, marca personal y proyección estratégica.',
-      },
-    ],
-    audience:
-      'Para personas que tienen responsabilidades reales y necesitan funcionar mejor, decidir mejor y sostener una imagen coherente con lo que quieren construir.',
-    cta: 'Quiero aplicar a Rebirth',
-    ctaUrl: SCHEDULE_CALL_URL,
-    details: ['Bio-Optimizacion', 'Arquitectura de Control', 'Identidad e Impacto'],
-    footer: 'Disenado para alta exigencia personal y profesional.',
   },
   {
     title: 'E-books y recursos digitales',
@@ -1045,7 +977,7 @@ function App() {
             title="Programas y Servicios"
             description="Cada linea de trabajo tiene una estructura distinta, pero comparte el mismo principio: claridad, seguimiento y ejecucion."
           />
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => (
               <button
                 className="card group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink"
