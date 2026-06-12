@@ -186,17 +186,11 @@ const services = [
     eyebrow: 'Herramientas practicas',
     subtitle: 'Herramientas prácticas para empezar con claridad.',
     description:
-      'Materiales claros para simplificar decisiones de alimentacion, entrenamiento y construccion de habitos.',
+      'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos sin depender de información suelta.',
+    image: '/media/ebooks-recursos.png',
+    imageAlt: 'E-books y recursos digitales de Cristian Núñez',
     descriptionRich: [
-      { text: 'Recursos para personas que quieren empezar a ' },
-      { text: 'comer mejor', mark: true },
-      { text: ', ' },
-      { text: 'moverse más', mark: true },
-      { text: ' y ' },
-      { text: 'ordenar sus hábitos', mark: true },
-      { text: ' antes de entrar a un ' },
-      { text: 'acompañamiento personalizado', mark: true },
-      { text: '.' },
+      { text: 'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos sin depender de información suelta.' },
     ],
     solves: [
       'No saber por dónde empezar.',
@@ -234,6 +228,84 @@ const services = [
     ctaUrl: DIGITAL_RESOURCES_URL,
     details: ['Come. Muevete. Y Ya.', 'Recetarios para perdida de grasa', 'Guias de habitos, nutricion y entrenamiento'],
     footer: 'Recursos editables y escalables para avanzar con criterio.',
+  },
+];
+
+const ebookResources = [
+  {
+    title: 'Come. Muévete. Y Ya.',
+    description: 'Una guía simple para bajar de peso sin volverlo una odisea.',
+    action: 'Próximamente',
+  },
+  {
+    title: '¿Cómo comer? Alimentación a mi medida',
+    description: 'Estructura práctica para entender porciones, comidas y decisiones diarias.',
+    action: 'Próximamente',
+  },
+  {
+    title: 'Musculación sin tonterías',
+    description: 'Entrenamiento explicado sin humo para construir músculo con criterio.',
+    action: 'Próximamente',
+  },
+  {
+    title: 'Vientre Plano, Mente Clara',
+    description: 'Hábitos digestivos, alimentación y pasos concretos para reducir inflamación.',
+    action: 'Próximamente',
+  },
+  {
+    title: 'Guía de suplementación',
+    description: 'Una guía para entender qué suplementos tienen sentido y cuáles no.',
+    action: 'Próximamente',
+  },
+  {
+    title: 'Más allá del miedo',
+    description: 'Identidad, ego, comparación y dirección personal para avanzar con más claridad.',
+    action: 'Próximamente',
+  },
+  {
+    title: 'Más guías',
+    description: 'Otros recursos prácticos de nutrición, entrenamiento, hábitos, recetas y seguimiento.',
+    action: 'Ver más guías',
+    isMoreGuides: true,
+  },
+];
+
+const guideResources = [
+  {
+    title: 'Guía de Viaje: Cumpliendo Mi Objetivo',
+    description: 'Estrategias simples para viajar sin abandonar tu alimentación, entrenamiento ni objetivo físico.',
+  },
+  {
+    title: 'Guía de Entrenamiento: Aprende Conmigo',
+    description: 'Base práctica para entender ejercicios, técnica, progresión y entrenamiento con más criterio.',
+  },
+  {
+    title: 'Guía Básica Meal Prep',
+    description: 'Organización básica de comidas para ahorrar tiempo, comer mejor y reducir improvisación.',
+  },
+  {
+    title: 'Guía de Sueño',
+    description: 'Herramientas concretas para mejorar descanso, recuperación, energía y adherencia al proceso.',
+  },
+  {
+    title: 'Guía de Respiración',
+    description: 'Ejercicios prácticos para regular estrés, mejorar control corporal y conectar con tu recuperación.',
+  },
+  {
+    title: 'Guía Suelo Pélvico para Hombres',
+    description: 'Trabajo específico para fuerza, control, estabilidad y función del suelo pélvico masculino.',
+  },
+  {
+    title: '¿Qué Pasará en los Próximos 90 Días de Iniciar un Déficit?',
+    description: 'Una guía clara para entender cambios físicos, adaptaciones y expectativas reales durante el déficit.',
+  },
+  {
+    title: 'Guía de Preparación de Alimentos',
+    description: 'Métodos simples para preparar alimentos de forma práctica, segura y sostenible.',
+  },
+  {
+    title: 'Plan de Acción – Estreñimiento',
+    description: 'Pasos concretos para mejorar tránsito intestinal, digestión y hábitos que afectan la regularidad.',
   },
 ];
 
@@ -563,6 +635,140 @@ function ServiceModal({ service, onClose }) {
   );
 }
 
+function EbooksModal({ isOpen, onClose }) {
+  const [view, setView] = useState('ebooks');
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  useEffect(() => {
+    if (isOpen) setView('ebooks');
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  const isGuidesView = view === 'guides';
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center bg-ink/82 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
+      onClick={onClose}
+      role="presentation"
+    >
+      <article
+        className="relative max-h-[92vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-white/12 bg-[linear-gradient(145deg,rgba(11,15,20,0.96),rgba(25,38,50,0.94)_52%,rgba(13,47,80,0.9))] p-5 shadow-premium sm:p-8"
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="ebooks-modal-title"
+      >
+        <div className="pointer-events-none absolute -left-20 top-12 h-64 w-64 rounded-full bg-accent/16 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
+        <div className="relative flex items-start justify-between gap-5">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-accent">Recursos digitales</p>
+            <h3 id="ebooks-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
+              {isGuidesView ? 'Más guías y recursos' : 'E-books disponibles'}
+            </h3>
+            <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
+              {isGuidesView
+                ? 'Material práctico para seguir avanzando con estructura.'
+                : 'Selecciona el recurso que quieres conocer.'}
+            </p>
+          </div>
+          <button
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl leading-none text-smoke transition duration-300 hover:border-accent/50 hover:bg-white/15"
+            type="button"
+            onClick={onClose}
+            aria-label="Cerrar recursos digitales"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="relative mt-8 max-h-[calc(92vh-12rem)] overflow-y-auto pr-1">
+          {isGuidesView ? (
+            <div className="space-y-5">
+              <button
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] px-5 py-2 text-sm font-semibold text-smoke transition duration-300 hover:-translate-y-0.5 hover:border-accent/35 hover:bg-white/[0.09]"
+                type="button"
+                onClick={() => setView('ebooks')}
+              >
+                Volver a e-books
+              </button>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {guideResources.map((guide) => (
+                  <article
+                    className="group flex min-h-[210px] flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-5 shadow-[0_18px_55px_rgba(0,0,0,0.2)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-white/[0.07]"
+                    key={guide.title}
+                  >
+                    <h4 className="text-lg font-semibold leading-tight text-smoke">{guide.title}</h4>
+                    <p className="mt-4 flex-1 text-sm leading-7 text-muted">{guide.description}</p>
+                    <button
+                      className="mt-5 inline-flex min-h-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.08] px-4 py-2 text-sm font-semibold text-smoke transition duration-300 hover:-translate-y-0.5 hover:bg-smoke hover:text-ink"
+                      type="button"
+                    >
+                      Próximamente
+                    </button>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {ebookResources.map((resource) => (
+                <article
+                  className={`group flex min-h-[230px] flex-col rounded-2xl border p-5 backdrop-blur transition duration-300 hover:-translate-y-1 ${
+                    resource.isMoreGuides
+                      ? 'border-white/10 bg-white/[0.035] shadow-[0_18px_55px_rgba(0,0,0,0.16)] hover:border-accent/25 hover:bg-white/[0.055]'
+                      : 'border-white/10 bg-white/[0.055] shadow-[0_22px_70px_rgba(0,0,0,0.22)] hover:border-accent/35 hover:bg-white/[0.075]'
+                  }`}
+                  key={resource.title}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h4 className="text-xl font-semibold leading-tight text-smoke">{resource.title}</h4>
+                    {resource.isMoreGuides ? (
+                      <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-2xl font-light leading-none text-accent/75 transition duration-300 group-hover:border-accent/30 group-hover:text-accent">
+                        +
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-4 flex-1 text-sm leading-7 text-muted">{resource.description}</p>
+                  <button
+                    className={`mt-6 inline-flex min-h-11 items-center justify-center rounded-full border px-5 py-2 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 ${
+                      resource.isMoreGuides
+                        ? 'border-white/12 bg-white/[0.08] text-smoke hover:bg-smoke hover:text-ink'
+                        : 'border-white/12 bg-smoke text-ink hover:bg-accent'
+                    }`}
+                    type="button"
+                    onClick={resource.isMoreGuides ? () => setView('guides') : undefined}
+                  >
+                    {resource.action}
+                  </button>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+      </article>
+    </div>
+  );
+}
+
 function AboutCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -839,6 +1045,7 @@ function App() {
   const [selectedService, setSelectedService] = useState(null);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [areTestimonialsOpen, setAreTestimonialsOpen] = useState(false);
+  const [isEbooksOpen, setIsEbooksOpen] = useState(false);
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('[data-section-reveal]'));
@@ -989,6 +1196,23 @@ function App() {
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">{service.eyebrow}</p>
                 <h3 className="mt-4 text-3xl font-semibold text-smoke">{service.title}</h3>
                 <p className="mt-5 leading-7 text-muted">{service.description}</p>
+                {service.image ? (
+                  <figure
+                    className="ebooks-resource-visual mt-8 cursor-pointer rounded-2xl border border-white/10 bg-white/[0.035] p-4 shadow-[0_22px_70px_rgba(112,150,195,0.12)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_30px_90px_rgba(112,150,195,0.2)]"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setIsEbooksOpen(true);
+                    }}
+                  >
+                    <img
+                      className="h-auto w-full object-contain drop-shadow-[0_18px_45px_rgba(112,150,195,0.18)]"
+                      src={service.image}
+                      alt={service.imageAlt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                ) : null}
                 <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                   {service.details.map((detail) => (
                     <li className="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-smoke" key={detail}>
@@ -1141,6 +1365,7 @@ function App() {
       </section>
 
       <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
+      <EbooksModal isOpen={isEbooksOpen} onClose={() => setIsEbooksOpen(false)} />
       <AboutStoryModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
       <TestimonialsModal isOpen={areTestimonialsOpen} onClose={() => setAreTestimonialsOpen(false)} />
     </main>
