@@ -5,7 +5,7 @@ const SCHEDULE_CALL_URL = 'https://calendly.com/coachingcristian/diagnostico';
 const WHATSAPP_MESSAGE = 'Hola Cristian, quiero información sobre tus programas de coaching.';
 const PROFILE_IMAGE = '/brand/cristian-nunez-logo.png';
 const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
-const DIGITAL_RESOURCES_URL = '#servicios';
+const DIGITAL_RESOURCES_URL = 'https://cristiannunez.myshopify.com/collections/all';
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 const REBUILD_WHATSAPP_MESSAGE = 'Hola Cristian, quiero agendar una videollamada para conocer sobre tu programa';
@@ -625,7 +625,7 @@ function ServiceModal({ service, onClose }) {
 
         <div className="mt-8 flex flex-col gap-3 border-t border-white/12 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className={`text-sm ${theme.bodyText}`}>Haz clic para avanzar con este servicio.</p>
-          <a className={`inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white ${theme.cta}`} href={service.ctaUrl} target={isExternalCta ? '_blank' : undefined} rel={isExternalCta ? 'noreferrer' : undefined}>
+          <a className={`inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white ${theme.cta}`} href={service.ctaUrl} target={isExternalCta ? '_blank' : undefined} rel={isExternalCta ? 'noopener noreferrer' : undefined}>
             {service.cta}
           </a>
         </div>
@@ -1213,13 +1213,15 @@ function App() {
                     />
                   </figure>
                 ) : null}
-                <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {service.details.map((detail) => (
-                    <li className="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-smoke" key={detail}>
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
+                {!service.image ? (
+                  <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                    {service.details.map((detail) => (
+                      <li className="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-smoke" key={detail}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
                 <p className="mt-7 border-t border-white/10 pt-5 text-sm text-muted">{service.footer}</p>
                 <span className="mt-6 inline-flex text-sm font-semibold text-accent transition duration-300 group-hover:translate-x-1">
                   Ver descripción ampliada
