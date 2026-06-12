@@ -10,6 +10,8 @@ const DIGITAL_RESOURCES_URL = 'https://cristiannunez.myshopify.com/collections/a
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 const REBUILD_WHATSAPP_MESSAGE = 'Hola Cristian, quiero agendar una videollamada para conocer sobre tu programa';
 const rebuildWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(REBUILD_WHATSAPP_MESSAGE)}`;
+const FITNESS_WHATSAPP_MESSAGE = 'Estuve en tu página y quiero conocer tus Asesorías Online';
+const fitnessWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(FITNESS_WHATSAPP_MESSAGE)}`;
 
 const focusLevels = [
   {
@@ -96,7 +98,7 @@ const services = [
     footer: 'Etapa 1 - Reconstruccion / Etapa 2 - Direccion',
   },
   {
-    title: 'Asesorias Fitness Online',
+    title: 'Asesorías Fitness Online',
     theme: {
       shell: 'border-[#8fb99a]/35 bg-[linear-gradient(145deg,#0b1710_0%,#254434_48%,#506757_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(10,35,21,0.58)]',
       smokeA: 'bg-[#8fb99a]/18',
@@ -114,7 +116,11 @@ const services = [
     eyebrow: 'Entrenamiento, nutricion y seguimiento',
     subtitle: 'Entrenamiento, nutrición y seguimiento personalizado.',
     description:
-      'Planes personalizados para personas que necesitan una estrategia concreta, medible y adaptada a su vida real.',
+      'Acompañamiento para mejorar tu composición corporal con una estrategia clara, seguimiento real y una estructura adaptada a tu vida.',
+    image: '/media/asesoria-fitness-online.jpg',
+    imageAlt: 'Cristian Núñez en asesoría fitness online',
+    imageModal: 'fitness',
+    imageVariant: 'compact',
     descriptionRich: [
       { text: 'Servicio para personas que quieren ' },
       { text: 'mejorar su composición corporal', mark: true },
@@ -144,19 +150,11 @@ const services = [
     frameworkTitle: 'Planes',
     framework: [
       {
-        title: 'Gold',
-        text: 'Acompañamiento básico y efectivo.',
-      },
-      {
         title: 'Platinum',
         text: 'Seguimiento más completo durante 12 semanas.',
       },
       {
-        title: 'Platinum Plus',
-        text: 'Acompañamiento intensivo con más herramientas y análisis.',
-      },
-      {
-        title: 'Platinum Pro',
+        title: 'Platinum PRO',
         text: 'Servicio premium con mayor personalización, videollamadas y soporte prioritario.',
       },
     ],
@@ -164,7 +162,7 @@ const services = [
       'Para personas que quieren una mejora física seria, con entrenamiento, nutrición y acompañamiento adaptado a su vida real.',
     cta: 'Quiero mi asesoría fitness',
     ctaUrl: SCHEDULE_CALL_URL,
-    details: ['Gold', 'Platinum', 'Platinum Plus', 'Platinum Pro'],
+    details: ['Platinum', 'Platinum PRO'],
     footer: 'Acompanamiento progresivo segun nivel de soporte.',
   },
   {
@@ -189,6 +187,8 @@ const services = [
       'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos sin depender de información suelta.',
     image: '/media/ebooks-recursos.png',
     imageAlt: 'E-books y recursos digitales de Cristian Núñez',
+    imageModal: 'ebooks',
+    hideDetails: true,
     descriptionRich: [
       { text: 'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos sin depender de información suelta.' },
     ],
@@ -769,6 +769,116 @@ function EbooksModal({ isOpen, onClose }) {
   );
 }
 
+function FitnessPlansModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center bg-ink/82 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
+      onClick={onClose}
+      role="presentation"
+    >
+      <article
+        className="relative max-h-[92vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-white/12 bg-[linear-gradient(145deg,rgba(11,15,20,0.96),rgba(25,38,50,0.94)_52%,rgba(37,68,52,0.88))] p-5 shadow-premium sm:p-8"
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="fitness-plans-modal-title"
+      >
+        <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full bg-[#8fb99a]/16 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 right-8 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
+        <button
+          className="absolute right-5 top-5 z-10 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl leading-none text-smoke transition duration-300 hover:border-[#8fb99a]/50 hover:bg-white/15"
+          type="button"
+          onClick={onClose}
+          aria-label="Cerrar planes fitness"
+        >
+          ×
+        </button>
+
+        <div className="relative max-h-[calc(92vh-2.5rem)] overflow-y-auto pr-1">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+            <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-[0_28px_90px_rgba(0,0,0,0.28)] transition duration-500 hover:-translate-y-1 hover:border-[#8fb99a]/30">
+              <img
+                className="aspect-[4/5] h-full w-full rounded-2xl object-cover object-center shadow-[0_18px_55px_rgba(0,0,0,0.24)]"
+                src="/media/asesoria-fitness-online.jpg"
+                alt="Cristian Núñez en Asesorías Fitness Online"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+
+            <div className="pt-1 lg:pt-2">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#bfd8c4]">Asesorías Fitness Online</p>
+              <h3 id="fitness-plans-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
+                Asesorías Fitness Online
+              </h3>
+              <p className="mt-4 text-lg font-medium leading-8 text-[#bfd8c4]">
+                Entrenamiento, nutrición y seguimiento para dejar de improvisar.
+              </p>
+
+              <div className="mt-7 space-y-5 text-base leading-8 text-muted">
+                <p>
+                  Si ya intentaste entrenar, comer mejor o bajar grasa, pero siempre terminas volviendo al mismo punto,
+                  el problema no es solo tu disciplina. El problema es la falta de estructura, seguimiento y ajustes
+                  reales.
+                </p>
+                <p>
+                  Mis Asesorías Fitness Online están diseñadas para que sepas exactamente qué hacer con tu
+                  entrenamiento, tu alimentación y tus decisiones diarias. No trabajamos con rutinas genéricas ni dietas
+                  copiadas. Trabajamos con un sistema adaptado a tu vida, tu cuerpo y tu nivel de compromiso.
+                </p>
+                <p>
+                  Aquí no vienes a recibir información suelta. Vienes a tener dirección, criterio y acompañamiento para
+                  mejorar tu composición corporal con más orden, menos ansiedad y más claridad.
+                </p>
+              </div>
+
+              <div className="fitness-plans-reveal mt-8 border-t border-white/12 pt-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#bfd8c4]">Planes disponibles:</p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {['Plan Platinum', 'Plan Platinum PRO'].map((plan) => (
+                    <article
+                      className="rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur"
+                      key={plan}
+                    >
+                      <h4 className="text-lg font-semibold text-smoke">{plan}</h4>
+                    </article>
+                  ))}
+                </div>
+                <a
+                  className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-smoke px-7 py-3 text-sm font-semibold text-[#254434] transition duration-300 hover:-translate-y-0.5 hover:bg-[#bfd8c4] focus:outline-none focus:ring-2 focus:ring-[#8fb99a] focus:ring-offset-2 focus:ring-offset-ink"
+                  href={fitnessWhatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Empezar ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+}
+
 function AboutCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -1046,6 +1156,7 @@ function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [areTestimonialsOpen, setAreTestimonialsOpen] = useState(false);
   const [isEbooksOpen, setIsEbooksOpen] = useState(false);
+  const [isFitnessPlansOpen, setIsFitnessPlansOpen] = useState(false);
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('[data-section-reveal]'));
@@ -1198,14 +1309,24 @@ function App() {
                 <p className="mt-5 leading-7 text-muted">{service.description}</p>
                 {service.image ? (
                   <figure
-                    className="ebooks-resource-visual mt-8 cursor-pointer rounded-2xl border border-white/10 bg-white/[0.035] p-4 shadow-[0_22px_70px_rgba(112,150,195,0.12)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_30px_90px_rgba(112,150,195,0.2)]"
+                    className={`ebooks-resource-visual cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] shadow-[0_22px_70px_rgba(112,150,195,0.12)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_30px_90px_rgba(112,150,195,0.2)] ${
+                      service.imageVariant === 'compact' ? 'mt-6 h-52 p-0 sm:h-56' : 'mt-8 p-4'
+                    }`}
                     onClick={(event) => {
                       event.stopPropagation();
+                      if (service.imageModal === 'fitness') {
+                        setIsFitnessPlansOpen(true);
+                        return;
+                      }
                       setIsEbooksOpen(true);
                     }}
                   >
                     <img
-                      className="h-auto w-full object-contain drop-shadow-[0_18px_45px_rgba(112,150,195,0.18)]"
+                      className={`drop-shadow-[0_18px_45px_rgba(112,150,195,0.18)] ${
+                        service.imageVariant === 'compact'
+                          ? 'h-full w-full object-cover object-center'
+                          : 'h-auto w-full object-contain'
+                      }`}
                       src={service.image}
                       alt={service.imageAlt}
                       loading="lazy"
@@ -1213,7 +1334,7 @@ function App() {
                     />
                   </figure>
                 ) : null}
-                {!service.image ? (
+                {!service.hideDetails ? (
                   <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                     {service.details.map((detail) => (
                       <li className="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-smoke" key={detail}>
@@ -1368,6 +1489,7 @@ function App() {
 
       <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
       <EbooksModal isOpen={isEbooksOpen} onClose={() => setIsEbooksOpen(false)} />
+      <FitnessPlansModal isOpen={isFitnessPlansOpen} onClose={() => setIsFitnessPlansOpen(false)} />
       <AboutStoryModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
       <TestimonialsModal isOpen={areTestimonialsOpen} onClose={() => setAreTestimonialsOpen(false)} />
     </main>
