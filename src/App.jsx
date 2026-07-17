@@ -239,6 +239,72 @@ const services = [
   },
 ];
 
+const rebuildService = services[0];
+
+const rebuildProblems = [
+  'Falta de estructura.',
+  'Alimentación improvisada.',
+  'Ciclos de abandono.',
+  'Resultados que no se sostienen.',
+];
+
+const rebuildSteps = [
+  {
+    title: 'Regular la Biología',
+    text: 'Entrenamiento, nutrición, descanso, recuperación y energía. Primero se ordena el cuerpo para que el proceso tenga base real.',
+  },
+  {
+    title: 'Reordenar los Hábitos',
+    text: 'Rutinas, seguimiento, check-ins, decisiones diarias y estructura. El objetivo es dejar de depender de la motivación.',
+  },
+  {
+    title: 'Reconstruir la Identidad',
+    text: 'Coherencia, responsabilidad, diálogo interno y una forma de actuar que sostenga los resultados cuando la vida se pone exigente.',
+  },
+];
+
+const rebuildIncludes = [
+  'Nutrición personalizada',
+  'Entrenamiento personalizado',
+  'Seguimiento',
+  'Check-ins',
+  'Sesiones',
+  'Portal / plataforma',
+];
+
+const faqItems = [
+  {
+    question: '¿Método Rebuild es solo un plan de entrenamiento y nutrición?',
+    answer:
+      'No. Entrenamiento y nutrición son parte del proceso, pero el método también trabaja hábitos, seguimiento, estructura diaria e identidad. El objetivo no es que mejores unas semanas, sino que aprendas a sostener el cambio.',
+  },
+  {
+    question: '¿Necesito tener experiencia entrenando?',
+    answer:
+      'No. El proceso se adapta a tu punto de partida. Lo importante es tener disposición para seguir una estructura y reportar con honestidad.',
+  },
+  {
+    question: '¿Cuánto tiempo dura el proceso?',
+    answer:
+      'Depende del formato activo, pero el enfoque está pensado para generar cambios medibles y sostenibles, no resultados improvisados.',
+  },
+  {
+    question: '¿Qué pasa si ya he abandonado otros procesos?',
+    answer:
+      'Precisamente por eso existe el método. La mayoría no falla por falta de ganas, falla porque no tiene estructura, seguimiento ni ajustes reales.',
+  },
+  {
+    question: '¿El plan de alimentación es personalizado?',
+    answer:
+      'Sí. La nutrición se adapta al objetivo, contexto, horarios, preferencias y capacidad real de adherencia.',
+  },
+  {
+    question: '¿Tendré acompañamiento durante el proceso?',
+    answer:
+      'Sí. El seguimiento, los check-ins y los ajustes son parte central del método.',
+  },
+];
+
 const ebookResources = [
   {
     title: 'Come. Muévete. Y Ya.',
@@ -1262,10 +1328,7 @@ function App() {
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
-                Agendar diagnóstico
-              </a>
-              <a className="btn-secondary" href="#servicios">
-                Ver programas
+                Aplicar al Método Rebuild
               </a>
             </div>
           </div>
@@ -1273,54 +1336,59 @@ function App() {
         </div>
       </section>
 
-      <section className="border-y border-accent/30 bg-[linear-gradient(90deg,#192632_0%,#0d2f50_52%,#192632_100%)] px-5 py-8 shadow-[0_20px_70px_rgba(13,47,80,0.28)] sm:px-8 lg:px-12">
-        <div className="section-reveal mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center" data-section-reveal>
-          <p className="text-center text-base font-semibold leading-7 text-smoke sm:text-lg lg:text-left">
-            Más que fitness. Un sistema de estructura, seguimiento y reconstrucción real.
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {authorityStats.map((stat) => (
-              <div className="rounded-2xl border border-white/12 bg-white/[0.06] px-4 py-4 text-center shadow-[0_16px_44px_rgba(0,0,0,0.16)] backdrop-blur" key={stat}>
-                <p className="text-sm font-semibold leading-6 text-smoke">{stat}</p>
+      <section className="px-5 py-20 sm:px-8 lg:px-12" id="servicios">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            label="Programas y Servicios"
+            title="Método Rebuild"
+            description="El servicio principal para ordenar cuerpo, hábitos e identidad con estructura y seguimiento real."
+          />
+          <div className="section-reveal grid gap-8 rounded-3xl border border-accent/25 bg-[linear-gradient(145deg,rgba(13,47,80,0.76),rgba(25,38,50,0.86)_48%,rgba(11,15,20,0.96))] p-7 shadow-premium sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:p-12" data-section-reveal>
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-accent">{rebuildService.eyebrow}</p>
+              <h2 className="text-4xl font-semibold leading-tight text-smoke sm:text-6xl">{rebuildService.modalTitle}</h2>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-muted">
+                Método Rebuild está diseñado para personas que quieren dejar de improvisar y construir una estructura
+                real para bajar grasa, recuperar energía y sostener resultados cuando la vida se pone exigente.
+              </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {authorityStats.map((stat) => (
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-4 shadow-[0_16px_44px_rgba(0,0,0,0.16)]" key={stat}>
+                    <p className="text-sm font-semibold leading-6 text-smoke">{stat}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="grid gap-4">
+              {rebuildService.details.map((detail) => (
+                <div className="group rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.085]" key={detail}>
+                  <p className="text-lg font-semibold text-smoke">{detail}</p>
+                </div>
+              ))}
+              <div className="rounded-2xl border border-accent/25 bg-accent/10 p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Plataforma Rebuild</p>
+                <p className="mt-3 text-sm leading-7 text-smoke">
+                  Seguimiento, recursos, clases, registros y herramientas prácticas organizadas en un solo lugar.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12">
-        <div className="section-reveal mx-auto grid max-w-7xl gap-10 rounded-3xl border border-white/10 bg-white/[0.045] p-7 shadow-premium backdrop-blur sm:p-10 lg:grid-cols-[0.92fr_1.08fr] lg:p-12" data-section-reveal>
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Problema</p>
-            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
-              No te falta más información. Te falta estructura.
-            </h2>
-          </div>
-          <div>
-            <div className="space-y-5 text-base leading-8 text-muted sm:text-lg">
-              <p>
-                Muchas personas saben qué deberían hacer, pero no logran sostenerlo. Empiezan una dieta, vuelven a
-                improvisar. Entran al gimnasio, no ven progreso. Se motivan unos días y después la vida real los
-                arrastra otra vez.
-              </p>
-              <p>
-                El problema no siempre es falta de disciplina. Muchas veces es falta de sistema, seguimiento y ajustes
-                concretos.
-              </p>
-            </div>
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                'Entrenas, pero no sabes si estás progresando.',
-                'Comes “bien”, pero no tienes estructura.',
-                'Empiezas fuerte y abandonas rápido.',
-                'La motivación baja y todo se cae.',
-                'Nadie ajusta el plan según tu realidad.',
-              ].map((item) => (
-                <li className="rounded-2xl border border-white/10 bg-ink/35 px-4 py-3 text-sm leading-6 text-smoke" key={item}>
-                  {item}
-                </li>
-              ))}
-            </ul>
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            label="Qué problema resuelve"
+            title="No necesitas más información suelta. Necesitas un sistema."
+            description="Método Rebuild está diseñado para personas que no necesitan más información suelta, sino una estructura que les permita sostener resultados en la vida real."
+          />
+          <div className="grid gap-5 md:grid-cols-4">
+            {rebuildProblems.map((problem) => (
+              <article className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.075]" key={problem}>
+                <p className="text-lg font-semibold leading-7 text-smoke">{problem}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -1328,18 +1396,21 @@ function App() {
       <section className="px-5 py-20 sm:px-8 lg:px-12" id="enfoque">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            label="Mi enfoque"
-            title="Cuerpo, hábitos e identidad trabajando en la misma dirección."
-            description="Un proceso simple de entender, pero sostenido con seguimiento y ajustes reales."
+            label="Cómo funciona"
+            title="Tres pasos para reconstruir con orden."
+            description="Primero se estabiliza la base. Después se organiza la ejecución. Finalmente se construye una identidad capaz de sostener el proceso."
           />
           <div className="grid gap-5 md:grid-cols-3">
-            {focusLevels.map((level) => (
+            {rebuildSteps.map((step, index) => (
               <article
                 className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-[#eaf1f7] hover:shadow-[0_26px_80px_rgba(112,150,195,0.18)] active:-translate-y-0.5 sm:p-8"
-                key={level.title}
+                key={step.title}
               >
-                <h3 className="text-2xl font-semibold text-smoke transition duration-300 group-hover:text-[#0d2f50]">{level.title}</h3>
-                <p className="mt-5 leading-7 text-muted transition duration-300 group-hover:text-[#34495c]">{level.description}</p>
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-accent/35 bg-accent/10 text-sm font-semibold text-accent transition duration-300 group-hover:bg-[#0d2f50] group-hover:text-smoke">
+                  {index + 1}
+                </span>
+                <h3 className="mt-5 text-2xl font-semibold text-smoke transition duration-300 group-hover:text-[#0d2f50]">{step.title}</h3>
+                <p className="mt-5 leading-7 text-muted transition duration-300 group-hover:text-[#34495c]">{step.text}</p>
               </article>
             ))}
           </div>
@@ -1349,168 +1420,36 @@ function App() {
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            label="Evidencia"
-            title="Antes de ver los programas, mira lo que pasa cuando hay estructura real."
-            description="Historias reales de alumnos durante el proceso."
+            label="Qué incluye"
+            title="Una estructura completa para dejar de improvisar."
+            description="El proceso combina dirección, seguimiento y herramientas prácticas para avanzar con criterio."
           />
-          <div className="-mx-5 overflow-x-auto px-5 pb-4 sm:mx-0 sm:px-0">
-            <div className="flex snap-x snap-mandatory gap-5 sm:grid sm:grid-cols-3">
-              {featuredTestimonials.map((testimonial, index) => (
-                <FeaturedProofCard testimonial={testimonial} priority={index === 0} key={testimonial.image} />
-              ))}
-            </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {rebuildIncludes.map((item) => (
+              <article className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.075]" key={item}>
+                <p className="text-xl font-semibold text-smoke">{item}</p>
+              </article>
+            ))}
           </div>
-          <div className="mt-8 flex justify-center">
-            <a className="btn-primary" href="#servicios">
-              Ver programas
+          <div className="mt-6 rounded-3xl border border-accent/25 bg-[linear-gradient(135deg,rgba(112,150,195,0.14),rgba(13,47,80,0.28))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.2)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Portal / plataforma</p>
+            <p className="mt-3 max-w-4xl text-base leading-8 text-smoke">
+              El proceso cuenta con un portal completo para organizar recursos, clases, registros, seguimiento y
+              herramientas prácticas en un solo lugar.
+            </p>
+          </div>
+          <div className="mt-9 flex justify-center">
+            <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
+              Aplicar al Método Rebuild
             </a>
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-12" id="servicios">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader
-            label="Servicios"
-            title="Programas y Servicios"
-            description="Cada linea de trabajo tiene una estructura distinta, pero comparte el mismo principio: claridad, seguimiento y ejecucion."
-          />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
-              <button
-                className="card group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink"
-                key={service.title}
-                type="button"
-                onClick={() => setSelectedService(service)}
-                aria-label={`Ver más sobre ${service.modalTitle}`}
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">{service.eyebrow}</p>
-                <h3 className="mt-4 text-3xl font-semibold text-smoke">{service.title}</h3>
-                <p className="mt-5 leading-7 text-muted">{service.description}</p>
-                {service.image ? (
-                  <figure
-                    className={`ebooks-resource-visual cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] shadow-[0_22px_70px_rgba(112,150,195,0.12)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_30px_90px_rgba(112,150,195,0.2)] ${
-                      service.imageVariant === 'compact' ? 'mt-6 h-52 p-0 sm:h-56' : 'mt-8 p-4'
-                    }`}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      if (service.imageModal === 'fitness') {
-                        setIsFitnessPlansOpen(true);
-                        return;
-                      }
-                      setIsEbooksOpen(true);
-                    }}
-                  >
-                    <img
-                      className={`drop-shadow-[0_18px_45px_rgba(112,150,195,0.18)] ${
-                        service.imageVariant === 'compact'
-                          ? 'h-full w-full object-cover object-[center_35%]'
-                          : 'h-auto w-full object-contain'
-                      }`}
-                      src={service.image}
-                      alt={service.imageAlt}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                ) : null}
-                {!service.hideDetails ? (
-                  <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-                    {service.details.map((detail) => (
-                      <li className="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-smoke" key={detail}>
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-                <p className="mt-7 border-t border-white/10 pt-5 text-sm text-muted">{service.footer}</p>
-                <span className="mt-6 inline-flex text-sm font-semibold text-accent transition duration-300 group-hover:translate-x-1">
-                  Ver descripción ampliada
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-6xl gap-9 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:p-14">
-          <figure className="section-reveal overflow-hidden rounded-3xl border border-white/10 bg-ink shadow-premium" data-section-reveal>
-            <AboutVideo />
-          </figure>
-
-          <div className="section-reveal flex flex-col justify-center" data-section-reveal>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
-            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Sobre mí</h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación y he sido 15 veces campeón en fisicoculturismo. Pero mi autoridad no viene solo de los logros: también viene de haber tenido que reconstruirme desde cero.
-            </p>
-            <button className="btn-primary mt-8 w-fit" type="button" onClick={() => setIsAboutOpen(true)}>
-              Leer mi historia completa
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="hidden px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-10 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
-          <AboutCarousel />
-
-          <div className="section-reveal flex flex-col justify-center" data-section-reveal>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
-            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
-              Mi autoridad no viene solo del rendimiento. También viene de haber tenido que reconstruirme.
-            </h2>
-
-            <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
-                <p className="text-2xl font-semibold text-smoke">2.000+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">procesos acompañados</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
-                <p className="text-2xl font-semibold text-smoke">15x</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">campeón</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
-                <p className="text-2xl font-semibold text-smoke">2024</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">reconstrucción real</p>
-              </div>
-            </div>
-
-            <div className="mt-8 space-y-5 text-base leading-8 text-muted sm:text-lg">
-              <p>
-                Soy Cristian Núñez. Durante años mi autoridad estuvo ligada al rendimiento: más de 2.000 procesos de
-                transformación física y personal acompañados, una carrera como atleta de fisicoculturismo y 15 títulos
-                en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
-              </p>
-              <p>
-                Pero mi historia no se queda en los logros. En septiembre de 2024 tuve un accidente muy fuerte. Pasé
-                casi un mes en UCI, viví momentos críticos y, después de salir del hospital, una recaída exigió otra
-                cirugía. Ese proceso me enfrentó a la pérdida de autonomía, a la fragilidad del cuerpo y a una
-                reconstrucción real desde cero.
-              </p>
-              <p>
-                Esa experiencia me hizo más humilde, más consciente y más claro en mi forma de acompañar. Hoy mi
-                trabajo no se basa en promesas rápidas, sino en estructura, criterio, acompañamiento y reconstrucción
-                real.
-              </p>
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-accent/25 bg-accent/10 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Lo que sostiene el método</p>
-              <p className="mt-3 leading-7 text-smoke">
-                Disciplina, experiencia vivida y una mirada más humana del proceso: no solo cambiar el cuerpo, sino
-                construir una estructura que una persona pueda sostener cuando la vida deja de estar bajo control.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            label="Testimonios"
+            label="Resultados reales"
             title="Historias Reales"
             description="Evidencia cercana del proceso: seguimiento, ajustes, constancia y cambios sostenidos."
           />
@@ -1537,32 +1476,97 @@ function App() {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-12" id="contacto">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-accent/30 bg-[linear-gradient(135deg,rgba(13,47,80,0.9),rgba(25,38,50,0.92))] p-7 text-center shadow-premium sm:p-12">
-          <div className="section-reveal" data-section-reveal>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Contacto</p>
-            <h2 className="text-3xl font-semibold text-smoke sm:text-5xl">Hablemos de la estructura que necesitas ahora.</h2>
+      <section className="px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-6xl gap-9 rounded-3xl border border-white/10 bg-navy/55 p-7 shadow-premium sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:p-14">
+          <figure className="section-reveal overflow-hidden rounded-3xl border border-white/10 bg-ink shadow-premium" data-section-reveal>
+            <AboutVideo />
+          </figure>
+
+          <div className="section-reveal flex flex-col justify-center" data-section-reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Sobre mí</p>
+            <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Sobre mí</h2>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación y he sido 15 veces campeón en fisicoculturismo. Pero mi autoridad no viene solo de los logros: también viene de haber tenido que reconstruirme desde cero.
+            </p>
+            <button className="btn-primary mt-8 w-fit" type="button" onClick={() => setIsAboutOpen(true)}>
+              Leer mi historia completa
+            </button>
           </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8 lg:px-12">
+        <div className="section-reveal mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/[0.045] p-7 shadow-premium backdrop-blur sm:p-10 lg:p-12" data-section-reveal>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Trayectoria</p>
+          <h2 className="mb-7 text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Experiencia que sostiene el método</h2>
+          <div className="space-y-5 text-base leading-8 text-muted sm:text-lg">
+            <p>
+              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación física y personal, y he sido 15
+              veces campeón en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
+            </p>
+            <p>
+              Pero mi visión del cambio no viene solo de competir o acompañar alumnos. En 2024 tuve un accidente grave
+              que me obligó a reconstruirme desde cero: cuerpo, hábitos, autonomía y criterio.
+            </p>
+            <p className="font-semibold text-smoke">
+              Esa experiencia cambió la forma en que acompaño. Hoy no trabajo desde promesas rápidas. Trabajo desde
+              estructura, seguimiento y reconstrucción real.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <SectionHeader
+            label="Preguntas frecuentes"
+            title="Lo que necesitas saber antes de aplicar."
+          />
+          <div className="grid gap-4">
+            {faqItems.map((item) => (
+              <details className="group rounded-2xl border border-white/10 bg-white/[0.055] p-5 shadow-premium backdrop-blur transition duration-300 open:border-accent/35 open:bg-white/[0.075]" key={item.question}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-semibold text-smoke">
+                  {item.question}
+                  <span className="text-2xl font-light text-accent transition duration-300 group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 max-w-4xl text-sm leading-7 text-muted">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8 lg:px-12" id="contacto">
+        <div className="section-reveal mx-auto max-w-4xl rounded-3xl border border-accent/30 bg-[linear-gradient(135deg,rgba(13,47,80,0.9),rgba(25,38,50,0.92))] p-7 text-center shadow-premium sm:p-12" data-section-reveal>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-accent">Aplicación</p>
+          <h2 className="text-3xl font-semibold text-smoke sm:text-5xl">Empieza con una estructura que puedas sostener.</h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
-            Puedes agendar una llamada, escribirme por WhatsApp o contactarme por Instagram y correo.
+            Agenda un diagnóstico privado para revisar tu punto de partida y ver si Método Rebuild encaja con lo que necesitas construir.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noreferrer">
-              <ContactIcon type="calendar" />
-              Agendar llamada
-            </a>
-            <a className="btn-secondary" href={whatsappUrl} target="_blank" rel="noreferrer">
-              <ContactIcon type="whatsapp" />
-              Escribirme por WhatsApp
-            </a>
-            <a className="btn-secondary" href="https://www.instagram.com/cristian_nunezzz/" target="_blank" rel="noreferrer">
-              <ContactIcon type="instagram" />
-              Instagram
-            </a>
-            <a className="btn-secondary" href="mailto:coachingcristian@gmail.com">
-              <ContactIcon type="mail" />
-              coachingcristian@gmail.com
-            </a>
+          <a className="btn-primary mt-9" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
+            Aplicar al Método Rebuild
+          </a>
+        </div>
+      </section>
+
+      <section className="px-5 pb-20 pt-8 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/[0.035] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.16)] backdrop-blur sm:p-8">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.28em] text-accent">Otros recursos</p>
+              <h2 className="text-xl font-semibold text-smoke">Otros recursos</h2>
+              <p className="max-w-2xl text-sm leading-7 text-muted">
+                También puedes encontrar e-books, guías y recursos digitales para empezar con herramientas puntuales.
+              </p>
+            </div>
+            <button
+              className="group inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-4xl font-light leading-none text-accent/80 transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.09] hover:text-accent"
+              type="button"
+              onClick={() => setIsEbooksOpen(true)}
+              aria-label="Ver otros recursos digitales"
+            >
+              +
+            </button>
           </div>
         </div>
       </section>
