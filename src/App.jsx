@@ -6,6 +6,7 @@ const WHATSAPP_MESSAGE = 'Hola Cristian, quiero información sobre tus programas
 const PROFILE_IMAGE = '/brand/cristian-nunez-logo.png';
 const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
 const DIGITAL_RESOURCES_URL = 'https://cristiannunez.myshopify.com/collections/all';
+const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 const shopifyResourceLinks = {
   comeMuevete: DIGITAL_RESOURCES_URL,
@@ -28,27 +29,6 @@ const shopifyGuideLinks = {
   planEstrenimiento: DIGITAL_RESOURCES_URL,
 };
 
-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-const REBUILD_WHATSAPP_MESSAGE = 'Hola Cristian, quiero agendar una videollamada para conocer sobre tu programa';
-const rebuildWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(REBUILD_WHATSAPP_MESSAGE)}`;
-const FITNESS_WHATSAPP_MESSAGE = 'Estuve en tu página y quiero conocer tus Asesorías Online';
-const fitnessWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(FITNESS_WHATSAPP_MESSAGE)}`;
-
-const focusLevels = [
-  {
-    title: 'Cuerpo',
-    description: 'Entrenamiento, nutrición, descanso y energía.',
-  },
-  {
-    title: 'Hábitos',
-    description: 'Rutina, adherencia, seguimiento y ejecución diaria.',
-  },
-  {
-    title: 'Identidad',
-    description: 'Responsabilidad, diálogo interno, coherencia y dirección.',
-  },
-];
-
 const rebuildProgramStats = [
   '+2.000 procesos acompañados',
   'Método con plataforma',
@@ -56,211 +36,10 @@ const rebuildProgramStats = [
   'Reconstrucción real',
 ];
 
-const services = [
-  {
-    title: 'Metodo Rebuild',
-    theme: {
-      shell: 'border-[#7096c3]/35 bg-[linear-gradient(145deg,#0b1722_0%,#0d2f50_48%,#192632_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(6,20,35,0.62)]',
-      smokeA: 'bg-[#7096c3]/18',
-      smokeB: 'bg-[#f4f6f8]/10',
-      accentText: 'text-[#a9c8e8]',
-      titleText: 'text-[#f4f6f8]',
-      bodyText: 'text-[#d7e2ee]',
-      panel: 'border-white/12 bg-white/[0.075]',
-      panelStrong: 'border-[#7096c3]/25 bg-[#7096c3]/12',
-      dot: 'bg-[#a9c8e8]',
-      cta: 'bg-[#f4f6f8] text-[#0d2f50] hover:bg-[#a9c8e8] focus:ring-[#7096c3]',
-      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#7096c3]/50 hover:bg-white/15',
-    },
-    modalTitle: 'Método Rebuild',
-    eyebrow: 'Transformacion fisica y personal',
-    subtitle: 'Reconstrucción física, hábitos sostenibles e identidad.',
-    description:
-      'Un programa para recuperar estructura, ordenar habitos y reconstruirse desde adentro con un proceso claro.',
-    descriptionRich: [
-      { text: 'Método Rebuild es un proceso para mujeres con alta exigencia personal que quieren ' },
-      { text: 'bajar grasa', mark: true },
-      { text: ', ' },
-      { text: 'recuperar energía', mark: true },
-      { text: ' y ' },
-      { text: 'dejar de vivir en modo automático', mark: true },
-      { text: '. No es una dieta ni una rutina aislada: es una ' },
-      { text: 'estructura completa', mark: true },
-      { text: ' para ordenar cuerpo, hábitos y mente.' },
-    ],
-    featureBlock: {
-      title: 'Diferencial principal',
-      segments: [
-        { text: 'Incluye una ' },
-        { text: 'plataforma completa y optimizada', mark: true },
-        { text: ' para tener seguimiento, recursos, clases, registros y herramientas prácticas en un solo lugar.' },
-      ],
-    },
-    solves: [
-      'Desorden con la alimentación.',
-      'Falta de constancia.',
-      'Autosabotaje y todo o nada.',
-      'Cansancio físico y mental.',
-      'Pérdida de confianza por intentos fallidos.',
-    ],
-    frameworkTitle: 'Método 3R',
-    framework: [
-      {
-        title: 'Regular la Biología',
-        text: 'Entrenamiento, alimentación, descanso, recuperación y energía.',
-      },
-      {
-        title: 'Reordenar los hábitos',
-        text: 'Rutina real, seguimiento, organización mínima y no negociables sostenibles.',
-      },
-      {
-        title: 'Reconstruirse desde adentro',
-        text: 'Diálogo interno, responsabilidad, coherencia, identidad y orgullo personal basado en evidencia.',
-      },
-    ],
-    audience:
-      'Para personas que no solo quieren verse mejor, sino volver a sentirse fuertes, ordenadas y dueñas de sí mismas.',
-    cta: 'Quiero información sobre Rebuild',
-    ctaUrl: rebuildWhatsappUrl,
-    details: ['Regular la Biologia', 'Reordenar los habitos', 'Reconstruirse desde adentro'],
-    footer: 'Etapa 1 - Reconstruccion / Etapa 2 - Direccion',
-  },
-  {
-    title: 'Asesorías Fitness Online',
-    theme: {
-      shell: 'border-[#8fb99a]/35 bg-[linear-gradient(145deg,#0b1710_0%,#254434_48%,#506757_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(10,35,21,0.58)]',
-      smokeA: 'bg-[#8fb99a]/18',
-      smokeB: 'bg-[#f4f6f8]/9',
-      accentText: 'text-[#bfd8c4]',
-      titleText: 'text-[#f4f6f8]',
-      bodyText: 'text-[#dce9df]',
-      panel: 'border-white/12 bg-white/[0.075]',
-      panelStrong: 'border-[#8fb99a]/25 bg-[#8fb99a]/12',
-      dot: 'bg-[#bfd8c4]',
-      cta: 'bg-[#f4f6f8] text-[#254434] hover:bg-[#bfd8c4] focus:ring-[#8fb99a]',
-      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#8fb99a]/50 hover:bg-white/15',
-    },
-    modalTitle: 'Asesorías Fitness Online',
-    eyebrow: 'Entrenamiento, nutricion y seguimiento',
-    subtitle: 'Entrenamiento, nutrición y seguimiento personalizado.',
-    description:
-      'Acompañamiento para mejorar tu composición corporal con una estrategia clara, seguimiento real y una estructura adaptada a tu vida.',
-    image: '/media/asesoria-fitness-online.jpg',
-    imageAlt: 'Cristian Núñez en asesoría fitness online',
-    imageModal: 'fitness',
-    imageVariant: 'compact',
-    descriptionRich: [
-      { text: 'Servicio para personas que quieren ' },
-      { text: 'mejorar su composición corporal', mark: true },
-      { text: ' con una ' },
-      { text: 'estrategia clara', mark: true },
-      { text: '. El foco está en ' },
-      { text: 'entrenar mejor', mark: true },
-      { text: ', ' },
-      { text: 'comer con criterio', mark: true },
-      { text: ' y ajustar el proceso según la ' },
-      { text: 'respuesta real del cuerpo', mark: true },
-      { text: '.' },
-    ],
-    solves: [
-      'Rutinas genéricas.',
-      'Dietas difíciles de sostener.',
-      'Estancamiento físico.',
-      'Entrenar sin saber si se está haciendo bien.',
-      'Falta de seguimiento.',
-    ],
-    featureBlock: {
-      title: 'Diferencial principal',
-      segments: [
-        { text: 'Planes con distintos niveles de acompañamiento según la intensidad de seguimiento que la persona necesita.' },
-      ],
-    },
-    frameworkTitle: 'Planes',
-    framework: [
-      {
-        title: 'Platinum',
-        text: 'Seguimiento más completo durante 12 semanas.',
-      },
-      {
-        title: 'Platinum PRO',
-        text: 'Servicio premium con mayor personalización, videollamadas y soporte prioritario.',
-      },
-    ],
-    audience:
-      'Para personas que quieren una mejora física seria, con entrenamiento, nutrición y acompañamiento adaptado a su vida real.',
-    cta: 'Quiero mi asesoría fitness',
-    ctaUrl: SCHEDULE_CALL_URL,
-    details: ['Platinum', 'Platinum PRO'],
-    hideDetails: true,
-    footer: 'Acompanamiento progresivo segun nivel de soporte.',
-  },
-  {
-    title: 'E-books y recursos digitales',
-    theme: {
-      shell: 'border-[#9c8fb3]/38 bg-[linear-gradient(145deg,#171321_0%,#44395d_48%,#675b80_100%)] text-[#f4f6f8] shadow-[0_30px_110px_rgba(35,26,52,0.58)]',
-      smokeA: 'bg-[#b9a9d0]/18',
-      smokeB: 'bg-[#f4f6f8]/9',
-      accentText: 'text-[#dbcff0]',
-      titleText: 'text-[#f4f6f8]',
-      bodyText: 'text-[#e6def0]',
-      panel: 'border-white/12 bg-white/[0.075]',
-      panelStrong: 'border-[#b9a9d0]/25 bg-[#b9a9d0]/12',
-      dot: 'bg-[#dbcff0]',
-      cta: 'bg-[#f4f6f8] text-[#44395d] hover:bg-[#dbcff0] focus:ring-[#b9a9d0]',
-      close: 'border-white/15 bg-white/10 text-[#f4f6f8] hover:border-[#b9a9d0]/50 hover:bg-white/15',
-    },
-    modalTitle: 'E-books y recursos digitales',
-    eyebrow: 'Herramientas practicas',
-    subtitle: 'Herramientas prácticas para empezar con claridad.',
-    description:
-      'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos sin depender de información suelta.',
-    image: '/media/ebooks-recursos.png',
-    imageAlt: 'E-books y recursos digitales de Cristian Núñez',
-    imageModal: 'ebooks',
-    hideDetails: true,
-    descriptionRich: [
-      { text: 'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos sin depender de información suelta.' },
-    ],
-    solves: [
-      'No saber por dónde empezar.',
-      'Complicarse demasiado con la nutrición.',
-      'Falta de ideas para comer mejor.',
-      'Confusión por exceso de información.',
-      'Falta de estructura básica.',
-    ],
-    featureBlock: {
-      title: 'Diferencial principal',
-      segments: [
-        { text: 'Material simple, aplicable y diseñado para ' },
-        { text: 'tomar mejores decisiones', mark: true },
-        { text: ' en la vida diaria.' },
-      ],
-    },
-    frameworkTitle: 'Recursos',
-    framework: [
-      {
-        title: 'Come. Muévete. Y Ya.',
-        text: 'Guía práctica para simplificar alimentación y movimiento.',
-      },
-      {
-        title: 'Recetarios para pérdida de grasa',
-        text: 'Ideas aplicables para comer mejor sin complicarte.',
-      },
-      {
-        title: 'Guías de hábitos, nutrición y entrenamiento',
-        text: 'Herramientas para ordenar decisiones diarias y seguimiento.',
-      },
-    ],
-    audience:
-      'Para personas que quieren empezar de forma simple, realista y sin entrar todavía a un proceso personalizado.',
-    cta: 'Ver recursos digitales',
-    ctaUrl: DIGITAL_RESOURCES_URL,
-    details: ['Come. Muevete. Y Ya.', 'Recetarios para perdida de grasa', 'Guias de habitos, nutricion y entrenamiento'],
-    footer: 'Recursos editables y escalables para avanzar con criterio.',
-  },
-];
-
-const rebuildService = services[0];
+const rebuildService = {
+  eyebrow: 'Transformación física y personal',
+  modalTitle: 'Método Rebuild',
+};
 
 const rebuildProblems = [
   {
@@ -463,22 +242,22 @@ const guideResources = [
 const testimonials = [
   {
     name: 'Sebastian',
-    summary: 'Bajo 3 kilos y volvio a sentirse mejor con su ropa.',
+    summary: 'Bajó 3 kilos y volvió a sentirse mejor con su ropa.',
     image: '/testimonials/01-testimonial.webp',
   },
   {
     name: 'Juan Libreros',
-    summary: 'Celebro resultados fisicos claros y mas confianza en el proceso.',
+    summary: 'Celebró resultados físicos claros y más confianza en el proceso.',
     image: '/testimonials/02-testimonial.webp',
   },
   {
     name: 'Sahira Moreno',
-    summary: 'Aprendio a ajustar su alimentacion sin perder estructura.',
+    summary: 'Aprendió a ajustar su alimentación sin perder estructura.',
     image: '/testimonials/03-testimonial.webp',
   },
   {
     name: 'Juan Camilo Ortegon',
-    summary: 'Reconocio el acompanamiento como un pilar para avanzar.',
+    summary: 'Reconoció el acompañamiento como un pilar para avanzar.',
     image: '/testimonials/04-testimonial.webp',
   },
   {
@@ -493,42 +272,42 @@ const testimonials = [
   },
   {
     name: 'Sandra Garcia',
-    summary: 'Se sintio mejor, menos inflamada y con cambios visibles.',
+    summary: 'Se sintió mejor, menos inflamada y con cambios visibles.',
     image: '/testimonials/07-testimonial.webp',
   },
   {
     name: 'Alumna Rebuild',
-    summary: 'Noto mas confianza, menos grasa y mejores reportes de salud.',
+    summary: 'Notó más confianza, menos grasa y mejores reportes de salud.',
     image: '/testimonials/08-testimonial.webp',
   },
   {
-    name: 'Proceso fisico',
-    summary: 'El cambio visual mostro constancia y direccion.',
+    name: 'Proceso físico',
+    summary: 'El cambio visual mostró constancia y dirección.',
     image: '/testimonials/09-testimonial.webp',
   },
   {
     name: 'Alumna de coaching',
-    summary: 'Valoro habitos duraderos y una forma distinta de ver el proceso.',
+    summary: 'Valoró hábitos duraderos y una forma distinta de ver el proceso.',
     image: '/testimonials/10-testimonial.webp',
   },
   {
     name: 'Proceso femenino',
-    summary: 'Transformacion visible con mejor composicion corporal.',
+    summary: 'Transformación visible con mejor composición corporal.',
     image: '/testimonials/11-testimonial.webp',
   },
   {
     name: 'Deborah Gonzales',
-    summary: 'Agradecio el apoyo y la guia durante el proceso.',
+    summary: 'Agradeció el apoyo y la guía durante el proceso.',
     image: '/testimonials/12-testimonial.webp',
   },
   {
     name: 'Respuesta de historia',
-    summary: 'Reconocio el valor del metodo y del acompanamiento.',
+    summary: 'Reconoció el valor del método y del acompañamiento.',
     image: '/testimonials/13-testimonial.webp',
   },
   {
     name: 'Paola Amador',
-    summary: 'Sintio menos inflamacion, mas dureza y avances reales.',
+    summary: 'Sintió menos inflamación, más dureza y avances reales.',
     image: '/testimonials/14-testimonial.webp',
   },
 ];
@@ -593,45 +372,6 @@ function SectionHeader({ label, title, description }) {
       <h2 className="text-3xl font-semibold leading-tight text-smoke sm:text-4xl lg:text-5xl">{title}</h2>
       {description ? <p className="mt-5 text-base leading-8 text-muted sm:text-lg">{description}</p> : null}
     </div>
-  );
-}
-
-function ContactIcon({ type }) {
-  const commonClass = 'h-5 w-5 shrink-0';
-
-  if (type === 'calendar') {
-    return (
-      <svg className={`${commonClass} text-[#8db4df]`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M7 3v3M17 3v3M4.5 9.5h15M6.5 5h11A2.5 2.5 0 0 1 20 7.5v10A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-10A2.5 2.5 0 0 1 6.5 5Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M8 13h3M8 16h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
-  if (type === 'whatsapp') {
-    return (
-      <svg className={`${commonClass} text-[#8fb99a]`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M5.2 18.9 6 15.7a7.3 7.3 0 1 1 2.9 2.8l-3.7.4Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M9.4 8.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.4.5c-.1.1-.2.3 0 .5.4.8 1.1 1.5 2.1 2 .2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.6 0 .5-.3 1.2-.8 1.5-.6.4-1.7.4-3.3-.3-2.7-1.2-4.4-3.8-4.5-5.3 0-.7.2-1.2.5-1.6Z" fill="currentColor" opacity="0.95" />
-      </svg>
-    );
-  }
-
-  if (type === 'instagram') {
-    return (
-      <svg className={`${commonClass} text-[#b89ac6]`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="4.5" y="4.5" width="15" height="15" rx="4.2" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M15.6 11.9a3.6 3.6 0 1 1-7.2 0 3.6 3.6 0 0 1 7.2 0Z" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M16.5 7.7h.01" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg className={`${commonClass} text-[#c9d4df]`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M4.5 7.5A2.5 2.5 0 0 1 7 5h10a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 17 19H7a2.5 2.5 0 0 1-2.5-2.5v-9Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-      <path d="m6 8 6 5 6-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }
 
@@ -718,157 +458,6 @@ function RebuildIcon({ type, className = '' }) {
   }
 
   return <RebuildIcon type="portal" className={className} />;
-}
-
-function RichText({ segments, className = '' }) {
-  return (
-    <p className={className}>
-      {segments.map((segment, index) => (
-        <span key={`${segment.text}-${index}`}>{segment.text}</span>
-      ))}
-    </p>
-  );
-}
-
-function ServiceModal({ service, onClose }) {
-  useEffect(() => {
-    if (!service) return undefined;
-
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
-    };
-
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = '';
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [service, onClose]);
-
-  if (!service) return null;
-
-  const isExternalCta = service.ctaUrl.startsWith('http');
-  const theme = service.theme;
-
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-ink/80 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
-      onClick={onClose}
-      role="presentation"
-    >
-      <article
-        className={`relative max-h-[92vh] w-full max-w-5xl overflow-hidden rounded-3xl border p-6 sm:p-8 lg:p-10 ${theme.shell}`}
-        onClick={(event) => event.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="service-modal-title"
-      >
-        <div className={`pointer-events-none absolute -left-20 top-8 h-64 w-64 rounded-full blur-3xl ${theme.smokeA}`} />
-        <div className={`pointer-events-none absolute -bottom-24 right-8 h-72 w-72 rounded-full blur-3xl ${theme.smokeB}`} />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.34),transparent_34rem)]" />
-        <div className="relative max-h-[calc(92vh-3rem)] overflow-y-auto pr-1 sm:max-h-[calc(92vh-4rem)]">
-        <div className="flex items-start justify-between gap-5">
-          <div>
-            <p className={`mb-3 text-xs font-semibold uppercase tracking-[0.28em] ${theme.accentText}`}>{service.eyebrow}</p>
-            <h3 id="service-modal-title" className={`text-3xl font-semibold leading-tight sm:text-5xl ${theme.titleText}`}>
-              {service.modalTitle}
-            </h3>
-            <p className={`mt-4 max-w-3xl text-lg font-medium leading-8 ${theme.accentText}`}>{service.subtitle}</p>
-          </div>
-          <button
-            className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border text-2xl leading-none transition duration-300 ${theme.close}`}
-            type="button"
-            onClick={onClose}
-            aria-label="Cerrar descripción del servicio"
-          >
-            ×
-          </button>
-        </div>
-
-        <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-          <div className={`space-y-5 text-base leading-8 ${theme.bodyText}`}>
-            <RichText segments={service.descriptionRich} className={`text-base leading-8 ${theme.bodyText}`} />
-            <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.08)] ${theme.panelStrong}`}>
-              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>
-                {service.featureBlock.title}
-              </h4>
-              <RichText segments={service.featureBlock.segments} className={`mt-3 leading-7 ${theme.bodyText}`} />
-            </div>
-          </div>
-
-          <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
-            <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Qué resuelve</h4>
-            <ul className={`mt-4 space-y-3 text-sm leading-6 ${theme.bodyText}`}>
-              {service.solves.map((item) => (
-                <li className="flex gap-3" key={item}>
-                  <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${theme.dot}`} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="hidden">
-          <div className={`space-y-5 text-base leading-8 ${theme.bodyText}`}>
-            <RichText segments={service.descriptionRich} className={`text-base leading-8 ${theme.bodyText}`} />
-
-            {service.featureBlock ? (
-              <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.08)] ${theme.panelStrong}`}>
-                <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>
-                  {service.featureBlock.title}
-                </h4>
-                <RichText segments={service.featureBlock.segments} className={`mt-3 leading-7 ${theme.bodyText}`} />
-              </div>
-            ) : null}
-
-            <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
-              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Para quién es</h4>
-              <p className={`mt-3 leading-7 ${theme.bodyText}`}>{service.audience}</p>
-            </div>
-          </div>
-
-          <div className="space-y-5">
-            <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panel}`}>
-              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>Qué resuelve</h4>
-              <ul className={`mt-4 space-y-3 text-sm leading-6 ${theme.bodyText}`}>
-                {service.solves.map((item) => (
-                  <li className="flex gap-3" key={item}>
-                    <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${theme.dot}`} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={`rounded-2xl border p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] ${theme.panelStrong}`}>
-              <h4 className={`text-sm font-semibold uppercase tracking-[0.22em] ${theme.titleText}`}>{service.frameworkTitle}</h4>
-              <div className="mt-4 space-y-4">
-                {service.framework.map((item, index) => (
-                  <div className="border-b border-white/12 pb-4 last:border-b-0 last:pb-0" key={item.title}>
-                    <p className={`text-sm font-semibold ${theme.titleText}`}>
-                      {index + 1}. {item.title}
-                    </p>
-                    <p className={`mt-2 text-sm leading-6 ${theme.bodyText}`}>{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 flex flex-col gap-3 border-t border-white/12 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className={`text-sm ${theme.bodyText}`}>Haz clic para avanzar con este servicio.</p>
-          <a className={`inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white ${theme.cta}`} href={service.ctaUrl} target={isExternalCta ? '_blank' : undefined} rel={isExternalCta ? 'noopener noreferrer' : undefined}>
-            {service.cta}
-          </a>
-        </div>
-        </div>
-      </article>
-    </div>
-  );
 }
 
 function EbooksModal({ isOpen, onClose }) {
@@ -1005,116 +594,6 @@ function EbooksModal({ isOpen, onClose }) {
               </button>
             </div>
           )}
-        </div>
-      </article>
-    </div>
-  );
-}
-
-function FitnessPlansModal({ isOpen, onClose }) {
-  useEffect(() => {
-    if (!isOpen) return undefined;
-
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
-    };
-
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = '';
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
-
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-ink/82 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
-      onClick={onClose}
-      role="presentation"
-    >
-      <article
-        className="relative max-h-[92vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-white/12 bg-[linear-gradient(145deg,rgba(11,15,20,0.96),rgba(25,38,50,0.94)_52%,rgba(37,68,52,0.88))] p-5 shadow-premium sm:p-8"
-        onClick={(event) => event.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="fitness-plans-modal-title"
-      >
-        <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full bg-[#8fb99a]/16 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 right-8 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
-        <button
-          className="absolute right-5 top-5 z-10 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl leading-none text-smoke transition duration-300 hover:border-[#8fb99a]/50 hover:bg-white/15"
-          type="button"
-          onClick={onClose}
-          aria-label="Cerrar planes fitness"
-        >
-          ×
-        </button>
-
-        <div className="relative max-h-[calc(92vh-2.5rem)] overflow-y-auto pr-1">
-          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-            <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-[0_28px_90px_rgba(0,0,0,0.28)] transition duration-500 hover:-translate-y-1 hover:border-[#8fb99a]/30">
-              <img
-                className="aspect-[4/5] h-full w-full rounded-2xl object-cover object-[center_35%] shadow-[0_18px_55px_rgba(0,0,0,0.24)]"
-                src="/media/asesoria-fitness-online.jpg"
-                alt="Cristian Núñez en Asesorías Fitness Online"
-                loading="eager"
-                decoding="async"
-              />
-            </figure>
-
-            <div className="pt-1 lg:pt-2">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#bfd8c4]">Asesorías Fitness Online</p>
-              <h3 id="fitness-plans-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
-                Asesorías Fitness Online
-              </h3>
-              <p className="mt-4 text-lg font-medium leading-8 text-[#bfd8c4]">
-                Entrenamiento, nutrición y seguimiento para dejar de improvisar.
-              </p>
-
-              <div className="mt-7 space-y-5 text-base leading-8 text-muted">
-                <p>
-                  Si ya intentaste entrenar, comer mejor o bajar grasa, pero siempre terminas volviendo al mismo punto,
-                  el problema no es solo tu disciplina. El problema es la falta de estructura, seguimiento y ajustes
-                  reales.
-                </p>
-                <p>
-                  Mis Asesorías Fitness Online están diseñadas para que sepas exactamente qué hacer con tu
-                  entrenamiento, tu alimentación y tus decisiones diarias. No trabajamos con rutinas genéricas ni dietas
-                  copiadas. Trabajamos con un sistema adaptado a tu vida, tu cuerpo y tu nivel de compromiso.
-                </p>
-                <p>
-                  Aquí no vienes a recibir información suelta. Vienes a tener dirección, criterio y acompañamiento para
-                  mejorar tu composición corporal con más orden, menos ansiedad y más claridad.
-                </p>
-              </div>
-
-              <div className="fitness-plans-reveal mt-8 border-t border-white/12 pt-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#bfd8c4]">Planes disponibles:</p>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  {['Plan Platinum', 'Plan Platinum PRO'].map((plan) => (
-                    <article
-                      className="rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur"
-                      key={plan}
-                    >
-                      <h4 className="text-lg font-semibold text-smoke">{plan}</h4>
-                    </article>
-                  ))}
-                </div>
-                <a
-                  className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-smoke px-7 py-3 text-sm font-semibold text-[#254434] transition duration-300 hover:-translate-y-0.5 hover:bg-[#bfd8c4] focus:outline-none focus:ring-2 focus:ring-[#8fb99a] focus:ring-offset-2 focus:ring-offset-ink"
-                  href={fitnessWhatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Empezar ahora
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </article>
     </div>
@@ -1414,11 +893,9 @@ function TestimonialsModal({ isOpen, onClose }) {
 }
 
 function App() {
-  const [selectedService, setSelectedService] = useState(null);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [areTestimonialsOpen, setAreTestimonialsOpen] = useState(false);
   const [isEbooksOpen, setIsEbooksOpen] = useState(false);
-  const [isFitnessPlansOpen, setIsFitnessPlansOpen] = useState(false);
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('[data-section-reveal]'));
@@ -1476,7 +953,7 @@ function App() {
             className="rounded-full border border-accent/50 px-5 py-2 text-sm font-semibold text-smoke transition hover:bg-accent hover:text-ink"
             href={SCHEDULE_CALL_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Agendar llamada
           </a>
@@ -1807,9 +1284,7 @@ function App() {
         </div>
       </section>
 
-      <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
       <EbooksModal isOpen={isEbooksOpen} onClose={() => setIsEbooksOpen(false)} />
-      <FitnessPlansModal isOpen={isFitnessPlansOpen} onClose={() => setIsFitnessPlansOpen(false)} />
       <AboutStoryModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
       <TestimonialsModal isOpen={areTestimonialsOpen} onClose={() => setAreTestimonialsOpen(false)} />
     </main>
