@@ -7,6 +7,27 @@ const PROFILE_IMAGE = '/brand/cristian-nunez-logo.png';
 const HERO_BANNER_IMAGE = '/cristian-nunez-hero-banner.png';
 const DIGITAL_RESOURCES_URL = 'https://cristiannunez.myshopify.com/collections/all';
 
+const shopifyResourceLinks = {
+  comeMuevete: DIGITAL_RESOURCES_URL,
+  comoComer: DIGITAL_RESOURCES_URL,
+  musculacion: DIGITAL_RESOURCES_URL,
+  vientrePlano: DIGITAL_RESOURCES_URL,
+  suplementacion: DIGITAL_RESOURCES_URL,
+  masAllaDelMiedo: DIGITAL_RESOURCES_URL,
+};
+
+const shopifyGuideLinks = {
+  guiaViaje: DIGITAL_RESOURCES_URL,
+  guiaEntrenamiento: DIGITAL_RESOURCES_URL,
+  guiaMealPrep: DIGITAL_RESOURCES_URL,
+  guiaSueno: DIGITAL_RESOURCES_URL,
+  guiaRespiracion: DIGITAL_RESOURCES_URL,
+  guiaSueloPelvico: DIGITAL_RESOURCES_URL,
+  guiaDeficit90Dias: DIGITAL_RESOURCES_URL,
+  guiaPreparacionAlimentos: DIGITAL_RESOURCES_URL,
+  planEstrenimiento: DIGITAL_RESOURCES_URL,
+};
+
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 const REBUILD_WHATSAPP_MESSAGE = 'Hola Cristian, quiero agendar una videollamada para conocer sobre tu programa';
 const rebuildWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(REBUILD_WHATSAPP_MESSAGE)}`;
@@ -362,38 +383,32 @@ const ebookResources = [
   {
     title: 'Come. Muévete. Y Ya.',
     description: 'Una guía simple para bajar de peso sin volverlo una odisea.',
-    action: 'Próximamente',
+    url: shopifyResourceLinks.comeMuevete,
   },
   {
     title: '¿Cómo comer? Alimentación a mi medida',
     description: 'Estructura práctica para entender porciones, comidas y decisiones diarias.',
-    action: 'Próximamente',
+    url: shopifyResourceLinks.comoComer,
   },
   {
     title: 'Musculación sin tonterías',
     description: 'Entrenamiento explicado sin humo para construir músculo con criterio.',
-    action: 'Próximamente',
+    url: shopifyResourceLinks.musculacion,
   },
   {
     title: 'Vientre Plano, Mente Clara',
     description: 'Hábitos digestivos, alimentación y pasos concretos para reducir inflamación.',
-    action: 'Próximamente',
+    url: shopifyResourceLinks.vientrePlano,
   },
   {
     title: 'Guía de suplementación',
     description: 'Una guía para entender qué suplementos tienen sentido y cuáles no.',
-    action: 'Próximamente',
+    url: shopifyResourceLinks.suplementacion,
   },
   {
     title: 'Más allá del miedo',
     description: 'Identidad, ego, comparación y dirección personal para avanzar con más claridad.',
-    action: 'Próximamente',
-  },
-  {
-    title: 'Más guías',
-    description: 'Otros recursos prácticos de nutrición, entrenamiento, hábitos, recetas y seguimiento.',
-    action: 'Ver más guías',
-    isMoreGuides: true,
+    url: shopifyResourceLinks.masAllaDelMiedo,
   },
 ];
 
@@ -401,38 +416,47 @@ const guideResources = [
   {
     title: 'Guía de Viaje: Cumpliendo Mi Objetivo',
     description: 'Estrategias simples para viajar sin abandonar tu alimentación, entrenamiento ni objetivo físico.',
+    url: shopifyGuideLinks.guiaViaje,
   },
   {
     title: 'Guía de Entrenamiento: Aprende Conmigo',
     description: 'Base práctica para entender ejercicios, técnica, progresión y entrenamiento con más criterio.',
+    url: shopifyGuideLinks.guiaEntrenamiento,
   },
   {
     title: 'Guía Básica Meal Prep',
     description: 'Organización básica de comidas para ahorrar tiempo, comer mejor y reducir improvisación.',
+    url: shopifyGuideLinks.guiaMealPrep,
   },
   {
     title: 'Guía de Sueño',
     description: 'Herramientas concretas para mejorar descanso, recuperación, energía y adherencia al proceso.',
+    url: shopifyGuideLinks.guiaSueno,
   },
   {
     title: 'Guía de Respiración',
     description: 'Ejercicios prácticos para regular estrés, mejorar control corporal y conectar con tu recuperación.',
+    url: shopifyGuideLinks.guiaRespiracion,
   },
   {
     title: 'Guía Suelo Pélvico para Hombres',
     description: 'Trabajo específico para fuerza, control, estabilidad y función del suelo pélvico masculino.',
+    url: shopifyGuideLinks.guiaSueloPelvico,
   },
   {
     title: '¿Qué Pasará en los Próximos 90 Días de Iniciar un Déficit?',
     description: 'Una guía clara para entender cambios físicos, adaptaciones y expectativas reales durante el déficit.',
+    url: shopifyGuideLinks.guiaDeficit90Dias,
   },
   {
     title: 'Guía de Preparación de Alimentos',
     description: 'Métodos simples para preparar alimentos de forma práctica, segura y sostenible.',
+    url: shopifyGuideLinks.guiaPreparacionAlimentos,
   },
   {
     title: 'Plan de Acción – Estreñimiento',
     description: 'Pasos concretos para mejorar tránsito intestinal, digestión y hábitos que afectan la regularidad.',
+    url: shopifyGuideLinks.planEstrenimiento,
   },
 ];
 
@@ -893,12 +917,12 @@ function EbooksModal({ isOpen, onClose }) {
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-accent">Recursos digitales</p>
             <h3 id="ebooks-modal-title" className="text-3xl font-semibold leading-tight text-smoke sm:text-5xl">
-              {isGuidesView ? 'Más guías y recursos' : 'E-books disponibles'}
+              {isGuidesView ? 'Más guías' : 'E-books y recursos digitales'}
             </h3>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
               {isGuidesView
                 ? 'Material práctico para seguir avanzando con estructura.'
-                : 'Selecciona el recurso que quieres conocer.'}
+                : 'Recursos prácticos para comer mejor, entrenar con más criterio y ordenar tus hábitos.'}
             </p>
           </div>
           <button
@@ -930,49 +954,55 @@ function EbooksModal({ isOpen, onClose }) {
                   >
                     <h4 className="text-lg font-semibold leading-tight text-smoke">{guide.title}</h4>
                     <p className="mt-4 flex-1 text-sm leading-7 text-muted">{guide.description}</p>
-                    <button
+                    <a
                       className="mt-5 inline-flex min-h-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.08] px-4 py-2 text-sm font-semibold text-smoke transition duration-300 hover:-translate-y-0.5 hover:bg-smoke hover:text-ink"
-                      type="button"
+                      href={guide.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Próximamente
-                    </button>
+                      Ver en tienda
+                    </a>
                   </article>
                 ))}
               </div>
             </div>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {ebookResources.map((resource) => (
-                <article
-                  className={`group flex min-h-[230px] flex-col rounded-2xl border p-5 backdrop-blur transition duration-300 hover:-translate-y-1 ${
-                    resource.isMoreGuides
-                      ? 'border-white/10 bg-white/[0.035] shadow-[0_18px_55px_rgba(0,0,0,0.16)] hover:border-accent/25 hover:bg-white/[0.055]'
-                      : 'border-white/10 bg-white/[0.055] shadow-[0_22px_70px_rgba(0,0,0,0.22)] hover:border-accent/35 hover:bg-white/[0.075]'
-                  }`}
-                  key={resource.title}
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <h4 className="text-xl font-semibold leading-tight text-smoke">{resource.title}</h4>
-                    {resource.isMoreGuides ? (
-                      <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-2xl font-light leading-none text-accent/75 transition duration-300 group-hover:border-accent/30 group-hover:text-accent">
-                        +
-                      </span>
-                    ) : null}
-                  </div>
-                  <p className="mt-4 flex-1 text-sm leading-7 text-muted">{resource.description}</p>
-                  <button
-                    className={`mt-6 inline-flex min-h-11 items-center justify-center rounded-full border px-5 py-2 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 ${
-                      resource.isMoreGuides
-                        ? 'border-white/12 bg-white/[0.08] text-smoke hover:bg-smoke hover:text-ink'
-                        : 'border-white/12 bg-smoke text-ink hover:bg-accent'
-                    }`}
-                    type="button"
-                    onClick={resource.isMoreGuides ? () => setView('guides') : undefined}
+            <div className="space-y-5">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {ebookResources.map((resource) => (
+                  <article
+                    className="group flex min-h-[230px] flex-col rounded-2xl border border-white/10 bg-white/[0.055] p-5 shadow-[0_22px_70px_rgba(0,0,0,0.22)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.075]"
+                    key={resource.title}
                   >
-                    {resource.action}
-                  </button>
-                </article>
-              ))}
+                    <h4 className="text-xl font-semibold leading-tight text-smoke">{resource.title}</h4>
+                    <p className="mt-4 flex-1 text-sm leading-7 text-muted">{resource.description}</p>
+                    <a
+                      className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full border border-white/12 bg-smoke px-5 py-2 text-sm font-semibold text-ink transition duration-300 hover:-translate-y-0.5 hover:bg-accent"
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver en tienda
+                    </a>
+                  </article>
+                ))}
+              </div>
+
+              <button
+                className="group flex w-full items-center justify-between gap-5 rounded-2xl border border-white/10 bg-white/[0.035] p-5 text-left shadow-[0_18px_55px_rgba(0,0,0,0.16)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/25 hover:bg-white/[0.055]"
+                type="button"
+                onClick={() => setView('guides')}
+              >
+                <span>
+                  <span className="block text-lg font-semibold text-smoke">Más guías</span>
+                  <span className="mt-2 block text-sm leading-7 text-muted">
+                    Otros recursos prácticos de nutrición, entrenamiento, hábitos, recetas y seguimiento.
+                  </span>
+                </span>
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-2xl font-light leading-none text-accent/75 transition duration-300 group-hover:border-accent/30 group-hover:text-accent">
+                  +
+                </span>
+              </button>
             </div>
           )}
         </div>
@@ -1749,21 +1779,29 @@ function App() {
 
       <section className="px-5 pb-20 pt-8 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/[0.035] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.16)] backdrop-blur sm:p-8">
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-6">
             <div>
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.28em] text-accent">Otros recursos</p>
               <h2 className="text-xl font-semibold text-smoke">Otros recursos</h2>
               <p className="max-w-2xl text-sm leading-7 text-muted">
-                También puedes encontrar e-books, guías y recursos digitales para empezar con herramientas puntuales.
+                E-books, guías y recursos prácticos para empezar con herramientas puntuales.
               </p>
             </div>
             <button
-              className="group inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-4xl font-light leading-none text-accent/80 transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.09] hover:text-accent"
+              className="group flex w-full items-center justify-between gap-5 rounded-2xl border border-white/10 bg-white/[0.045] p-5 text-left transition duration-300 hover:-translate-y-1 hover:border-accent/25 hover:bg-white/[0.065] sm:p-6"
               type="button"
               onClick={() => setIsEbooksOpen(true)}
-              aria-label="Ver otros recursos digitales"
+              aria-label="Abrir e-books y recursos digitales"
             >
-              +
+              <span>
+                <span className="block text-lg font-semibold text-smoke">E-books y recursos digitales</span>
+                <span className="mt-2 block max-w-2xl text-sm leading-7 text-muted">
+                  Herramientas prácticas para alimentación, entrenamiento, hábitos y seguimiento.
+                </span>
+              </span>
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-3xl font-light leading-none text-accent/80 transition duration-300 group-hover:border-accent/35 group-hover:text-accent">
+                +
+              </span>
             </button>
           </div>
         </div>
