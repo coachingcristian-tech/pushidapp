@@ -28,11 +28,11 @@ const focusLevels = [
   },
 ];
 
-const authorityStats = [
+const rebuildProgramStats = [
   '+2.000 procesos acompañados',
-  '15 veces campeón',
   'Método con plataforma',
-  'Experiencia real de reconstrucción',
+  'Seguimiento y check-ins',
+  'Reconstrucción real',
 ];
 
 const services = [
@@ -242,66 +242,119 @@ const services = [
 const rebuildService = services[0];
 
 const rebuildProblems = [
-  'Falta de estructura.',
-  'Alimentación improvisada.',
-  'Ciclos de abandono.',
-  'Resultados que no se sostienen.',
+  {
+    title: 'Falta de estructura',
+    text: 'Sin sistema, cada semana depende del ánimo, el tiempo libre o la fuerza de voluntad.',
+  },
+  {
+    title: 'Alimentación improvisada',
+    text: 'Comer “más o menos bien” funciona unos días. Luego vuelve la confusión.',
+  },
+  {
+    title: 'Ciclos de abandono',
+    text: 'Empiezas fuerte, te saturas, fallas, paras y vuelves a empezar desde cero.',
+  },
+  {
+    title: 'Resultados que no se sostienen',
+    text: 'Bajar peso no es suficiente si no construyes una forma de vivir que lo mantenga.',
+  },
 ];
 
 const rebuildSteps = [
   {
     title: 'Regular la Biología',
-    text: 'Entrenamiento, nutrición, descanso, recuperación y energía. Primero se ordena el cuerpo para que el proceso tenga base real.',
+    icon: 'pulse',
+    shortText:
+      'Ordenamos entrenamiento, nutrición, descanso y energía para que tu cuerpo deje de trabajar en contra del proceso.',
+    text:
+      'Entrenamiento, nutrición, descanso, recuperación y energía. Primero se ordena el cuerpo para que el proceso tenga base real. Aquí se eliminan las decisiones al azar: qué comer, cómo entrenar, cómo recuperarte y cómo responder cuando el cuerpo cambia.',
   },
   {
     title: 'Reordenar los Hábitos',
-    text: 'Rutinas, seguimiento, check-ins, decisiones diarias y estructura. El objetivo es dejar de depender de la motivación.',
+    icon: 'system',
+    shortText:
+      'Convertimos las decisiones diarias en un sistema claro: menos improvisación, más estructura y seguimiento real.',
+    text:
+      'Rutinas, seguimiento, check-ins, decisiones diarias y estructura. El objetivo es dejar de depender de la motivación. No se trata de llenar tu vida de reglas, sino de crear un sistema que puedas sostener incluso en semanas difíciles.',
   },
   {
     title: 'Reconstruir la Identidad',
-    text: 'Coherencia, responsabilidad, diálogo interno y una forma de actuar que sostenga los resultados cuando la vida se pone exigente.',
+    icon: 'compass',
+    shortText:
+      'Trabajamos la coherencia, el diálogo interno y la forma en que actúas cuando la motivación ya no alcanza.',
+    text:
+      'Coherencia, responsabilidad, diálogo interno y una forma de actuar que sostenga los resultados cuando la vida se pone exigente. La meta es que tus acciones dejen de depender del impulso del momento y empiecen a responder a la persona que estás construyendo.',
   },
 ];
 
 const rebuildIncludes = [
-  'Nutrición personalizada',
-  'Entrenamiento personalizado',
-  'Seguimiento',
-  'Check-ins',
-  'Sesiones',
-  'Portal / plataforma',
+  {
+    title: 'Nutrición personalizada',
+    text: 'Un plan ajustado a tu objetivo, horarios, preferencias y capacidad real de adherencia.',
+    icon: 'nutrition',
+  },
+  {
+    title: 'Entrenamiento personalizado',
+    text: 'Estructura de entrenamiento con progresión, técnica y ajustes según tu nivel.',
+    icon: 'training',
+  },
+  {
+    title: 'Seguimiento',
+    text: 'No avanzas a ciegas. Se revisa el proceso y se ajusta según tu respuesta real.',
+    icon: 'tracking',
+  },
+  {
+    title: 'Check-ins',
+    text: 'Puntos de control para medir avance, detectar errores y corregir antes de abandonar.',
+    icon: 'checkin',
+  },
+  {
+    title: 'Sesiones',
+    text: 'Espacios para ordenar dudas, tomar decisiones y sostener dirección.',
+    icon: 'sessions',
+  },
+  {
+    title: 'Portal Rebuild',
+    text: 'Recursos, clases, registros y herramientas organizadas en una plataforma clara.',
+    icon: 'portal',
+  },
 ];
 
 const faqItems = [
   {
     question: '¿Método Rebuild es solo un plan de entrenamiento y nutrición?',
     answer:
-      'No. Entrenamiento y nutrición son parte del proceso, pero el método también trabaja hábitos, seguimiento, estructura diaria e identidad. El objetivo no es que mejores unas semanas, sino que aprendas a sostener el cambio.',
+      'No. Entrenamiento y nutrición son parte del proceso, pero no son todo el método. Rebuild también trabaja hábitos, seguimiento, estructura diaria, toma de decisiones e identidad. El objetivo no es que mejores unas semanas, sino que entiendas cómo sostener el cambio cuando la vida se pone exigente.',
   },
   {
     question: '¿Necesito tener experiencia entrenando?',
     answer:
-      'No. El proceso se adapta a tu punto de partida. Lo importante es tener disposición para seguir una estructura y reportar con honestidad.',
+      'No. El proceso se adapta a tu punto de partida. Lo importante es tener disposición para seguir una estructura, reportar con honestidad y permitir que el proceso se ajuste con base en tu respuesta real.',
   },
   {
     question: '¿Cuánto tiempo dura el proceso?',
     answer:
-      'Depende del formato activo, pero el enfoque está pensado para generar cambios medibles y sostenibles, no resultados improvisados.',
+      'Depende del formato activo, pero el enfoque está pensado para generar cambios medibles y sostenibles. No se trabaja desde la urgencia de “bajar rápido”, sino desde un sistema que te permita avanzar sin volver al punto de inicio.',
   },
   {
     question: '¿Qué pasa si ya he abandonado otros procesos?',
     answer:
-      'Precisamente por eso existe el método. La mayoría no falla por falta de ganas, falla porque no tiene estructura, seguimiento ni ajustes reales.',
+      'Precisamente por eso existe el método. Muchas personas no fallan por falta de ganas, sino porque empiezan sin estructura, sin seguimiento y sin herramientas para corregir cuando aparecen semanas difíciles.',
   },
   {
     question: '¿El plan de alimentación es personalizado?',
     answer:
-      'Sí. La nutrición se adapta al objetivo, contexto, horarios, preferencias y capacidad real de adherencia.',
+      'Sí. La nutrición se adapta a tu objetivo, contexto, horarios, preferencias y capacidad real de adherencia. No se trata de comer perfecto, sino de tener una estrategia que puedas aplicar y ajustar.',
   },
   {
     question: '¿Tendré acompañamiento durante el proceso?',
     answer:
-      'Sí. El seguimiento, los check-ins y los ajustes son parte central del método.',
+      'Sí. El seguimiento, los check-ins y los ajustes son parte central del método. La idea es que no avances a ciegas ni tengas que interpretar sola qué hacer cuando algo no funciona.',
+  },
+  {
+    question: '¿Qué hace diferente a Método Rebuild?',
+    answer:
+      'No se enfoca solo en entregar un plan. Integra cuerpo, hábitos, seguimiento, educación y reconstrucción de identidad. El cambio físico es importante, pero lo que evita que vuelvas al punto de inicio es el sistema que sostiene tus decisiones.',
   },
 ];
 
@@ -556,6 +609,91 @@ function ContactIcon({ type }) {
       <path d="m6 8 6 5 6-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
+}
+
+function RebuildIcon({ type, className = '' }) {
+  const iconClass = `h-6 w-6 ${className}`;
+
+  if (type === 'pulse') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 12h3.5l2-5 4 10 2.5-7H21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 4a8 8 0 1 1-7.4 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity="0.55" />
+      </svg>
+    );
+  }
+
+  if (type === 'system') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7 3v3M17 3v3M5 9h14M6.5 5h11A2.5 2.5 0 0 1 20 7.5v10A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-10A2.5 2.5 0 0 1 6.5 5Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="m8 14 2 2 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'compass') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" strokeWidth="1.6" />
+        <path d="m15.8 8.2-2.1 5.5-5.5 2.1 2.1-5.5 5.5-2.1Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'portal') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M8 9h8M8 12h5M8 15h8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'nutrition') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 20c4-2.2 6.2-5.5 6.2-9.1 0-3-2-5.4-4.4-5.4-1.1 0-2 .4-2.8 1.2-.8-.8-1.7-1.2-2.8-1.2-2.4 0-4.4 2.4-4.4 5.4C3.8 14.5 6 17.8 12 20Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+        <path d="M14.5 4.5c.7-1 1.7-1.5 3-1.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'training') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 9v6M19 9v6M8 7v10M16 7v10M8 12h8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'tracking') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 19V5M5 19h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="m7.5 15 3.2-3.2 2.4 2.4L18 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'checkin') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.6" />
+        <path d="m8.5 12 2 2 5-5M9 17h6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (type === 'sessions') {
+    return (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 8.5A3.5 3.5 0 0 1 8.5 5h7A3.5 3.5 0 0 1 19 8.5v4A3.5 3.5 0 0 1 15.5 16H12l-4 3v-3A3.5 3.5 0 0 1 5 12.5v-4Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  return <RebuildIcon type="portal" className={className} />;
 }
 
 function RichText({ segments, className = '' }) {
@@ -1327,7 +1465,7 @@ function App() {
               sostener cuando la vida se pone exigente.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
+              <a className="btn-rebuild" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
                 Aplicar al Método Rebuild
               </a>
             </div>
@@ -1343,32 +1481,59 @@ function App() {
             title="Método Rebuild"
             description="El servicio principal para ordenar cuerpo, hábitos e identidad con estructura y seguimiento real."
           />
-          <div className="section-reveal grid gap-8 rounded-3xl border border-accent/25 bg-[linear-gradient(145deg,rgba(13,47,80,0.76),rgba(25,38,50,0.86)_48%,rgba(11,15,20,0.96))] p-7 shadow-premium sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:p-12" data-section-reveal>
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-accent">{rebuildService.eyebrow}</p>
-              <h2 className="text-4xl font-semibold leading-tight text-smoke sm:text-6xl">{rebuildService.modalTitle}</h2>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-muted">
-                Método Rebuild está diseñado para personas que quieren dejar de improvisar y construir una estructura
-                real para bajar grasa, recuperar energía y sostener resultados cuando la vida se pone exigente.
-              </p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {authorityStats.map((stat) => (
+          <div className="section-reveal overflow-hidden rounded-3xl border border-accent/25 bg-[linear-gradient(145deg,rgba(13,47,80,0.78),rgba(25,38,50,0.9)_45%,rgba(11,15,20,0.98))] p-7 shadow-premium sm:p-10 lg:p-12" data-section-reveal>
+            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+              <div>
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-accent">{rebuildService.eyebrow}</p>
+                <h2 className="text-4xl font-semibold leading-tight text-smoke sm:text-6xl">{rebuildService.modalTitle}</h2>
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-muted">
+                  Método Rebuild está diseñado para personas que quieren dejar de improvisar y construir una estructura
+                  real para bajar grasa, recuperar energía y sostener resultados cuando la vida se pone exigente.
+                </p>
+                <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-smoke">
+                  Este método existe para personas que ya entendieron que necesitan estructura, no otro intento improvisado.
+                </p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {rebuildProgramStats.map((stat) => (
                   <div className="rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-4 shadow-[0_16px_44px_rgba(0,0,0,0.16)]" key={stat}>
                     <p className="text-sm font-semibold leading-6 text-smoke">{stat}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="grid gap-4">
-              {rebuildService.details.map((detail) => (
-                <div className="group rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.085]" key={detail}>
-                  <p className="text-lg font-semibold text-smoke">{detail}</p>
-                </div>
+
+            <div className="rebuild-pillar-flow mt-10 grid gap-5 lg:grid-cols-3">
+              {rebuildSteps.map((step, index) => (
+                <article
+                  className="rebuild-pillar-card group relative rounded-2xl border border-white/10 bg-white/[0.06] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.085]"
+                  key={step.title}
+                >
+                  <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/25 bg-accent/10 text-accent transition duration-300 group-hover:border-accent/45 group-hover:bg-accent/15 group-hover:text-smoke">
+                    <RebuildIcon type={step.icon} />
+                  </span>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent/80">Paso {index + 1}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-smoke">{step.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">{step.shortText}</p>
+                </article>
               ))}
-              <div className="rounded-2xl border border-accent/25 bg-accent/10 p-5">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Plataforma Rebuild</p>
-                <p className="mt-3 text-sm leading-7 text-smoke">
-                  Seguimiento, recursos, clases, registros y herramientas prácticas organizadas en un solo lugar.
+            </div>
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
+              <div className="rounded-2xl border border-accent/25 bg-accent/10 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.2)]">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/30 bg-white/[0.08] text-accent">
+                  <RebuildIcon type="portal" />
+                </div>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Portal Rebuild</p>
+                <p className="mt-4 text-base leading-8 text-smoke">
+                  Una plataforma completa para centralizar el proceso: recursos, clases, registros, check-ins,
+                  seguimiento, herramientas prácticas y organización del avance en un solo lugar.
+                </p>
+              </div>
+              <div className="flex items-center rounded-2xl border border-white/10 bg-white/[0.045] p-6 shadow-[0_22px_70px_rgba(0,0,0,0.16)]">
+                <p className="text-xl font-semibold leading-9 text-smoke">
+                  No estás recibiendo información suelta. Tienes un sistema organizado para avanzar.
                 </p>
               </div>
             </div>
@@ -1383,12 +1548,29 @@ function App() {
             title="No necesitas más información suelta. Necesitas un sistema."
             description="Método Rebuild está diseñado para personas que no necesitan más información suelta, sino una estructura que les permita sostener resultados en la vida real."
           />
-          <div className="grid gap-5 md:grid-cols-4">
-            {rebuildProblems.map((problem) => (
-              <article className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.075]" key={problem}>
-                <p className="text-lg font-semibold leading-7 text-smoke">{problem}</p>
-              </article>
-            ))}
+          <div className="section-reveal problem-circuit relative mx-auto max-w-6xl rounded-3xl border border-white/10 bg-[radial-gradient(circle_at_center,rgba(112,150,195,0.12),rgba(25,38,50,0.34)_42%,rgba(11,15,20,0.78))] p-6 shadow-premium sm:p-8 lg:min-h-[620px]" data-section-reveal>
+            <div className="problem-circuit-orbit hidden lg:block" aria-hidden="true" />
+            <div className="problem-circuit-core relative mx-auto flex min-h-[220px] max-w-md flex-col items-center justify-center rounded-3xl border border-accent/25 bg-ink/74 p-7 text-center shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur lg:absolute lg:left-1/2 lg:top-1/2 lg:min-h-[260px] lg:-translate-x-1/2 lg:-translate-y-1/2">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">El ciclo</p>
+              <h3 className="mt-4 text-2xl font-semibold leading-tight text-smoke sm:text-3xl">Improvisar, frustrarse y volver a empezar.</h3>
+              <p className="mt-4 text-sm leading-7 text-muted">
+                Rebuild corta el ciclo con estructura, seguimiento y reconstrucción real.
+              </p>
+            </div>
+            <div className="mt-7 grid gap-5 lg:mt-0 lg:block">
+              {rebuildProblems.map((problem, index) => (
+                <article
+                  className={`problem-node problem-node-${index + 1} group rounded-2xl border border-white/10 bg-white/[0.07] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.095] lg:absolute lg:w-[285px]`}
+                  key={problem.title}
+                >
+                  <span className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-accent/25 bg-accent/10 text-sm font-semibold text-accent">
+                    {index + 1}
+                  </span>
+                  <h3 className="text-xl font-semibold leading-7 text-smoke">{problem.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">{problem.text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -1406,9 +1588,14 @@ function App() {
                 className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-[#eaf1f7] hover:shadow-[0_26px_80px_rgba(112,150,195,0.18)] active:-translate-y-0.5 sm:p-8"
                 key={step.title}
               >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-accent/35 bg-accent/10 text-sm font-semibold text-accent transition duration-300 group-hover:bg-[#0d2f50] group-hover:text-smoke">
-                  {index + 1}
-                </span>
+                <div className="flex items-center gap-4">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/35 bg-accent/10 text-accent transition duration-300 group-hover:bg-[#0d2f50] group-hover:text-smoke">
+                    <RebuildIcon type={step.icon} />
+                  </span>
+                  <span className="text-sm font-semibold uppercase tracking-[0.22em] text-accent transition duration-300 group-hover:text-[#0d2f50]">
+                    Paso {index + 1}
+                  </span>
+                </div>
                 <h3 className="mt-5 text-2xl font-semibold text-smoke transition duration-300 group-hover:text-[#0d2f50]">{step.title}</h3>
                 <p className="mt-5 leading-7 text-muted transition duration-300 group-hover:text-[#34495c]">{step.text}</p>
               </article>
@@ -1422,24 +1609,31 @@ function App() {
           <SectionHeader
             label="Qué incluye"
             title="Una estructura completa para dejar de improvisar."
-            description="El proceso combina dirección, seguimiento y herramientas prácticas para avanzar con criterio."
+            description="No necesitas más información. Necesitas un sistema que te diga qué hacer, cuándo ajustar y cómo sostenerlo."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {rebuildIncludes.map((item) => (
-              <article className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.075]" key={item}>
-                <p className="text-xl font-semibold text-smoke">{item}</p>
+              <article className="group rounded-2xl border border-white/10 bg-white/[0.055] p-6 shadow-premium backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white/[0.075]" key={item.title}>
+                <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-accent/25 bg-accent/10 text-accent transition duration-300 group-hover:border-accent/40 group-hover:bg-accent/15 group-hover:text-smoke">
+                  <RebuildIcon type={item.icon} />
+                </span>
+                <h3 className="text-xl font-semibold text-smoke">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-muted">{item.text}</p>
               </article>
             ))}
           </div>
           <div className="mt-6 rounded-3xl border border-accent/25 bg-[linear-gradient(135deg,rgba(112,150,195,0.14),rgba(13,47,80,0.28))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.2)]">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Portal / plataforma</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Portal Rebuild</p>
             <p className="mt-3 max-w-4xl text-base leading-8 text-smoke">
-              El proceso cuenta con un portal completo para organizar recursos, clases, registros, seguimiento y
-              herramientas prácticas en un solo lugar.
+              Una plataforma completa para centralizar el proceso: recursos, clases, registros, check-ins, seguimiento,
+              herramientas prácticas y organización del avance en un solo lugar.
+            </p>
+            <p className="mt-4 max-w-4xl text-base font-semibold leading-8 text-smoke">
+              No estás recibiendo información suelta. Tienes un sistema organizado para avanzar.
             </p>
           </div>
           <div className="mt-9 flex justify-center">
-            <a className="btn-primary" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
+            <a className="btn-rebuild" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
               Aplicar al Método Rebuild
             </a>
           </div>
@@ -1501,16 +1695,20 @@ function App() {
           <h2 className="mb-7 text-3xl font-semibold leading-tight text-smoke sm:text-5xl">Experiencia que sostiene el método</h2>
           <div className="space-y-5 text-base leading-8 text-muted sm:text-lg">
             <p>
-              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación física y personal, y he sido 15
-              veces campeón en categorías como Fitness Model, Classic Bodybuilding y Men’s Physique.
+              Soy Cristian Núñez. He acompañado más de 2.000 procesos de transformación física y personal. También he
+              construido experiencia como atleta, formador y mentor en espacios de educación profesional.
             </p>
             <p>
-              Pero mi visión del cambio no viene solo de competir o acompañar alumnos. En 2024 tuve un accidente grave
-              que me obligó a reconstruirme desde cero: cuerpo, hábitos, autonomía y criterio.
+              He realizado conferencias en la Escuela Nacional del Deporte, capacitaciones para Nutramerican Pharma y
+              formación para entrenadores personales en Bodytech.
+            </p>
+            <p>
+              En 2024 tuve un accidente grave que me obligó a reconstruirme desde cero: cuerpo, autonomía, hábitos y
+              criterio. Esa experiencia cambió mi forma de acompañar. Hoy no trabajo desde promesas rápidas. Trabajo
+              desde estructura, seguimiento y reconstrucción real.
             </p>
             <p className="font-semibold text-smoke">
-              Esa experiencia cambió la forma en que acompaño. Hoy no trabajo desde promesas rápidas. Trabajo desde
-              estructura, seguimiento y reconstrucción real.
+              La reconstrucción no es teoría para mí. Es experiencia vivida.
             </p>
           </div>
         </div>
@@ -1543,7 +1741,7 @@ function App() {
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
             Agenda un diagnóstico privado para revisar tu punto de partida y ver si Método Rebuild encaja con lo que necesitas construir.
           </p>
-          <a className="btn-primary mt-9" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
+          <a className="btn-rebuild mt-9" href={SCHEDULE_CALL_URL} target="_blank" rel="noopener noreferrer">
             Aplicar al Método Rebuild
           </a>
         </div>

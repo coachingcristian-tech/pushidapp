@@ -37,6 +37,40 @@
     @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-smoke px-7 py-3 text-sm font-semibold text-ink transition duration-300 hover:-translate-y-0.5 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink;
   }
 
+  .btn-rebuild {
+    @apply relative isolate inline-flex min-h-14 items-center justify-center overflow-hidden rounded-full px-9 py-4 text-sm font-semibold text-smoke transition duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink;
+    background:
+      linear-gradient(135deg, rgba(112, 150, 195, 0.95), rgba(13, 47, 80, 0.98) 52%, rgba(25, 38, 50, 0.98)),
+      #0d2f50;
+    border: 1px solid rgba(244, 246, 248, 0.18);
+    box-shadow:
+      0 18px 60px rgba(13, 47, 80, 0.34),
+      inset 0 1px 0 rgba(244, 246, 248, 0.24);
+  }
+
+  .btn-rebuild::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 0%, rgba(244, 246, 248, 0.22) 44%, transparent 62%);
+    transform: translateX(-130%);
+    transition: transform 700ms ease;
+  }
+
+  .btn-rebuild:hover {
+    transform: translateY(-2px);
+    border-color: rgba(112, 150, 195, 0.72);
+    box-shadow:
+      0 26px 78px rgba(13, 47, 80, 0.46),
+      0 0 0 1px rgba(112, 150, 195, 0.12),
+      inset 0 1px 0 rgba(244, 246, 248, 0.3);
+  }
+
+  .btn-rebuild:hover::before {
+    transform: translateX(130%);
+  }
+
   .btn-secondary {
     @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-white/15 bg-white/[0.045] px-7 py-3 text-sm font-semibold text-smoke transition duration-300 hover:-translate-y-0.5 hover:border-accent/70 hover:bg-white/[0.075] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink;
   }
@@ -98,6 +132,92 @@
   .fitness-plans-reveal {
     animation: fitness-plans-reveal 900ms ease 360ms both;
   }
+
+  .rebuild-pillar-flow {
+    position: relative;
+  }
+
+  .rebuild-pillar-card {
+    position: relative;
+    z-index: 1;
+  }
+
+  .problem-circuit {
+    isolation: isolate;
+  }
+
+  .problem-circuit::before {
+    content: "";
+    position: absolute;
+    inset: 12%;
+    z-index: -1;
+    border-radius: 9999px;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(112, 150, 195, 0.12), transparent 34%),
+      radial-gradient(circle at 20% 20%, rgba(244, 246, 248, 0.08), transparent 22%);
+    filter: blur(18px);
+  }
+
+  .problem-circuit-orbit {
+    position: absolute;
+    inset: 4rem 5rem;
+    border: 1px solid rgba(112, 150, 195, 0.22);
+    border-radius: 9999px;
+    animation: circuit-breathe 12s ease-in-out infinite;
+  }
+
+  .problem-circuit-orbit::before,
+  .problem-circuit-orbit::after {
+    content: "";
+    position: absolute;
+    border-radius: 9999px;
+    pointer-events: none;
+  }
+
+  .problem-circuit-orbit::before {
+    inset: 3.1rem 4.2rem;
+    border: 1px dashed rgba(244, 246, 248, 0.16);
+  }
+
+  .problem-circuit-orbit::after {
+    inset: -1px;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 246deg, rgba(112, 150, 195, 0.78) 274deg, transparent 306deg, transparent 360deg);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+    animation: circuit-trace 22s linear infinite;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rebuild-pillar-flow::before {
+    content: "";
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    top: 2rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(112, 150, 195, 0.55), transparent);
+  }
+
+  .problem-node-1 {
+    left: 1.5rem;
+    top: 2rem;
+  }
+
+  .problem-node-2 {
+    right: 1.5rem;
+    top: 4.7rem;
+  }
+
+  .problem-node-3 {
+    bottom: 2.2rem;
+    right: 3.5rem;
+  }
+
+  .problem-node-4 {
+    bottom: 4.4rem;
+    left: 3.2rem;
+  }
 }
 
 @keyframes testimonials-scroll {
@@ -107,6 +227,29 @@
 
   to {
     transform: translateX(calc(-50% - 10px));
+  }
+}
+
+@keyframes circuit-breathe {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.015);
+  }
+}
+
+@keyframes circuit-trace {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -136,7 +279,14 @@
 @media (prefers-reduced-motion: reduce) {
   .testimonials-marquee,
   .ebooks-resource-visual img,
-  .fitness-plans-reveal {
+  .fitness-plans-reveal,
+  .problem-circuit-orbit,
+  .problem-circuit-orbit::after {
     animation: none;
+  }
+
+  .section-reveal {
+    opacity: 1;
+    transform: none;
   }
 }
